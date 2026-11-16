@@ -107,7 +107,7 @@ function cartaoKpi(k, { ds, an }) {
       k.recorde ? el("span", { class: "chip chip-recorde" }, `Recorde da série (desde ${k.recordeDesde})`) : null),
     nota ? el("p", { class: "kpi-nota" }, el("strong", {}, "Contexto: "), nota.contexto, " ",
       f ? externo(f.url, `${f.documento}${nota.pagina ? `, p. ${[].concat(nota.pagina).join(" e ")}` : ""}`) : null) : null,
-    el("p", { class: "kpi-fonte" }, "Fonte: ", externo(ds.meta.fonte_planilha.url, `planilha oficial, célula ${k.celula}`)));
+    el("p", { class: "kpi-fonte" }, "Fonte: ", fonteLink(ds, "planilha oficial", k.origem)));
 }
 
 function iniciarPanorama(ctx) {
@@ -166,7 +166,7 @@ function desenharIndicadores(ctx) {
       el("td", { class: "num" }, ultimo ? fmtValor(ultimo.valor, i.unidade) : ND),
       el("td", { class: "num" }, aa === null ? ND : pp ? `${aa >= 0 ? "+" : "-"}${nf(Math.abs(aa), 1)} p.p.` : fmtPct(aa, 1)),
       el("td", {}, el("span", { class: `pilula pilula-${i.tipo}` }, ROTULO_TIPO_INDICADOR[i.tipo])),
-      el("td", {}, ultimo ? externo(ctx.ds.meta.fonte_planilha.url, `célula ${C.enderecoCelula(ctx.ix, i.id, ultimo.periodo)}`) : ND)));
+      el("td", {}, ultimo ? fonteLink(ctx.ds, "", C.origemValor(ctx.ix, i.id, ultimo.periodo)) : ND)));
   }
   $("#indicadores-contagem").textContent = `${linhas.length} indicador(es)`;
   document.querySelectorAll("#tabela-indicadores thead th[data-ordem]").forEach((th) => {
@@ -224,7 +224,7 @@ function iniciarDocumentos(ctx) {
 
 function iniciarMetodologia({ ds }) {
   const c = ds.meta.contagens;
-  $("#met-contagens").textContent = `${nf(c.indicadores, 0)} indicadores, ${nf(c.observacoes_com_valor, 0)} observações com valor, ${c.tracos_na_fonte} células com traço na fonte (tratadas como ${ND}), ${c.documentos} documentos de resultados.`;
+  $("#met-contagens").textContent = `${nf(c.indicadores, 0)} indicadores, ${nf(c.observacoes_com_valor, 0)} observações com valor, ${c.tracos_na_fonte} células com traço na fonte (tratadas como ${ND}), ${c.documentos} documentos de resultados.${c.valores_do_itr ? ` Além disso, ${nf(c.valores_do_itr, 0)} valores financeiros do 3T26 vêm do ITR 3T26, com página citada, porque a planilha ainda não os trazia.` : ""}`;
   const fonte = ds.meta.fonte_planilha;
   const alvoFonte = limpar($("#met-fonte"));
   alvoFonte.append(externo(fonte.url, fonte.nome), el("span", { class: "sub" }, `SHA-256 do arquivo: ${fonte.sha256}`));
@@ -279,6 +279,17 @@ function chipRecorde(d) {
 function chipAA(d) {
   return d.variacaoPct === null ? null : el("span", { class: `chip ${d.variacaoPct >= 0 ? "chip-bom" : "chip-atencao"}` }, el("span", { "aria-hidden": "true" }, d.variacaoPct >= 0 ? "▲ " : "▼ "), `${fmtPct(d.variacaoPct, 1)} contra ${d.comparacao.periodo}`);
 }
+/** Link da fonte de um valor: célula da planilha oficial ou, no 3T26 do ITR, documento e página (o.tipo). */
+function urlCentral(ds) {
+  return ds.navegacao.find((n) => n.titulo === "Central de Resultados")?.url ?? "https://ri.patrimar.com.br/";
+}
+function fonteLink(ds, texto, o) {
+  if (o.tipo === "documento") {
+    const t = texto.replace(/(^|, )planilha oficial$/, "");
+    return externo(urlCentral(ds), t ? `${t}, ${o.texto}` : o.texto);
+  }
+  return externo(ds.meta.fonte_planilha.url, texto ? `${texto}, célula ${o.celula}` : `célula ${o.celula}`);
+}
 function celulaLink(ds, texto, celula) {
   return externo(ds.meta.fonte_planilha.url, `${texto}, célula ${celula}`);
 }
@@ -293,7 +304,7 @@ function provaTerreno(p, { ds, ix }) {
     el("p", { class: "prova-leitura" }, `No ritmo dos últimos 12 meses (${fmtValor(t.lancamentos12m, "BRL_MILHOES", { bi: 2 })} lançados, de ${t.janela.de} a ${t.janela.ate}), o landbank cobre `,
       el("strong", {}, `${fmtValor(t.cobertura, "anos")} de lançamentos`), ". ", el("a", { href: "#cobertura" }, "Mover o ritmo no simulador")),
     el("p", { class: "prova-conta" }, "Cálculo GSA: landbank ÷ lançamentos dos últimos 12 meses. VGV potencial não é receita contratada."),
-    el("p", { class: "prova-fonte" }, "Fonte: ", celulaLink(ds, "landbank, planilha oficial", l.celula), `; lançamentos na linha ${ix.ind.get(1).linha}.`));
+    el("p", { class: "prova-fonte" }, "Fonte: ", fonteLink(ds, "landbank, planilha oficial", l.origem), `; lançamentos na linha ${ix.ind.get(1).linha}.`));
 }
 
 function provaVenda(p, { ds, an }) {
@@ -309,7 +320,7 @@ function provaVenda(p, { ds, an }) {
     el("p", { class: "prova-meta" }, chipRecorde(u), chipAA(u)),
     el("p", { class: "prova-leitura" }, vgvTexto),
     v.vso ? el("p", { class: "prova-vso" }, v.vso.texto, " ", f ? externo(f.url, `${f.documento}, p. ${v.vso.pagina}`) : null) : null,
-    el("p", { class: "prova-fonte" }, "Fonte: ", celulaLink(ds, "unidades, planilha oficial", u.celula), "; ", celulaLink(ds, "VGV", g.celula), "."));
+    el("p", { class: "prova-fonte" }, "Fonte: ", fonteLink(ds, "unidades, planilha oficial", u.origem), "; ", fonteLink(ds, "VGV", g.origem), "."));
 }
 
 function provaBalanco(p, { ds }) {
@@ -326,7 +337,7 @@ function provaBalanco(p, { ds }) {
       el("ul", { class: "minibarras", "aria-label": "Contas a receber de clientes, curto prazo, em R$ milhões" },
         b.receber.serie.map((x) => el("li", {}, el("span", {}, x.periodo), el("span", { class: "mb-trilho" }, el("span", { class: "mb-barra", style: `width:${(x.valor / max) * 100}%` })), el("span", { class: "mb-valor" }, fmtValor(x.valor, "BRL_MILHOES")))))),
     el("p", { class: "prova-contrapeso" }, el("strong", {}, "Contrapeso: "), `os empréstimos de curto prazo subiram ${fmtPct(em.variacaoPct, 1)} contra o ${em.comparacao.periodo}, para ${fmtValor(em.valor, "BRL_MILHOES")}.`),
-    el("p", { class: "prova-fonte" }, "Fonte: ", celulaLink(ds, "ativo", a.atual.celula), "; ", celulaLink(ds, "patrimônio líquido", pl.celula), "; ", celulaLink(ds, "empréstimos", em.celula), "."));
+    el("p", { class: "prova-fonte" }, "Fonte: ", fonteLink(ds, "ativo", a.atual.origem), "; ", fonteLink(ds, "patrimônio líquido", pl.origem), "; ", fonteLink(ds, "empréstimos", em.origem), "."));
 }
 
 function iniciarProvas(ctx) {
@@ -361,7 +372,7 @@ function iniciarSimulador({ ix, ds }) {
   }
   faixa.addEventListener("input", atualizar);
   atualizar();
-  limpar($("#cob-fonte")).append(`Landbank de ${s.periodo} e lançamentos dos últimos 12 meses. Fonte: `, celulaLink(ds, "landbank, planilha oficial", s.celula), ".");
+  limpar($("#cob-fonte")).append(`Landbank de ${s.periodo} e lançamentos dos últimos 12 meses. Fonte: `, fonteLink(ds, "landbank, planilha oficial", s.origem), ".");
 }
 
 // ------------------------------------------------------------------ índice de solidez
@@ -375,8 +386,8 @@ function pagsTexto(pagina) {
 }
 
 function contextoAlavancagem({ an }) {
-  const total = an.citacoes_de_release.divida_liquida_sobre_pl_2T26;
-  const corp = an.citacoes_de_release.divida_corporativa_sobre_pl_2T26;
+  const total = an.citacoes_de_release.divida_liquida_sobre_pl_3T26;
+  const corp = an.citacoes_de_release.divida_corporativa_sobre_pl_3T26;
   const plano = an.eventos.find((e) => e.titulo === "Plano27");
   const link = (c) => externo(an.fontes[c.fonte].url, `${an.fontes[c.fonte].documento}${pagsTexto(c.pagina)}`);
   return el("p", { class: "indice-contexto" }, el("strong", {}, "Contexto do release: "),
@@ -572,7 +583,11 @@ function cartaoLeitura(s, leitura) {
       comp("Contra o período anterior", leitura.tt),
       marcaLinha("recorde", leitura.recorde, "Recorde da série exibida"),
       marcaLinha("minimo", leitura.minimo, "Mínimo da série exibida")),
-    el("p", { class: "nota" }, "Fonte: ", celulaLink(ctxGlobal.ds, "planilha oficial", `linha ${s.linha}`)));
+    el("p", { class: "nota" }, "Fonte: ", celulaLink(ctxGlobal.ds, "planilha oficial", `linha ${s.linha}`),
+      ...C.periodosDeDocumento(ctxGlobal.ix, s.id).map((per) => {
+        const o = C.origemValor(ctxGlobal.ix, s.id, per);
+        return [`; o ${per} vem do `, fonteLink(ctxGlobal.ds, "", o), "."];
+      }).flat()));
 }
 
 function tabelaExp(lista) {

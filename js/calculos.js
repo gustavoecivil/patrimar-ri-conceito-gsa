@@ -225,6 +225,10 @@ const ID = { LANC: 1, LAND: 21, CAIXA_OP: 73, CAIXA: 93, TVM: 94, REC_CP: 95, RE
 function v(ix, id, k) {
   return ix.ind.get(id)?.tri[k] ?? null;
 }
+/** Títulos e valores mobiliários de LONGO prazo (linha nova no ITR 3T26, sem linha na planilha). Antes do 3T26 o saldo era zero. */
+function tvmLongoPrazo(ix, k) {
+  return ix.ds.complementos?.extras?.tvm_longo_prazo?.valores?.[ix.tri[k]] ?? 0;
+}
 function divide(a, b) {
   return a === null || b === null || b === 0 ? null : a / b;
 }
@@ -266,12 +270,12 @@ export const DEFINICOES_SOLIDEZ = [
     nome: "Alavancagem (dívida líquida sobre patrimônio líquido)",
     unidade: "%",
     sentido: "menor_melhor",
-    formula: "(Empréstimos de curto + longo prazo − caixa − títulos e valores mobiliários) ÷ patrimônio líquido × 100. Inclui o financiamento à construção.",
+    formula: "(Empréstimos de curto + longo prazo − caixa − títulos e valores mobiliários de curto e longo prazo) ÷ patrimônio líquido × 100. Inclui o financiamento à construção.",
     entradas: [ID.EMP_CP, ID.EMP_LP, ID.CAIXA, ID.TVM, ID.PL],
     calc: (ix, k) => {
       const e = [ID.EMP_CP, ID.EMP_LP, ID.CAIXA, ID.TVM].map((id) => v(ix, id, k));
       if (e.some((x) => x === null)) return null;
-      const r = divide(e[0] + e[1] - e[2] - e[3], v(ix, ID.PL, k));
+      const r = divide(e[0] + e[1] - e[2] - e[3] - tvmLongoPrazo(ix, k), v(ix, ID.PL, k));
       return r === null ? null : r * 100;
     },
   },
@@ -303,7 +307,7 @@ export function termosSolidez(ix, chave, k) {
     case "cobertura_divida_recebiveis":
       return [R("Contas a receber (curto + longo prazo)", soma2(v(ix, ID.REC_CP, k), v(ix, ID.REC_LP, k))), R("Empréstimos (circulante + não circulante)", soma2(v(ix, ID.EMP_CP, k), v(ix, ID.EMP_LP, k)))];
     case "alavancagem":
-      return [R("Empréstimos (circulante + não circulante)", soma2(v(ix, ID.EMP_CP, k), v(ix, ID.EMP_LP, k))), R("Caixa e títulos e valores mobiliários", soma2(v(ix, ID.CAIXA, k), v(ix, ID.TVM, k))), R("Patrimônio líquido", v(ix, ID.PL, k))];
+      return [R("Empréstimos (circulante + não circulante)", soma2(v(ix, ID.EMP_CP, k), v(ix, ID.EMP_LP, k))), R("Caixa e títulos e valores mobiliários", soma2(soma2(v(ix, ID.CAIXA, k), v(ix, ID.TVM, k)), tvmLongoPrazo(ix, k))), R("Patrimônio líquido", v(ix, ID.PL, k))];
     case "caixa_operacional_12m":
       return [0, 1, 2, 3].map((j) => R(`Caixa operacional, ${ix.tri[k - 3 + j]}`, v(ix, ID.CAIXA_OP, k - 3 + j)));
     default:
@@ -450,6 +454,24 @@ export function enderecoCelula(ix, id, periodo) {
   return i && col && i.linha ? `${col}${i.linha}` : null;
 }
 
+/**
+ * De onde vem o valor de um período: da célula da planilha oficial ou, quando a planilha ainda não trazia o período,
+ * de um documento com página (complemento do ITR 3T26, em ds.complementos). Nunca inventa: devolve null sem origem.
+ */
+export function origemValor(ix, id, periodo) {
+  const c = ix.ds.complementos?.valores?.[String(id)]?.[periodo];
+  if (c) {
+    return { tipo: "documento", documento: c.documento, pagina: c.pagina, metodo: c.metodo, confere: c.confere, nota: c.nota, texto: `${c.documento}, p. ${c.pagina}` };
+  }
+  const celula = enderecoCelula(ix, id, periodo);
+  return celula ? { tipo: "planilha", celula, texto: `célula ${celula}` } : null;
+}
+
+/** Períodos de um indicador cujo valor veio de documento (e não da planilha). */
+export function periodosDeDocumento(ix, id) {
+  return Object.keys(ix.ds.complementos?.valores?.[String(id)] ?? {});
+}
+
 // Indicadores do painel "Panorama". "recorde" liga o selo de recorde, que só aparece se confirmado na base.
 export const PANORAMA = [
   { id: 1, recorde: true },
@@ -482,6 +504,7 @@ export function kpisPanorama(ix) {
       recorde: cfg.recorde && confirmaRecorde(serie, atual.periodo),
       recordeDesde: rec ? rec.de : null,
       celula: enderecoCelula(ix, cfg.id, atual.periodo),
+      origem: origemValor(ix, cfg.id, atual.periodo),
     };
   });
 }
@@ -495,7 +518,7 @@ function destaqueDe(ix, id, periodo) {
   const v = valor(ix, id, periodo);
   const b = base ? valor(ix, id, base) : null;
   return {
-    id, periodo, valor: v, celula: enderecoCelula(ix, id, periodo),
+    id, periodo, valor: v, celula: enderecoCelula(ix, id, periodo), origem: origemValor(ix, id, periodo),
     comparacao: { periodo: base, valor: b },
     variacaoPct: v > 0 && b > 0 ? variacaoPct(v, b) : null,
     recorde: confirmaRecorde(serie, periodo),
@@ -533,12 +556,12 @@ export function provasSolidez(ix, an, { anoInicial = "2023" } = {}) {
   };
   const ativo = destaqueDe(ix, 114, periodoFin);
   const balanco = {
-    ativo: { inicial: { periodo: anoInicial, valor: valor(ix, 114, anoInicial), celula: enderecoCelula(ix, 114, anoInicial) }, atual: ativo },
+    ativo: { inicial: { periodo: anoInicial, valor: valor(ix, 114, anoInicial), celula: enderecoCelula(ix, 114, anoInicial), origem: origemValor(ix, 114, anoInicial) }, atual: ativo },
     patrimonio: destaqueDe(ix, 146, periodoFin),
     emprestimosCP: destaqueDe(ix, 115, periodoFin),
     receber: {
       id: 95,
-      serie: [anoInicial, "2024", "2025", periodoFin].map((p) => ({ periodo: p, valor: valor(ix, 95, p), celula: enderecoCelula(ix, 95, p) })),
+      serie: [anoInicial, "2024", "2025", periodoFin].map((p) => ({ periodo: p, valor: valor(ix, 95, p), celula: enderecoCelula(ix, 95, p), origem: origemValor(ix, 95, p) })),
     },
   };
   return { periodoOp, periodoFin, terreno, venda, balanco };
@@ -553,7 +576,7 @@ export function simuladorCobertura(ix) {
   const ltm = lancamentos12m(ix, periodo);
   const referencias = [{ chave: "ltm", rotulo: `Últimos 12 meses (até ${periodo})`, milhoes: ltm }];
   for (const ano of ["2024", "2025"]) referencias.push({ chave: ano, rotulo: `Lançado em ${ano}`, milhoes: valor(ix, 1, ano) });
-  return { periodo, landbank, celula: enderecoCelula(ix, 21, periodo), ltm, referencias };
+  return { periodo, landbank, celula: enderecoCelula(ix, 21, periodo), origem: origemValor(ix, 21, periodo), ltm, referencias };
 }
 
 /** Preenchimento (0 a 1) de cada um dos n anos de uma barra de cobertura. */

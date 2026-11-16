@@ -88,6 +88,12 @@ export const PERGUNTAS_SUGERIDAS = [
 export function criarAssistente(ds, an) {
   const ix = C.indexar(ds);
   const urlPlanilha = ds.meta.fonte_planilha.url;
+  // O 3T26 financeiro vem do ITR (a planilha capturada em 30/10/2026 ainda não o trazia): as respostas dizem de onde veio.
+  const urlCentral = ds.navegacao.find((n) => n.titulo === "Central de Resultados")?.url ?? urlPlanilha;
+  const temItr = Object.keys(ds.complementos?.valores ?? {}).length > 0;
+  const baseGsa = temItr ? "a planilha oficial e o ITR 3T26" : "a planilha oficial";
+  const rotGsa = temItr ? "Planilha oficial e ITR 3T26" : "Planilha oficial";
+  const sufixoItr = (id) => C.periodosDeDocumento(ix, id).map((per) => ` O ${per} vem do ${C.origemValor(ix, id, per).texto}.`).join("");
   const docs = [...ds.documentos].sort((a, b) => b.ano - a.ano || (b.tri ?? 0) - (a.tri ?? 0) || a.id - b.id);
   const sing = (t) => (t.length > 3 && t.endsWith("s") ? t.slice(0, -1) : t);
   const tokens = (t) => norm(t).match(/[a-z0-9]+/g) ?? [];
@@ -157,9 +163,13 @@ export function criarAssistente(ds, an) {
     else if (tem(/compar|evolu|vari|cresce|queda|contra|versus|mudou|a\/a|ano anterior/, q)) txt += ` Não há valor de ${pb} para comparar.`;
     if (ind.tipo === "estoque") txt += " Saldo de fim de período, não se soma entre trimestres.";
     if (id === 28) txt += " É a margem bruta contábil da planilha; o release destaca a margem ajustada, que é outra medida.";
-    const cel = C.enderecoCelula(ix, id, p);
-    txt += ` Fonte: planilha oficial, célula ${cel}.`;
-    return r("ok", "valor", txt, urlPlanilha, `Planilha oficial, célula ${cel}`, p, id);
+    const o = C.origemValor(ix, id, p);
+    if (o.tipo === "documento") {
+      txt += ` Fonte: ${o.texto}.`;
+      return r("ok", "valor", txt, urlCentral, o.texto, p, id);
+    }
+    txt += ` Fonte: planilha oficial, célula ${o.celula}.`;
+    return r("ok", "valor", txt, urlPlanilha, `Planilha oficial, célula ${o.celula}`, p, id);
   }
 
   // ---- recorde e mínimo
@@ -187,7 +197,7 @@ export function criarAssistente(ds, an) {
       } else {
         txt = `O ${per} tem ${fmtValor(vp, un)} em ${ind.rotulo}. O ${extremo} da série, ${fmtValor(alvo, un)}, se repete em ${donos.length} períodos (${donos.join(", ")}): não há ${nome} único.`;
       }
-      return r("ok", nome, `${txt} Fonte: planilha oficial, linha ${ind.linha}.`, urlPlanilha, rot, per, id);
+      return r("ok", nome, `${txt} Fonte: planilha oficial, linha ${ind.linha}.${sufixoItr(id)}`, urlPlanilha, rot, per, id);
     }
     const de = pts[0][0], ate = pts[pts.length - 1][0];
     const [lp, lv] = pts[pts.length - 1];
@@ -195,7 +205,7 @@ export function criarAssistente(ds, an) {
     const txt = unico
       ? `${titulo} valor de ${ind.rotulo} na série ${serie} (${de} a ${ate}): ${fmtValor(alvo, un)} em ${donos[0]}. Último dado: ${lp}, ${fmtValor(lv, un)}.`
       : `O ${extremo} de ${ind.rotulo} na série ${serie} (${de} a ${ate}), ${fmtValor(alvo, un)}, se repete em ${donos.length} períodos (${donos.join(", ")}): não há ${nome} único. Último dado: ${lp}, ${fmtValor(lv, un)}.`;
-    return r("ok", nome, `${txt} Fonte: planilha oficial, linha ${ind.linha}.`, urlPlanilha, rot, unico ? donos[0] : null, id);
+    return r("ok", nome, `${txt} Fonte: planilha oficial, linha ${ind.linha}.${sufixoItr(id)}`, urlPlanilha, rot, unico ? donos[0] : null, id);
   }
 
   // ---- cobertura do landbank
@@ -233,9 +243,9 @@ export function criarAssistente(ds, an) {
     const a = avaliacoes()[chave];
     const [, , un] = INDICE[chave];
     const sentido = a.sentido === "maior_melhor" ? "maior" : "menor";
-    let txt = `${a.nome}, ${a.atual.periodo}: ${fmtValor(a.atual.valor, un)}. Selo: ${ROTULO_SELO[a.selo]}. Média histórica: ${fmtValor(a.historico.media, un)} (${a.historico.n} trimestres anteriores, desde ${a.historico.de}). Percentil ${numero(a.percentil, 0)} da própria série; posição de qualidade ${numero(a.qualidade, 0)} de 100 (${sentido} é melhor). Fórmula: ${a.formula} Cálculo GSA sobre a planilha oficial, não é indicador divulgado pela companhia.`;
-    if (chave === "alavancagem") txt += ` Contexto do release: ${an.citacoes_de_release.divida_corporativa_sobre_pl_2T26.texto}`;
-    return r("ok", "indice", txt, urlPlanilha, "Planilha oficial (cálculo GSA)", a.atual.periodo, null);
+    let txt = `${a.nome}, ${a.atual.periodo}: ${fmtValor(a.atual.valor, un)}. Selo: ${ROTULO_SELO[a.selo]}. Média histórica: ${fmtValor(a.historico.media, un)} (${a.historico.n} trimestres anteriores, desde ${a.historico.de}). Percentil ${numero(a.percentil, 0)} da própria série; posição de qualidade ${numero(a.qualidade, 0)} de 100 (${sentido} é melhor). Fórmula: ${a.formula} Cálculo GSA sobre ${baseGsa}, não é indicador divulgado pela companhia.`;
+    if (chave === "alavancagem") txt += ` Contexto do release: ${an.citacoes_de_release.divida_corporativa_sobre_pl_3T26.texto}`;
+    return r("ok", "indice", txt, urlPlanilha, `${rotGsa} (cálculo GSA)`, a.atual.periodo, null);
   }
 
   function respSolidez() {
@@ -245,8 +255,8 @@ export function criarAssistente(ds, an) {
       return `${a.nome}: ${fmtValor(a.atual.valor, INDICE[chave][2])} em ${a.atual.periodo}, selo ${ROTULO_SELO[a.selo]}.`;
     });
     const txt = "Índice de Solidez GSA, cinco medidas lidas contra a própria história da Patrimar:\n" + linhas.join("\n") +
-      "\nCálculo GSA sobre a planilha oficial. O selo \"atenção\" marca o quarto pior da própria série; não há comparação com outras empresas.";
-    return r("ok", "indice", txt, urlPlanilha, "Planilha oficial (cálculo GSA)", null, null);
+      `\nCálculo GSA sobre ${baseGsa}. O selo "atenção" marca o quarto pior da própria série; não há comparação com outras empresas.`;
+    return r("ok", "indice", txt, urlPlanilha, `${rotGsa} (cálculo GSA)`, null, null);
   }
 
   // ---- pontos de atenção
@@ -261,7 +271,7 @@ export function criarAssistente(ds, an) {
     const pts = C.pontosDeAtencao(ix, an.regras_pontos_de_atencao, {});
     const linhas = pts.map((p, n) => `${n + 1}. ${ix.ind.get(p.id).rotulo}, ${p.periodo}: ${fmtValor(p.valor, ix.ind.get(p.id).unidade)} (${p.motivos.map(textoMotivo).join("; ")}).`);
     const txt = `Pontos de atenção por regra, nos últimos ${C.JANELA_PONTOS} trimestres com dado: ${pts.length} ponto(s).\n${linhas.join("\n")}\nO contexto, o contrapeso e a fonte de cada um estão na seção Pontos de atenção. Não é recomendação de investimento.`;
-    return r("ok", "pontos", txt, urlPlanilha, "Planilha oficial (regra GSA)", null, null);
+    return r("ok", "pontos", txt, urlPlanilha, `${rotGsa} (regra GSA)`, null, null);
   }
 
   // ---- citações de release
@@ -279,11 +289,11 @@ export function criarAssistente(ds, an) {
 
   function respDivida() {
     const a = an.citacoes_de_release;
-    const t = a.divida_liquida_sobre_pl_2T26, c = a.divida_corporativa_sobre_pl_2T26;
+    const t = a.divida_liquida_sobre_pl_3T26, c = a.divida_corporativa_sobre_pl_3T26;
     const [url, rot] = fonteDe(c);
     const [, rotT] = fonteDe(t);
-    const txt = `${c.texto} Incluindo o financiamento à construção, a dívida líquida total é de ${numero(t.valor, 0)}% do patrimônio líquido (junho de 2026). A meta pública é zerar a dívida líquida corporativa até o fim de 2027. Fonte: ${rot} e ${rotT}.`;
-    return r("ok", "divida", txt, url, rot, "2T26", null);
+    const txt = `${c.texto} Incluindo o financiamento à construção, a dívida líquida total é de ${numero(t.valor, 0)}% do patrimônio líquido (setembro de 2026). A meta pública é zerar a dívida líquida corporativa até o fim de 2027. Fonte: ${rot} e ${rotT}.`;
+    return r("ok", "divida", txt, url, rot, "3T26", null);
   }
 
   // ---- documentos
