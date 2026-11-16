@@ -1,0 +1,215 @@
+{
+  "_como_editar": [
+    "Este arquivo é do Gu. O site lê daqui os eventos da linha do tempo, as regras e os textos dos pontos de atenção.",
+    "Os NÚMEROS não ficam aqui: vêm de data_site.json. Aqui ficam só contexto, contrapeso e fonte.",
+    "Em 'pontos_de_atencao', a chave é o id do indicador. 'periodo' vazio vale para qualquer período daquele indicador.",
+    "Todo texto precisa de fonte (documento e página). Sem travessão. Sem adjetivo."
+  ],
+  "fontes": {
+    "release_2T26": {
+      "documento": "Release de Resultados 2T26",
+      "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=Ed2D1oRlhHh5pf98YMT/Qg=="
+    },
+    "previa_3T26": {
+      "documento": "Prévia Operacional 3T26",
+      "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=m0th3NgNNNCM4p0TfiQ2Zg=="
+    },
+    "release_4T25": {
+      "documento": "Release de Resultados 4T25",
+      "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=jO+i5EMwPQZ1Po92zYIZAQ=="
+    },
+    "planilha_3T26": {
+      "documento": "Base de Dados Operacionais e Financeiros 3T26 (cálculo GSA sobre a planilha)",
+      "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=sFqbw3Z21UaMB1z2rPQtfQ=="
+    },
+    "release_1T26": {
+      "documento": "Release de Resultados 1T26",
+      "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=kI9YfoIryt59rosGDmhzqA=="
+    },
+    "release_3T25": {
+      "documento": "Release de Resultados 3T25",
+      "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=LriCONFbgqWTAWzBBSQcAA=="
+    }
+  },
+  "eventos": [
+    {
+      "periodo": "4T25",
+      "titulo": "Plano27",
+      "texto": "A companhia declara a meta de zerar a dívida líquida corporativa, que exclui o financiamento à construção, até o fim de 2027.",
+      "fonte": "release_4T25",
+      "pagina": 10
+    },
+    {
+      "periodo": "2T26",
+      "titulo": "Venda ao FII Belvedere",
+      "texto": "Venda de 192 unidades prontas ou quase prontas a um fundo imobiliário, cerca de R$ 250 milhões. Houve deságio, com efeito pontual na margem bruta e no lucro do trimestre.",
+      "fonte": "release_2T26",
+      "pagina": [
+        10,
+        11
+      ]
+    },
+    {
+      "periodo": "3T26",
+      "titulo": "Greve da Caixa",
+      "texto": "A greve da Caixa Econômica Federal adiou para o 4T26 cerca de R$ 30 milhões em repasses.",
+      "fonte": "previa_3T26",
+      "pagina": 8
+    },
+    {
+      "periodo": "3T26",
+      "titulo": "Cessão de carteira pro-soluto",
+      "texto": "Cessão de parte da carteira de pro-soluto de empreendimentos do Minha Casa Minha Vida, citada pela administração no release do 2T26.",
+      "fonte": "release_2T26",
+      "pagina": 5
+    }
+  ],
+  "regras_pontos_de_atencao": {
+    "_explicacao": "Um indicador-chave entra na lista quando piora mais que 'piora_aa_pct' contra o mesmo período do ano anterior, ou quando fica abaixo (ou acima, se menor for melhor) do percentil indicado da própria série trimestral, ou quando o valor é negativo e 'negativo_e_alerta' está ligado.",
+    "piora_aa_pct": 20,
+    "percentil": 25,
+    "indicadores_chave": [
+      {
+        "id": 40,
+        "sentido": "maior_melhor",
+        "negativo_e_alerta": true
+      },
+      {
+        "id": 28,
+        "sentido": "maior_melhor"
+      },
+      {
+        "id": 73,
+        "sentido": "maior_melhor",
+        "negativo_e_alerta": true
+      },
+      {
+        "id": 9,
+        "sentido": "maior_melhor"
+      },
+      {
+        "id": 25,
+        "sentido": "maior_melhor"
+      },
+      {
+        "id": 115,
+        "sentido": "menor_melhor"
+      },
+      {
+        "id": 146,
+        "sentido": "maior_melhor"
+      }
+    ],
+    "comparacoes_anuais": [
+      {
+        "id": 40,
+        "periodo": "2025",
+        "contra": "2023",
+        "sentido": "maior_melhor"
+      }
+    ]
+  },
+  "pontos_de_atencao": {
+    "40": [
+      {
+        "periodo": "2T26",
+        "contexto": "O trimestre carrega o deságio da venda de 192 unidades ao FII Belvedere, mais despesas operacionais maiores e resultado financeiro mais pesado. A administração trata parte do efeito como temporal.",
+        "contrapeso": "A mesma operação somou cerca de R$ 250 milhões em vendas, e a receita líquida do trimestre foi a maior da série.",
+        "fonte": "release_2T26",
+        "pagina": 23
+      },
+      {
+        "periodo": "4T25",
+        "contexto": "Crédito mais restritivo para os clientes, distratos acima do esperado e vendas de unidades com obra avançada abaixo do previsto no fim do ano.",
+        "contrapeso": "O 1T26 voltou ao lucro.",
+        "fonte": "release_4T25",
+        "pagina": 27
+      },
+      {
+        "periodo": "2025",
+        "contexto": "O lucro do ano ficou abaixo do de 2023, com receita praticamente estável desde 2024 e custo financeiro maior.",
+        "contrapeso": "A margem bruta contábil do ano subiu contra 2024, e os lançamentos de 2025 foram os maiores da série anual.",
+        "fonte": "release_4T25",
+        "pagina": 8
+      },
+      {
+        "periodo": "1T26",
+        "contexto": "Lucro positivo e acima do 1T25, mas pequeno frente à própria série trimestral. O release atribui a evolução à melhora do desempenho operacional, com expansão do lucro bruto e avanço de 0,9 ponto percentual na margem líquida.",
+        "contrapeso": "O release ressalva que, no acumulado de 12 meses, o resultado segue pressionado pelo desempenho negativo do 4T25.",
+        "fonte": "release_1T26",
+        "pagina": 24
+      },
+      {
+        "periodo": "3T25",
+        "contexto": "O release atribui a queda contra o 3T24 ao menor número de lançamentos no trimestre, que reduziu a diluição das despesas operacionais.",
+        "contrapeso": "No acumulado de nove meses de 2025 o lucro líquido avançou 3% sobre os nove meses de 2024, chegando a R$ 47 milhões.",
+        "fonte": "release_3T25",
+        "pagina": [
+          2,
+          23
+        ]
+      }
+    ],
+    "28": [
+      {
+        "periodo": "2T26",
+        "contexto": "Margem contábil comprimida pelo deságio da venda ao FII Belvedere. É efeito de uma operação, não da venda regular.",
+        "contrapeso": "Sem a operação, o release informa margem bruta AJUSTADA de 28,9%. É outra medida: não se compara diretamente com a margem contábil.",
+        "fonte": "release_2T26",
+        "pagina": 19
+      },
+      {
+        "periodo": "4T25",
+        "contexto": "Margem bruta operacional contábil da planilha, no menor patamar recente. É uma medida diferente da margem bruta ajustada por encargos financeiros, que o release destaca e que ficou em 26,0% no mesmo trimestre.",
+        "contrapeso": "O release registra evolução do lucro bruto e das margens em 2025 e crescimento de 3,9 pontos percentuais da margem bruta ajustada contra 2024.",
+        "fonte": "release_4T25",
+        "pagina": [
+          7,
+          23
+        ]
+      }
+    ],
+    "115": [
+      {
+        "periodo": "",
+        "contexto": "A dívida de curto prazo cresceu. A maior parte do endividamento é financiamento à construção, que acompanha o ciclo das obras e é pago com o repasse dos clientes.",
+        "contrapeso": "O release do 2T26 informa dívida líquida corporativa de R$ 285 milhões, 46,7% do patrimônio líquido, e a meta pública é zerá-la até o fim de 2027.",
+        "fonte": "release_2T26",
+        "pagina": 2
+      }
+    ],
+    "73": [
+      {
+        "periodo": "",
+        "contexto": "O caixa operacional contábil oscila com o ciclo de obras: consome quando a companhia constrói e devolve quando entrega e repassa.",
+        "contrapeso": "Cálculo GSA sobre a planilha: a soma dos quatro trimestres até o 2T26 é positiva, depois de três anos negativos (2023, 2024 e 2025).",
+        "fonte": "planilha_3T26",
+        "pagina": null
+      }
+    ]
+  },
+  "citacoes_de_release": {
+    "_explicacao": "Números que NÃO existem na planilha e só podem aparecer com documento e página.",
+    "vso_12_meses_3T26": {
+      "valor": 31,
+      "unidade": "PERCENTUAL",
+      "texto": "VSO líquida dos últimos doze meses: 31% no 3T26, 1,0 ponto percentual acima do mesmo período de 2025.",
+      "fonte": "previa_3T26",
+      "pagina": 7
+    },
+    "divida_liquida_sobre_pl_2T26": {
+      "valor": 188,
+      "unidade": "PERCENTUAL",
+      "texto": "Dívida líquida total sobre patrimônio líquido em junho de 2026, incluindo financiamento à construção.",
+      "fonte": "release_2T26",
+      "pagina": 7
+    },
+    "divida_corporativa_sobre_pl_2T26": {
+      "valor": 46.7,
+      "unidade": "PERCENTUAL",
+      "texto": "Dívida líquida corporativa de R$ 285 milhões, 46,7% do patrimônio líquido em 30 de junho de 2026.",
+      "fonte": "release_2T26",
+      "pagina": 2
+    }
+  }
+}

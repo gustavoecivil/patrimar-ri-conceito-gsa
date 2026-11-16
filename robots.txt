@@ -1,0 +1,3 @@
+# Proposta conceitual da GSA: nao e o site oficial de RI. Nao indexar.
+User-agent: *
+Disallow: /

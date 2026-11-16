@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Proposta conceitual da GSA para o site de Relações com Investidores do Grupo Patrimar: números públicos com fonte, período e a conta inteira à vista.">
+<title>Grupo Patrimar | Relações com Investidores: proposta conceitual da GSA</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="pular" href="#principal">Pular para o conteúdo</a>
+
+<div class="faixa" role="note">
+  <span><strong>Proposta conceitual da GSA.</strong> Não é o site oficial de RI do Grupo Patrimar.</span>
+  <a href="https://ri.patrimar.com.br/" target="_blank" rel="noopener noreferrer">Ir ao site oficial de RI<span aria-hidden="true"> ↗</span><span class="so-leitor"> (abre em nova aba)</span></a>
+</div>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#inicio" aria-label="Grupo Patrimar, Relações com Investidores: início">
+      <img class="logo logo-claro" src="img/logo-grupo-patrimar.png" width="112" height="37" alt="Grupo Patrimar">
+      <img class="logo logo-escuro" src="img/logo-grupo-patrimar-rodape.png" width="112" height="37" alt="Grupo Patrimar">
+      <span class="marca-rotulo">Relações com Investidores</span>
+    </a>
+    <nav aria-label="Seções da página">
+      <ul>
+        <li><a href="#provas">Provas</a></li>
+        <li><a href="#cobertura">Simulador</a></li>
+        <li><a href="#indice">Índice</a></li>
+        <li><a href="#atencao">Atenção</a></li>
+        <li><a href="#panorama">Panorama</a></li>
+        <li><a href="#indicadores">Indicadores</a></li>
+        <li><a href="#explorador">Explorador</a></li>
+        <li><a href="#assistente">Assistente</a></li>
+        <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#metodologia">Metodologia</a></li>
+      </ul>
+    </nav>
+    <button id="tema" class="botao-tema" type="button" aria-pressed="false">
+      <span class="tema-icone" aria-hidden="true"></span><span class="tema-rotulo">Tema escuro</span>
+    </button>
+  </div>
+</header>
+
+<main id="principal">
+  <noscript><div class="erro" role="alert"><strong>Este site precisa de JavaScript.</strong> Os números são montados a partir dos dados públicos no seu navegador.</div></noscript>
+
+  <section id="inicio" class="hero" aria-labelledby="titulo-inicio">
+    <div class="wrap grade">
+      <div class="hero-texto">
+        <p class="eyebrow">Terceiro trimestre de 2026</p>
+        <h1 id="titulo-inicio">Solidez que se mede em terreno, venda e caixa.</h1>
+        <p class="lead" id="abertura-texto">Carregando os números…</p>
+        <p class="nota" id="abertura-cobertura"></p>
+        <p class="acoes">
+          <a class="botao botao-primario" href="#panorama">Ver o panorama</a>
+          <a class="botao" href="#metodologia">Como os números são checados</a>
+        </p>
+      </div>
+      <figure class="skyline" id="skyline-fig">
+        <div id="skyline" class="skyline-area"></div>
+        <figcaption class="nota" id="skyline-legenda"></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="provas" aria-labelledby="titulo-provas">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Três provas de solidez</p>
+        <h2 id="titulo-provas">Terreno, venda e balanço, com a conta à vista</h2>
+        <p>A tese: a Patrimar é sólida porque tem terreno, venda e balanço, e mostra os três sem esconder nada. Cada prova traz o número, uma comparação justa e a fonte. Recorde só aparece quando o código confirma na base.</p>
+      </div>
+      <div class="grade-provas" id="provas-blocos"></div>
+    </div>
+  </section>
+
+  <section id="cobertura" aria-labelledby="titulo-cobertura">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Simulador de cobertura do landbank</p>
+        <h2 id="titulo-cobertura">Quantos anos de lançamento cabem no landbank</h2>
+        <p>Mova o ritmo anual de lançamentos e veja por quanto tempo o landbank atual sustenta a operação, sem comprar nenhum terreno novo. O ponto de partida é o ritmo real dos últimos 12 meses.</p>
+      </div>
+      <div class="grade-simulador">
+        <div class="painel-sim">
+          <output id="cob-saida" class="cob-saida" for="cob-ritmo" aria-live="polite"></output>
+          <p class="nota" id="cob-sub"></p>
+          <div class="campo-faixa">
+            <label for="cob-ritmo">Ritmo anual de lançamentos (VGV)</label>
+            <input id="cob-ritmo" type="range" min="1" max="4" step="0.01">
+            <div class="escala"><span id="cob-min"></span><span id="cob-max"></span></div>
+          </div>
+          <div class="presets" id="cob-presets" role="group" aria-label="Ritmos de referência"></div>
+          <div class="anos" id="cob-anos" aria-hidden="true"></div>
+          <div class="escala" aria-hidden="true"><span>ano 1</span><span>ano 12</span></div>
+        </div>
+        <div class="painel-sim">
+          <h3>A conta</h3>
+          <p class="conta" id="cob-conta"></p>
+          <p class="nota"><strong>Cálculo GSA, não dado publicado.</strong> Landbank dividido pelo ritmo anual escolhido. VGV potencial é estimativa de venda futura, não receita contratada. O simulador não prevê lançamentos: mostra só a aritmética do estoque de terrenos, que muda com novas aquisições e distratos.</p>
+          <p class="nota" id="cob-fonte"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="indice" aria-labelledby="titulo-indice">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Índice de Solidez GSA</p>
+        <h2 id="titulo-indice">Cinco medidas, lidas contra a própria história da Patrimar</h2>
+        <p id="indice-intro">Cada medida é calculada trimestre a trimestre a partir da planilha oficial, com a fórmula à vista.</p>
+      </div>
+      <div class="grade-indice" id="indice-cartoes"></div>
+      <div class="composto" id="composto">
+        <div class="composto-texto">
+          <h3>Posição média ponderada, se você quiser uma só leitura</h3>
+          <p>Não há nota única escondida: este número é a média da posição de cada medida na própria série (0 é o pior ponto da história da Patrimar, 50 é a mediana, 100 é o melhor). Os pesos são seus: mova e veja.</p>
+          <output id="composto-nota" class="composto-nota" aria-live="polite"></output>
+          <p class="nota" id="composto-detalhe"></p>
+          <button type="button" id="composto-reset" class="botao">Voltar aos pesos iguais</button>
+        </div>
+        <div class="composto-pesos" id="composto-pesos"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="atencao" aria-labelledby="titulo-atencao">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Pontos de atenção</p>
+        <h2 id="titulo-atencao">O que ainda pede trabalho, escolhido por regra</h2>
+        <p id="atencao-regras"></p>
+      </div>
+      <div class="tabela-rolagem tabela-empilha" tabindex="0" role="region" aria-label="Tabela de pontos de atenção, role para os lados em telas pequenas">
+        <table id="tabela-atencao">
+          <caption class="so-leitor">Pontos de atenção gerados por regra, com indicador, período, número, comparação, motivo, contexto, contrapeso e fonte</caption>
+          <thead><tr>
+            <th scope="col">Indicador e período</th><th scope="col">Número e comparação</th>
+            <th scope="col">Por que entrou</th><th scope="col">Contexto</th><th scope="col">Contrapeso</th><th scope="col">Fonte</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="nota" id="atencao-nota"></p>
+    </div>
+  </section>
+
+  <section id="panorama" aria-labelledby="titulo-panorama">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Panorama</p>
+        <h2 id="titulo-panorama">O último trimestre com dado, número por número</h2>
+        <p>Cada cartão traz o período, a variação contra o mesmo trimestre do ano anterior e a célula da planilha oficial de onde o número vem. O selo de recorde só aparece quando o código confirma na base que é o máximo da série.</p>
+      </div>
+      <div id="panorama-cartoes" aria-live="polite"></div>
+      <p class="nota" id="panorama-aviso">Ausência de dado aparece como n/d, nunca como zero.</p>
+    </div>
+  </section>
+
+  <section id="indicadores" aria-labelledby="titulo-indicadores">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Indicadores e fontes</p>
+        <h2 id="titulo-indicadores">Cada número, com a origem ao lado</h2>
+        <p>Clique no título de uma coluna para ordenar. Saldo (landbank, caixa, balanço) é a posição no fim do período e não se soma entre trimestres. Fluxo (lançamentos, vendas, receita) é o acumulado do trimestre. A variação de razões em % é a diferença em pontos percentuais (p.p.).</p>
+      </div>
+      <div class="controles">
+        <div class="campo"><label for="ind-busca">Buscar indicador</label><input id="ind-busca" type="search" autocomplete="off" placeholder="Ex.: landbank, caixa, margem"></div>
+        <div class="campo"><label for="ind-secao">Grupo</label><select id="ind-secao"></select></div>
+        <p class="contagem" id="indicadores-contagem" aria-live="polite"></p>
+      </div>
+      <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de indicadores, role para os lados em telas pequenas">
+        <table id="tabela-indicadores">
+          <caption class="so-leitor">Indicadores com último período disponível, valor, variação anual, natureza e célula de origem</caption>
+          <thead><tr>
+            <th scope="col" data-ordem="indicador" aria-sort="ascending"><button type="button">Indicador</button></th>
+            <th scope="col" data-ordem="periodo" aria-sort="none"><button type="button">Período</button></th>
+            <th scope="col" class="num" data-ordem="valor" aria-sort="none"><button type="button">Valor</button></th>
+            <th scope="col" class="num" data-ordem="variacao" aria-sort="none"><button type="button">Variação a/a</button></th>
+            <th scope="col">Natureza</th>
+            <th scope="col">Fonte</th>
+          </tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="explorador" aria-labelledby="titulo-explorador">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Explorador de séries</p>
+        <h2 id="titulo-explorador">Compare dois indicadores ao longo do tempo</h2>
+        <p>Escolha até dois indicadores, em visão trimestral, de 12 meses móveis ou anual. O gráfico marca sozinho o recorde e o mínimo de cada série e os eventos que a companhia explicou nos releases. Com unidades diferentes, o gráfico usa dois eixos: não leia o cruzamento das linhas como relação entre os indicadores.</p>
+      </div>
+      <div class="ex-controles">
+        <div class="campo"><label for="ex-a">Indicador A (linha contínua, círculos)</label><select id="ex-a"></select></div>
+        <div class="campo"><label for="ex-b">Indicador B (linha tracejada, quadrados)</label><select id="ex-b"></select></div>
+        <div class="campo">
+          <span class="rotulo-campo" id="ex-g-rotulo">Período</span>
+          <div class="seg" role="group" aria-labelledby="ex-g-rotulo" id="ex-g">
+            <button type="button" data-g="tri" aria-pressed="true">Trimestral</button>
+            <button type="button" data-g="ltm" aria-pressed="false">12 meses</button>
+            <button type="button" data-g="ano" aria-pressed="false">Anual</button>
+          </div>
+        </div>
+        <label class="marca-check"><input type="checkbox" id="ex-ev" checked> Mostrar eventos</label>
+      </div>
+      <div class="ex-presets" id="ex-presets" role="group" aria-label="Comparações prontas"></div>
+      <p class="ex-aviso" id="ex-aviso" role="status" aria-live="polite"></p>
+      <figure class="ex-figura">
+        <div id="ex-grafico"></div>
+        <figcaption class="nota" id="ex-legenda"></figcaption>
+      </figure>
+      <div class="ex-leitura" id="ex-leitura"></div>
+      <ol class="ex-eventos-lista" id="ex-eventos-lista" aria-label="Eventos marcados no gráfico"></ol>
+      <details class="ex-tabela">
+        <summary>Ver a tabela de valores desta visão</summary>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de valores do explorador, role para os lados em telas pequenas">
+          <table id="ex-tabela"><caption class="so-leitor">Valores e variações de cada período para os indicadores escolhidos</caption><thead></thead><tbody></tbody></table>
+        </div>
+      </details>
+      <div class="saz" id="sazonalidade">
+        <h3>Sazonalidade: o que cada trimestre do ano costuma pesar</h3>
+        <p class="nota" id="saz-intro"></p>
+        <div class="saz-paineis" id="sazonalidade-paineis"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="assistente" aria-labelledby="titulo-assistente">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Converse com os dados</p>
+        <h2 id="titulo-assistente">Pergunte aos números, com a fonte em cada resposta</h2>
+        <p>Este assistente não usa inteligência artificial generativa: ele segue regras escritas e consulta só os dados desta página. Toda resposta traz o período, o valor e o link da fonte. O que não está na base, ele diz que não está.</p>
+      </div>
+      <div class="chat">
+        <ul class="chat-mensagens" id="chat-mensagens" aria-live="polite" aria-label="Conversa com o assistente"></ul>
+        <div class="chat-sugestoes" id="chat-sugestoes" role="group" aria-label="Perguntas sugeridas"></div>
+        <form class="chat-form" id="chat-form" autocomplete="off">
+          <label for="chat-pergunta" class="so-leitor">Sua pergunta sobre os indicadores ou documentos</label>
+          <input id="chat-pergunta" type="text" maxlength="300" placeholder="Ex.: qual o recorde de vendas em unidades?">
+          <button class="botao botao-primario" type="submit">Perguntar</button>
+        </form>
+      </div>
+      <p class="nota">O assistente não projeta resultados, não compara a Patrimar com outras empresas e não dá recomendação de investimento.</p>
+    </div>
+  </section>
+
+  <section id="documentos" aria-labelledby="titulo-documentos">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Central de documentos</p>
+        <h2 id="titulo-documentos">Releases, ITR, prévias e demonstrações</h2>
+        <p>Os documentos oficiais da Central de Resultados, do mais recente ao mais antigo, com link para o original no site de RI.</p>
+      </div>
+      <div class="controles">
+        <div class="campo"><label for="doc-busca">Buscar documento</label><input id="doc-busca" type="search" autocomplete="off" placeholder="Ex.: 2T26, release"></div>
+        <div class="campo"><label for="doc-tipo">Tipo</label><select id="doc-tipo"></select></div>
+        <div class="campo"><label for="doc-ano">Ano</label><select id="doc-ano"></select></div>
+        <p class="contagem" id="documentos-contagem" aria-live="polite"></p>
+      </div>
+      <ul class="docs" id="lista-documentos"></ul>
+    </div>
+  </section>
+
+  <section id="metodologia" aria-labelledby="titulo-metodologia">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Metodologia e confiança</p>
+        <h2 id="titulo-metodologia">A conta inteira, e como ela é conferida</h2>
+        <p>Solidez se prova mostrando os números completos, inclusive os trimestres fracos, com contexto e contrapeso. Estas são as regras que o site segue.</p>
+      </div>
+      <div class="grade-cartoes">
+        <article class="cartao"><h3>Fonte</h3><p>Os números vêm da planilha pública Base de Dados Operacionais e Financeiros, publicada no site de RI. Cada valor mostra a célula de origem.</p><p id="met-fonte" class="bloco-fonte"></p><p class="nota" id="met-contagens"></p></article>
+        <article class="cartao"><h3>Conciliação com os releases</h3><p>Os valores da planilha são conferidos contra os releases de resultados. A tabela abaixo mostra cada conferência e a diferença, que fica dentro do arredondamento do release.</p></article>
+        <article class="cartao"><h3>Margem ajustada e margem contábil</h3><p>A planilha traz a margem bruta operacional contábil. Os releases destacam a margem bruta ajustada por encargos financeiros. São medidas diferentes: nunca aparecem no mesmo gráfico. A tabela abaixo traz a ajustada, com documento e página.</p></article>
+        <article class="cartao"><h3>Saldo e fluxo</h3><p>Landbank, caixa e balanço são saldos de fim de período e não se somam. Lançamentos, vendas e receita são fluxos do trimestre e podem ser somados em janelas de 12 meses.</p></article>
+        <article class="cartao"><h3>Ausência não é zero</h3><p>Período sem dado aparece como n/d. Nunca é preenchido com zero nem interpolado. Um zero só aparece quando a própria fonte publica zero.</p></article>
+        <article class="cartao"><h3>Dado publicado e cálculo GSA</h3><p>Dado publicado vem da planilha ou do release, com fonte. Cálculo GSA (coberturas, janelas de 12 meses, selos) mostra a fórmula e é recalculado por testes automáticos a cada alteração, direto da base.</p></article>
+        <article class="cartao"><h3>Assistente sem IA generativa</h3><p>O assistente é um conjunto de regras: reconhece o indicador, o período e o tipo de pergunta, e responde com o valor, o período e a fonte. Existe uma versão no site e outra em Python para uso em servidor, e um teste confere que as duas respondem exatamente igual.</p></article>
+        <article class="cartao"><h3>Como os números são auditados</h3><p>Cada número exibido é recalculado por testes automáticos direto da base de dados, por uma segunda implementação independente, e a própria página renderizada é lida e comparada. Se algum número divergir, a alteração não é aceita.</p></article>
+        <article class="cartao"><h3>Limites</h3><p>Este é um estudo conceitual independente com dados públicos. Não é o site oficial de RI, não substitui os documentos da companhia, não projeta resultados, não compara a Patrimar com outras empresas e não é recomendação de investimento.</p></article>
+      </div>
+
+      <h3 class="subtitulo">Conciliação entre release e planilha, em R$ milhões</h3>
+      <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de conciliação, role para os lados em telas pequenas">
+        <table id="tabela-conciliacao">
+          <caption class="so-leitor">Conciliação da receita líquida entre o release e a planilha</caption>
+          <thead><tr><th scope="col">Período</th><th scope="col" class="num">Release</th><th scope="col" class="num">Planilha</th><th scope="col" class="num">Diferença</th><th scope="col">Situação</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <h3 class="subtitulo">Margem bruta ajustada, tirada dos releases</h3>
+      <p class="nota">Períodos de tamanhos diferentes (trimestre, semestre, nove meses e ano). Não comparar diretamente com a margem contábil da planilha. Em 2T26 e 6M26 a margem é a ajustada sem a operação do FII Belvedere.</p>
+      <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de margem ajustada, role para os lados em telas pequenas">
+        <table id="tabela-margem">
+          <caption class="so-leitor">Margem bruta ajustada por período, com documento e página</caption>
+          <thead><tr><th scope="col">Período</th><th scope="col" class="num">Margem</th><th scope="col">Descrição</th><th scope="col">Fonte</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap grade-rodape">
+    <div>
+      <h2 class="rodape-titulo">Sobre esta página</h2>
+      <p>Estudo independente de redesign do site de Relações com Investidores do Grupo Patrimar, feito pela Gustavo Santos Analytics com dados públicos. Não substitui os documentos oficiais da companhia, não é um canal oficial e não é recomendação de investimento. Valores transcritos da planilha oficial e dos releases, sem auditoria independente da companhia.</p>
+      <p><a href="https://ri.patrimar.com.br/" target="_blank" rel="noopener noreferrer">Site oficial de RI do Grupo Patrimar<span aria-hidden="true"> ↗</span><span class="so-leitor"> (abre em nova aba)</span></a></p>
+    </div>
+    <div>
+      <h2 class="rodape-titulo">Gustavo Santos Analytics</h2>
+      <p>Cultura Data-Driven<br>Belo Horizonte, MG</p>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="js/interface.js"></script>
+</body>
+</html>
