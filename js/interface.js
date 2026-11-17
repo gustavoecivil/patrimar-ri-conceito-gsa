@@ -6,6 +6,8 @@ import { fmtValor, fmtPct, nf, ND, rotuloPeriodo, ROTULO_TIPO_INDICADOR, ROTULO_
 import { desenharSkyline, desenharSparkline, desenharExplorador, desenharBarras } from "./graficos.js";
 import * as P from "./painel.js";
 import { criarAssistente, PERGUNTAS_SUGERIDAS } from "./assistente.js";
+import { iniciarInstitucional } from "./institucional_ui.js";
+import { iniciarComparadores } from "./comparadores_ui.js";
 
 const $ = (s, r = document) => r.querySelector(s);
 
@@ -948,16 +950,17 @@ function iniciarAssistente({ ds, an }) {
 // ------------------------------------------------------------------ navegação
 
 function iniciarNavegacao() {
-  const links = [...document.querySelectorAll("nav a[href^='#']")];
-  const secoes = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+  // Cada link do menu cobre um grupo de seções (data-secoes). O link do grupo fica ativo enquanto qualquer seção dele estiver na faixa de leitura.
+  const links = [...document.querySelectorAll("header nav a[href^='#']")];
+  const grupoDe = new Map();
+  for (const a of links) for (const id of (a.dataset.secoes || a.getAttribute("href").slice(1)).split(" ")) grupoDe.set(id, a);
+  const secoes = [...grupoDe.keys()].map((id) => document.getElementById(id)).filter(Boolean);
   if (!("IntersectionObserver" in window)) return;
   const obs = new IntersectionObserver((entradas) => {
     for (const e of entradas) {
       if (!e.isIntersecting) continue;
-      links.forEach((a) => {
-        if (a.getAttribute("href") === `#${e.target.id}`) a.setAttribute("aria-current", "true");
-        else a.removeAttribute("aria-current");
-      });
+      const ativo = grupoDe.get(e.target.id);
+      links.forEach((a) => (a === ativo ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current")));
     }
   }, { rootMargin: "-35% 0px -60% 0px" });
   secoes.forEach((s) => obs.observe(s));
@@ -980,6 +983,8 @@ carregar().then((ctx) => {
   iniciarAssistente(ctx);
   iniciarPainel(ctx);
   iniciarDocumentos(ctx);
+  iniciarInstitucional(ctx);
+  iniciarComparadores(ctx);
   iniciarMetodologia(ctx);
   document.body.classList.add("pronto");
 }).catch((erro) => {

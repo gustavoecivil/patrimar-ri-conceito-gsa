@@ -31,16 +31,12 @@
     </a>
     <nav aria-label="Seções da página">
       <ul>
-        <li><a href="#provas">Provas</a></li>
-        <li><a href="#cobertura">Simulador</a></li>
-        <li><a href="#indice">Índice</a></li>
-        <li><a href="#atencao">Atenção</a></li>
-        <li><a href="#panorama">Panorama</a></li>
-        <li><a href="#indicadores">Indicadores</a></li>
-        <li><a href="#explorador">Explorador</a></li>
-        <li><a href="#assistente">Assistente</a></li>
-        <li><a href="#documentos">Central</a></li>
-        <li><a href="#metodologia">Metodologia</a></li>
+        <li><a href="#companhia" data-secoes="companhia historia teses sustentabilidade">A Companhia</a></li>
+        <li><a href="#provas" data-secoes="provas cobertura indice atencao panorama indicadores explorador comparadores assistente">Resultados</a></li>
+        <li><a href="#documentos" data-secoes="documentos">Central</a></li>
+        <li><a href="#governanca" data-secoes="governanca">Governança</a></li>
+        <li><a href="#servicos" data-secoes="servicos">Serviços RI</a></li>
+        <li><a href="#metodologia" data-secoes="metodologia">Metodologia</a></li>
       </ul>
     </nav>
     <button id="tema" class="botao-tema" type="button" aria-pressed="false">
@@ -71,6 +67,70 @@
     </div>
   </section>
 
+  <section id="companhia" aria-labelledby="titulo-companhia">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">A Companhia</p>
+        <h2 id="titulo-companhia">Mais de seis décadas de obra, duas marcas e um mercado de origem</h2>
+        <p id="cia-intro">Carregando o perfil…</p>
+      </div>
+      <nav class="subnav" aria-label="Neste grupo: A Companhia">
+        <a href="#companhia">Perfil</a><a href="#historia">História</a><a href="#teses">Por que investir</a><a href="#sustentabilidade">Sustentabilidade e prêmios</a>
+      </nav>
+      <div class="grade-fatos" id="cia-fatos"></div>
+      <h3 class="subtitulo">Duas marcas, dois mercados</h3>
+      <div class="grade-marcas" id="cia-marcas"></div>
+      <div id="cia-filme"></div>
+    </div>
+  </section>
+
+  <section id="historia" aria-labelledby="titulo-historia">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Nossa história</p>
+        <h2 id="titulo-historia">De obras rodoferroviárias a incorporadora de alta renda</h2>
+        <p>Os marcos da página oficial, na ordem do tempo. Escolha uma fase para ler só aquele trecho. Os textos são os da companhia; a divisão em fases é da GSA.</p>
+      </div>
+      <div class="chips-filtro" id="hist-eras" role="group" aria-label="Fase da história"></div>
+      <ol class="linha-tempo" id="hist-linha"></ol>
+      <h3 class="subtitulo">Captações de dívida citadas na história</h3>
+      <div id="hist-captacoes"></div>
+    </div>
+  </section>
+
+  <section id="teses" aria-labelledby="titulo-teses">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Por que investir na Patrimar</p>
+        <h2 id="titulo-teses">As teses da companhia, cada uma com os números ao lado</h2>
+        <p class="tese-guarda" id="teses-guarda"></p>
+        <p id="teses-intro">Carregando…</p>
+      </div>
+      <div class="grade-teses" id="teses-corpo"></div>
+      <h3 class="subtitulo" id="teses-bloco-titulo">Em mais detalhe</h3>
+      <ul class="lista-detalhes" id="teses-detalhes"></ul>
+    </div>
+  </section>
+
+  <section id="sustentabilidade" aria-labelledby="titulo-sustentabilidade">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Sustentabilidade e reconhecimento</p>
+        <h2 id="titulo-sustentabilidade">O que a companhia entrega nos empreendimentos e o que já foi premiado</h2>
+        <p id="sus-intro">Carregando…</p>
+      </div>
+      <h3 class="subtitulo">Prêmios e certificações</h3>
+      <div class="grade-premios" id="sus-premios"></div>
+      <h3 class="subtitulo">Melhorias implantadas nos empreendimentos</h3>
+      <div class="chips-filtro" id="sus-grupos" role="group" aria-label="Grupo de melhorias"></div>
+      <ul class="grade-melhorias" id="sus-melhorias"></ul>
+      <h3 class="subtitulo">Responsabilidade social e gestão de resíduos</h3>
+      <div class="grade-social" id="sus-social"></div>
+      <h3 class="subtitulo">Relatórios de sustentabilidade</h3>
+      <ul class="lista-links" id="sus-relatorios"></ul>
+    </div>
+  </section>
+
   <section id="provas" aria-labelledby="titulo-provas">
     <div class="wrap">
       <div class="cabeca">
@@ -78,6 +138,9 @@
         <h2 id="titulo-provas">Terreno, venda e balanço, com a conta à vista</h2>
         <p>A tese: a Patrimar é sólida porque tem terreno, venda e balanço, e mostra os três sem esconder nada. Cada prova traz o número, uma comparação justa e a fonte. Recorde só aparece quando o código confirma na base.</p>
       </div>
+      <nav class="subnav" aria-label="Neste grupo: Resultados">
+        <a href="#provas">Provas</a><a href="#cobertura">Simulador</a><a href="#indice">Índice</a><a href="#atencao">Atenção</a><a href="#panorama">Panorama</a><a href="#indicadores">Indicadores</a><a href="#explorador">Explorador</a><a href="#comparadores">Comparadores</a><a href="#assistente">Assistente</a>
+      </nav>
       <div class="grade-provas" id="provas-blocos"></div>
     </div>
   </section>
@@ -237,6 +300,58 @@
     </div>
   </section>
 
+  <section id="comparadores" aria-labelledby="titulo-comparadores">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Comparadores</p>
+        <h2 id="titulo-comparadores">A Patrimar ao lado de juros, inflação, custo da obra e crédito imobiliário</h2>
+        <p>Referências públicas do Banco Central, da FGV e do IBGE, alinhadas aos trimestres da Patrimar. Servem para dar contexto: se as vendas caíram quando os juros subiram, se a receita acompanhou o custo da obra. Comparação não é causa, e o site não compara a Patrimar com outras empresas.</p>
+      </div>
+      <h3 class="subtitulo">Ano a ano, a Patrimar contra as referências</h3>
+      <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Quadro de comparação por ano, role para os lados em telas pequenas">
+        <table id="cmp-quadro" class="tabela-cadeiras">
+          <caption class="so-leitor">Variação da Patrimar e das referências públicas, por ano</caption>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="nota">Valores anuais publicados da Patrimar (planilha oficial). Variação real é a variação da Patrimar descontada pelo índice: (1 + variação) ÷ (1 + índice) - 1. O ano em andamento compara o mesmo período do ano anterior; o PIB da construção sai com defasagem e aparece como n/d quando falta trimestre.</p>
+
+      <h3 class="subtitulo">Juros e vendas</h3>
+      <div class="painel-duas">
+        <figure class="figura-ritmo"><figcaption>Meta Selic no fim do trimestre</figcaption><div id="cmp-a1"></div></figure>
+        <figure class="figura-ritmo"><figcaption>Vendas de 12 meses, variação contra o ano anterior</figcaption><div id="cmp-a2"></div></figure>
+      </div>
+      <p class="nota" id="cmp-a-texto"></p>
+      <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Correlação por atraso, role para os lados em telas pequenas">
+        <table id="cmp-lags">
+          <caption class="so-leitor">Correlação entre a Selic e as vendas, por atraso</caption>
+          <thead><tr><th scope="col">Vendas medidas</th><th scope="col" class="num">Correlação</th><th scope="col" class="num">Trimestres comparados</th><th scope="col">Leitura</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <h3 class="subtitulo">Custo da obra e margem</h3>
+      <div class="painel-duas">
+        <figure class="figura-ritmo"><figcaption>INCC-M acumulado em 12 meses</figcaption><div id="cmp-b1"></div></figure>
+        <figure class="figura-ritmo"><figcaption>Margem bruta operacional contábil</figcaption><div id="cmp-b2"></div></figure>
+      </div>
+      <p class="nota" id="cmp-b-texto"></p>
+
+      <h3 class="subtitulo">Crédito imobiliário e vendas</h3>
+      <div class="painel-duas">
+        <figure class="figura-ritmo"><figcaption>Concessões de crédito imobiliário, variação anual</figcaption><div id="cmp-c1"></div></figure>
+        <figure class="figura-ritmo"><figcaption>Vendas líquidas da Patrimar, variação anual</figcaption><div id="cmp-c2"></div></figure>
+      </div>
+      <p class="nota" id="cmp-c-texto"></p>
+
+      <h3 class="subtitulo">De onde vêm as referências</h3>
+      <ul class="lista-links" id="cmp-fontes"></ul>
+      <p class="nota" id="cmp-baixado"></p>
+      <p class="nota">Ficam de fora, por enquanto, os indicadores setoriais da ABRAINC e da CBIC, que não têm API aberta e exigem leitura de relatórios. A defasagem de divulgação das séries (por exemplo, o PIB trimestral) é respeitada: nada é preenchido ou estimado.</p>
+    </div>
+  </section>
+
   <section id="assistente" aria-labelledby="titulo-assistente">
     <div class="wrap">
       <div class="cabeca">
@@ -316,6 +431,81 @@
         </div>
         <ul class="docs" id="lista-documentos"></ul>
       </details>
+    </div>
+  </section>
+
+  <section id="governanca" aria-labelledby="titulo-governanca">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Governança corporativa</p>
+        <h2 id="titulo-governanca">Quem controla, quem decide e onde estão os documentos</h2>
+        <p id="gov-intro">Carregando…</p>
+      </div>
+      <nav class="subnav" aria-label="Neste grupo: Governança">
+        <a href="#gov-acionaria">Composição acionária</a><a href="#gov-pessoas">Administração</a><a href="#gov-cadeiras">Quem está onde</a><a href="#gov-docs">Estatuto, políticas e documentos</a>
+      </nav>
+      <div class="grade-kpi" id="gov-resumo"></div>
+
+      <h3 class="subtitulo" id="gov-acionaria">Composição acionária</h3>
+      <div id="gov-composicao"></div>
+
+      <h3 class="subtitulo" id="gov-pessoas">Diretoria</h3>
+      <div id="gov-anos"></div>
+      <div class="grade-pessoas" id="gov-diretoria"></div>
+
+      <h3 class="subtitulo">Conselho de Administração</h3>
+      <div class="grade-pessoas" id="gov-conselho"></div>
+
+      <h3 class="subtitulo">Comitês</h3>
+      <div class="grade-comites" id="gov-comites"></div>
+
+      <h3 class="subtitulo" id="gov-cadeiras">Quem está onde</h3>
+      <p class="nota" id="gov-cadeiras-nota"></p>
+      <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela de cadeiras por pessoa e órgão, role para os lados em telas pequenas">
+        <table id="gov-tabela-cadeiras" class="tabela-cadeiras">
+          <caption class="so-leitor">Cada pessoa e os órgãos em que tem assento</caption>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="nota" id="gov-divergencias"></p>
+
+      <h3 class="subtitulo" id="gov-docs">Estatuto, políticas e documentos</h3>
+      <div id="gov-documentos"></div>
+    </div>
+  </section>
+
+  <section id="servicos" aria-labelledby="titulo-servicos">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="eyebrow">Serviços RI</p>
+        <h2 id="titulo-servicos">Calendário, ritmo de divulgação, contato e informe de rendimentos</h2>
+        <p>Tudo o que o investidor procura em Serviços RI, num só lugar. O calendário vira um retrato do ritmo: em quantos dias depois do fim do trimestre a companhia publica a prévia e o resultado.</p>
+      </div>
+      <nav class="subnav" aria-label="Neste grupo: Serviços RI">
+        <a href="#srv-calendario-h">Calendário de eventos</a><a href="#srv-ritmo-h">Ritmo de divulgação</a><a href="#srv-contato-h">Fale com RI</a><a href="#srv-informe-h">Informe de rendimentos</a>
+      </nav>
+      <div id="srv-destaque"></div>
+
+      <h3 class="subtitulo" id="srv-ritmo-h">Ritmo de divulgação</h3>
+      <p class="nota" id="srv-ritmo-texto"></p>
+      <div class="painel-duas">
+        <figure class="figura-ritmo"><figcaption>Dias entre o fim do trimestre e o resultado</figcaption><div id="srv-ritmo-resultado"></div></figure>
+        <figure class="figura-ritmo"><figcaption>Dias entre o fim do trimestre e a prévia operacional</figcaption><div id="srv-ritmo-previa"></div></figure>
+      </div>
+
+      <h3 class="subtitulo" id="srv-calendario-h">Calendário de eventos</h3>
+      <div class="controles">
+        <div class="chips-filtro" id="srv-anos" role="group" aria-label="Ano do calendário"></div>
+        <div class="campo"><label for="srv-tipo">Tipo de evento</label><select id="srv-tipo"></select></div>
+      </div>
+      <ul class="lista-eventos" id="srv-eventos"></ul>
+
+      <h3 class="subtitulo" id="srv-contato-h">Fale com RI</h3>
+      <div class="grade-contato" id="srv-contato"></div>
+
+      <h3 class="subtitulo" id="srv-informe-h">Informe de rendimentos</h3>
+      <div id="srv-informe"></div>
     </div>
   </section>
 

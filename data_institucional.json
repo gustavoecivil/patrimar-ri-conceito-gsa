@@ -1,0 +1,1835 @@
+{
+ "meta": {
+  "fonte": "Páginas do site oficial de RI arquivadas pela Atlas (somente leitura)",
+  "site": "https://ri.patrimar.com.br/",
+  "filme_url": "https://www.youtube.com/watch?v=FwFDzoGJ3gI",
+  "canal_url": "https://www.youtube.com/user/construtorapatrimar",
+  "aviso": "Proposta conceitual da GSA. Conteúdo institucional do site oficial de RI do Grupo Patrimar, reorganizado. Não é o site oficial."
+ },
+ "companhia": {
+  "perfil": {
+   "pagina": "Perfil Corporativo",
+   "arquivo": "ri.patrimar.com.br_603d67c0dd49bccc.html",
+   "paragrafos": [
+    "O Grupo Patrimar está posicionado entre as maiores construtoras do país. Desde 2019, ocupa o 1º e 30º lugares nos rankings Regional Sudeste e Nacional, respectivamente, segundo a revista O Empreiteiro¹, tendo sido eleita no mês ano, a “Empresa Excelência de Minas Gerais de 2019” na categoria Construção e Engenharia pelo “XXI Prêmio Minas – Desempenho Empresarial Melhores e Maiores”, promovido pela publicação de economia, finanças e negócios Mercado Comum. É líder de mercado no segmento residencial de alta renda em número de unidades vendidas em Belo Horizonte e adjacências. Com um modelo de negócios verticalizado, trabalha na incorporação e construção de empreendimentos imobiliários, além de comercialização e venda de unidades imobiliárias autônomas.",
+    "A Companhia atua de forma diversificada nos segmentos comercial e residencial (atividade principal), com presença nos segmentos econômicos, média e alta rendas (produtos de luxo e alto luxo). Seus mercados-alvo de atuação estão localizados no Sudeste do país, mais especificamente nas regiões metropolitanas das cidades de Belo Horizonte, Rio de Janeiro e São Paulo, além do interior do estado de São Paulo.",
+    "Com posicionamento diferenciado ao optar por uma atuação nos diversos segmentos do mercado imobiliário, a Companhia enseja em uma posição mais diversificada quando em comparação aos seus concorrentes. Visando expandir sua atuação em cada um desses segmentos, mantendo a qualidade de seus empreendimentos, além de fazer frente às demandas mercadológicas do setor, a Companhia atua por meio de duas marcas com equipes de execução segregadas e especializadas nas peculiaridades de cada mercado de atuação: Patrimar (alta renda, produtos de luxo e alto luxo) e Novolar (média e baixa rendas)."
+   ],
+   "abertura": [
+    "O Grupo Patrimar está posicionado entre as maiores construtoras do país.",
+    "É líder de mercado no segmento residencial de alta renda em número de unidades vendidas em Belo Horizonte e adjacências.",
+    "Com um modelo de negócios verticalizado, trabalha na incorporação e construção de empreendimentos imobiliários, além de comercialização e venda de unidades imobiliárias autônomas."
+   ],
+   "abertura_omitida": "A frase sobre rankings e prêmio de 2019 foi omitida da abertura porque o texto oficial traz 'no mês ano' no lugar da data; os rankings aparecem nos destaques.",
+   "marcas": [
+    {
+     "nome": "Patrimar",
+     "segmento": "alta renda, produtos de luxo e alto luxo",
+     "texto": "A Patrimar tem foco em empreendimentos residenciais no segmento de alta renda com produtos de luxo e alto luxo (com preços por metro quadrado variando entre R$11 mil e R$18 mil), voltados à população de alta renda (assim consideradas as famílias com renda média mensal acima de 20 salários mínimos, de acordo com a classificação IBGE), além de empreendimentos comerciais (de maneira oportunística). Para estes segmentos, a Companhia oferece produtos imobiliários caracterizados pela máxima diferenciação e exclusividade em projetos inovadores e de vanguarda, com arquitetura diferenciada, tais como o Edifício Medplex, vencedor do International Property Awards na categoria Arquitetura de Escritórios 2014 e do XI Grande Prêmio de Arquitetura Corporativa na categoria Predial Corporativa 2014, atuando principalmente nos mercados de Belo Horizonte e Nova Lima em Minas Gerais. Neste segmento, a Patrimar utiliza as seguintes tecnologias e métodos construtivos:",
+     "metodos": [
+      "Alvenaria estrutural;",
+      "Estrutura convencional de concreto armado com paredes de vedação em alvenaria paginada (não há cortes nas paredes em nenhuma fase produtiva);",
+      "Estrutura protendida com paredes de vedação em dry-wall;",
+      "Fachadas de granito aeradas;",
+      "Fachadas unitizadas (os módulos chegam prontos no canteiro e sua execução acompanha a evolução da estrutura agilizando o ciclo construtivo do empreendimento."
+     ],
+     "estrategia_titulo": "Estratégia de diferenciação;",
+     "estrategia": [
+      "Residencial nos segmentos de alto luxo e alta renda;",
+      "Região metropolitana de Belo Horizonte (foco primário) e Rio de Janeiro (foco oportunisticamente);",
+      "Busca pela exclusividade e arrojo em produtos inovadores;",
+      "Personalização (segmento residencial de alto luxo);"
+     ],
+     "posicionamento": "Posicionamento de mercado: Liderança dos produtos pela diferenciação, com relacionamento com cliente que permite obter elevado grau de conhecimento de seu perfil e demandas específicas; sem, contudo, impactar na excelência operacional."
+    },
+    {
+     "nome": "Novolar",
+     "segmento": "média e baixa rendas",
+     "texto": "A Novolar atua nos segmentos residenciais de média renda e baixa renda (assim consideradas, respectivamente, as famílias com renda média mensal entre 10 e 20 salários mínimos e de 2 a 10 salários mínimos, de acordo com a classificação IBGE). Busca oferecer ao público de média renda produtos voltados à melhor relação custo-benefício possível, com a qualidade pela qual a Companhia já é reconhecida. Com relação aos produtos do segmento econômico, busca promover o acesso à moradia digna e de qualidade a seus clientes. Para o segmento residencial de média e baixa rendas (econômico/PCVA), a Novolar utiliza seguintes métodos construtivos que permitam maior escalabilidade, racionalização e industrialização no canteiro de obras:",
+     "metodos": [
+      "Paredes de concreto moldadas in loco, utilizando-se formas de alumínio convencionais e formas trepantes;",
+      "Alvenaria estrutural com lajes pré-fabricadas içadas;"
+     ],
+     "estrategia_titulo": "Estratégia com maior enfoque em custos e produtividade;",
+     "estrategia": [
+      "Segmento residencial de média renda (com foco primariamente em MG e SP) e baixa renda (com foco primariamente em RJ e SP);",
+      "Regiões metropolitanas das cidades de Belo Horizonte, Rio de Janeiro, São Paulo e interior do estado de São Paulo;",
+      "Busca pela melhor relação custo/benefício e qualidade superior no segmento de média renda;",
+      "Acessibilidade com qualidade no segmento de baixa renda;"
+     ],
+     "posicionamento": "Posicionamento de mercado: Maximização da excelência operacional, com níveis adequados no relacionamento com clientes e liderança em produtos."
+    }
+   ],
+   "meta": "Em todos os segmentos de atuação, a Companhia possui como meta oferecer produtos que excedam as expectativas de seus clientes, promovendo assim uma experiência única na aquisição de um imóvel."
+  },
+  "historia": {
+   "pagina": "Nossa História",
+   "arquivo": "ri.patrimar.com.br_78bfb3ae4ef864fe.html",
+   "linha": [
+    {
+     "ano": 1963,
+     "tag": "Origem",
+     "marcos": [
+      "A Patrimar Engenharia S.A. tem a sua origem a partir da M. Martins Engenharia e Comércio Ltda., empresa familiar cujas atividades em engenharia civil iniciaram-se em 1963, notadamente nas áreas rodoferroviária e de construção de estruturas de concreto armado."
+     ],
+     "indices": [
+      0
+     ]
+    },
+    {
+     "ano": 1970,
+     "tag": "Escala",
+     "marcos": [
+      "Na década de 1970, a Companhia consolida sua posição no mercado nacional, aumentando seus investimentos e realizando obras de maior porte."
+     ],
+     "indices": [
+      1
+     ]
+    },
+    {
+     "ano": 1980,
+     "tag": "Incorporação",
+     "marcos": [
+      "Em 1980, foi fundada a M. Martins Empreendimentos Imobiliários Ltda., voltada ao setor imobiliário nos ramos predial, comercial e residencial. Essa foi a primeira denominação da Patrimar enquanto atuante no setor de construção civil."
+     ],
+     "indices": [
+      2
+     ]
+    },
+    {
+     "ano": 1986,
+     "tag": "Sociedade",
+     "marcos": [
+      "Em 1986, Alexandre Veiga, atual CEO e acionista controlador da Companhia, ingressa na Companhia como sócio."
+     ],
+     "indices": [
+      3
+     ]
+    },
+    {
+     "ano": 1995,
+     "tag": "Marca",
+     "marcos": [
+      "Em 1995, buscando a revitalização de marca, a Companhia torna-se independente e passa a se chamar Patrimar Engenharia Ltda., posicionando-se nos segmentos comercial e residencial de média e alta rendas."
+     ],
+     "indices": [
+      4
+     ]
+    },
+    {
+     "ano": 2000,
+     "tag": "Novolar",
+     "marcos": [
+      "Em 2000, tendo em vista uma maior demanda por unidades habitacionais de baixa renda, em decorrência da nova política e programa habitacional no país, a Companhia decide fundar a Construtora Novolar Ltda. (“Novolar”), focada nos segmentos residenciais de média renda e econômico. A partir de então, um novo posicionamento de marcas ocorre no grupo: a Patrimar passa a focar exclusivamente nos desenvolvimentos imobiliários comerciais e residenciais de alta renda e a Novolar passa a focar suas atividades no segmento residencial de média e baixa rendas."
+     ],
+     "indices": [
+      5
+     ]
+    },
+    {
+     "ano": 2002,
+     "tag": "Financiamento",
+     "marcos": [
+      "A partir de 2002, a Companhia inicia a sua parceria com a Caixa Econômica Federal (CEF), principal instituição financeira para o financiamento habitacional do país, firmando diversos contratos voltados ao financiamento de obras residenciais destinadas à população de baixa renda. Este longo período de relacionamento resultou em uma elevada expertise nos trâmites de aprovação de projetos habitacionais, nas esferas jurídica, engenheira e creditícia junto à CEF."
+     ],
+     "indices": [
+      6
+     ]
+    },
+    {
+     "ano": 2003,
+     "tag": "Expansão",
+     "marcos": [
+      "A partir de 2003, inicia-se um processo de consolidação da Companhia em empreendimentos no segmento residencial econômico, através da expansão geográfica das atividades da Novolar no Estado do Rio de Janeiro."
+     ],
+     "indices": [
+      7
+     ]
+    },
+    {
+     "ano": 2009,
+     "tag": "Expansão",
+     "marcos": [
+      "Em continuidade ao processo de expansão geográfica do grupo, em 2009 a Patrimar lançou o Residencial Acqua Galeria, no segmento residencial de alta renda, situado no município de Campinas/SP. Este empreendimento reflete o conceito de condomínio resort e deu início ao fortalecimento da marca Patrimar fora da região metropolitana de Belo Horizonte/MG."
+     ],
+     "indices": [
+      8
+     ]
+    },
+    {
+     "ano": 2013,
+     "tag": "Prêmios",
+     "marcos": [
+      "Em 2013, um importante projeto da Companhia, o Medplex (J.M. IRFFI BUSINESS), conquistou o prêmio londrino, “International Property Awards”, na categoria “Arquitetura de Escritórios” (“Category Office Architecture”). No ano seguinte, o mesmo empreendimento ganhou o “XI Grande Prêmio de Arquitetura Corporativa”, na Categoria “Predial Comercial”."
+     ],
+     "indices": [
+      9
+     ]
+    },
+    {
+     "ano": 2014,
+     "tag": "Prêmios",
+     "marcos": [
+      "Em 2014, a Companhia foi eleita como a 9ª maior construtora em receita bruta da região Sudeste, excluindo São Paulo, pelo ranking da Revista “O Empreiteiro”."
+     ],
+     "indices": [
+      10
+     ]
+    },
+    {
+     "ano": 2015,
+     "tag": "Gestão",
+     "marcos": [
+      "Em 2015, a família Martins Veiga conclui a aquisição da integralidade do capital social da Companhia, dando início a um longo ciclo de investimentos na profissionalização da gestão da Companhia.",
+      "Ainda em 2015, as demonstrações financeiras da Companhia passaram a ser auditadas por empresas “Big Four”, qual seja, a PricewaterhouseCoopers Auditores Independentes."
+     ],
+     "indices": [
+      11,
+      12
+     ]
+    },
+    {
+     "ano": 2016,
+     "tag": "Prêmios",
+     "marcos": [
+      "Em 2016, a Companhia alcançou o 2º lugar como maior construtora em receita bruta da região Sudeste, pelo Ranking da Revista “O Empreiteiro”, excluindo São Paulo e as 25 maiores construtoras, que formam um Ranking Nacional à parte."
+     ],
+     "indices": [
+      13
+     ]
+    },
+    {
+     "ano": 2017,
+     "tag": "Gestão",
+     "marcos": [
+      "Em 2017, inicia-se o Projeto Construir, uma reformulação completa da gestão empresarial baseada na tríade “pessoas, processos e tecnologias”, capitaneada pela implementação do novo Sistema de Gestão Integrada, o ERP SAP Hana. O projeto significou uma relevante inovação em termos de infraestrutura tecnológica para a Companhia, pois a capacita para enfrentar os desafios de transformação digital inerentes a modelos de negócios disruptivos e tendências em inteligência artificial, análises preditivas e big data, dentre outros."
+     ],
+     "indices": [
+      14
+     ]
+    },
+    {
+     "ano": 2018,
+     "tag": "Gestão",
+     "marcos": [
+      "Em 2018, a família Martins Veiga se certifica no “PDA - Parceria para o Desenvolvimento do Acionista e da Família Empresária” e todo o corpo diretivo estratégico e gerencial se certifica no “PDD - Programa de Desenvolvimento de Dirigentes”, ambos programas de educação executiva continuada da renomada escola de negócios da Fundação Dom Cabral."
+     ],
+     "indices": [
+      15
+     ]
+    },
+    {
+     "ano": 2019,
+     "tag": "Estrutura",
+     "marcos": [
+      "Em 2019, um novo Planejamento Estratégico e o “Programa de Gestão de Resultados pelo Gerenciamento da Rotina” são implementados na Companhia, frutos do constante investimento em pessoas e na profissionalização da gestão estratégica. No mesmo ano, ocorre a reestruturação societária da Companhia, por meio da qual a Novolar passa a ser uma subsidiária integral da Patrimar."
+     ],
+     "indices": [
+      16
+     ]
+    },
+    {
+     "ano": 2020,
+     "tag": "Capital",
+     "marcos": [
+      "A Companhia realiza empreendimentos imobiliários de forma verticalizada e diversificada, por meio da incorporação, construção e comercialização de empreendimentos imobiliários nos segmentos comercial e residencial de alta, média e baixa rendas, tendo entregue, desde o início de sua história, mais de 37 mil unidades imobiliárias.",
+      "Atualmente, a Companhia está presente nos Estados de Minas Gerais, Rio de Janeiro e São Paulo.",
+      "A Companhia inicia um processo de estruturação corporativa e um novo ciclo de investimentos, com a emissão da 1ª e 2ª Debêntures – no valor total de R$ 130 MM."
+     ],
+     "indices": [
+      17,
+      18,
+      19
+     ]
+    },
+    {
+     "ano": 2021,
+     "tag": "Novos negócios",
+     "marcos": [
+      "A Companhia avança na operacionalização do novo negócio multifamily, com a criação das empresas Viv in e Livizi. formada por meio de joint venture."
+     ],
+     "indices": [
+      20
+     ]
+    },
+    {
+     "ano": 2022,
+     "tag": "Capital",
+     "marcos": [
+      "Em 2022, também ocorreu a 3ª Emissão de Debênture – R$ 150 MM."
+     ],
+     "indices": [
+      21
+     ]
+    },
+    {
+     "ano": 2023,
+     "tag": "Sustentabilidade",
+     "marcos": [
+      "Em 2023, a Companhia recebe o selo Great Place to Work (GPTW), que a certifica como excelente local de trabalho.",
+      "Os empreendimentos Oceana Golf, Atlântico Golf e Étoile são certificados com o selo EDGE – destinado a edificações que atendem a padrões rigorosos de sustentabilidade construtiva, como redução do uso de água, energia e energia incorporada nos materiais.",
+      "Ocorreu também a 4ª Emissão de Debênture – R$ 200 MM, e a 1ª Emissão de Nota Comercial – R$ 80 MM.",
+      "A Companhia realiza sua 5ª Emissão de Debênture – R$ 200 MM – e a liquidação da 1ª Emissão de Debênture."
+     ],
+     "indices": [
+      22,
+      23,
+      24,
+      25
+     ]
+    },
+    {
+     "ano": 2024,
+     "tag": "Sustentabilidade",
+     "marcos": [
+      "Em 2024, os empreendimentos Le Sommet, Green View e Grand Quartier recebem a certificação EDGE, avançando na jornada de sustentabilidade da Companhia.",
+      "Outro selo alcançado, foi o Great Place to Work (GPTW), o qual a Companhia se destacou no ranking de Melhores Empresas para se trabalhar em Minas Gerais."
+     ],
+     "indices": [
+      26,
+      27
+     ]
+    }
+   ],
+   "edge": [
+    {
+     "nome": "Oceana Golf",
+     "ano": 2023
+    },
+    {
+     "nome": "Atlântico Golf",
+     "ano": 2023
+    },
+    {
+     "nome": "Étoile",
+     "ano": 2023
+    },
+    {
+     "nome": "Le Sommet",
+     "ano": 2024
+    },
+    {
+     "nome": "Green View",
+     "ano": 2024
+    },
+    {
+     "nome": "Grand Quartier",
+     "ano": 2024
+    }
+   ],
+   "aviso_abas": "Parágrafos sem ano no texto foram colocados na aba do ano que os antecede na ordem da página oficial."
+  },
+  "teses": {
+   "pagina": "Porque investir na Patrimar?",
+   "arquivo": "ri.patrimar.com.br_068d2d64a7ea8bd6.html",
+   "guarda_chuva": "Preparado para Consolidar Liderança no 2º Maior Mercado do Brasil",
+   "pilares": [
+    "Consolidar Pioneirismo e Liderança em um Mercado Relevante(1) Ainda Pouco Explorado por Grandes Companhias Listadas",
+    "Alto Valor de Escassez, Devido Tese de Investimento Única, com Foco Regional Fora do Eixo Rio-São Paulo",
+    "Atual Landbank Estrategicamente Adquirido para Sustentar Crescimento e Rentabilidade",
+    "Estrutura Corporativa Sólida e Pronta para Sustentar Novos Patamares de Crescimento"
+   ],
+   "bloco_titulo": "Patrimar: Líder no Mercado de Belo Horizonte com Sólida Presença em RJ e SP",
+   "bloco_pontos": [
+    "Foco Regional e Posicionamento de Liderança no Mercado de Alta Renda de Belo Horizonte, com Diversificação de Operações em Média/Baixa Renda em Rio de Janeiro e São Paulo",
+    "Comprovado Histórico de Lançamentos de Sucesso, Devido Excelência Operacional em Técnicas Construtivas e Inteligência Única de Mercado",
+    "Domínio de Técnicas Construtivas, Permitindo Flexibilidade e Expertise para Desenvolver Tanto Projetos Sofisticados, Quanto Modularizados",
+    "Sólidos e Consistentes Resultados Financeiros e Operacionais",
+    "Acionista de Referência com Histórico Comprovado no Setor Imobiliário",
+    "Solução One-Stop-Shop para Desenvolvimentos Imobiliários com Flexibilidade para Operar em Diferentes Segmentos"
+   ],
+   "indice_resultados": 3
+  },
+  "premios": {
+   "pagina": "Prêmios e Certificações",
+   "arquivo": "ri.patrimar.com.br_9879f95e7a8cffca.html",
+   "introducao": "A Patrimar é uma incorporadora e construtora com mais de 60 anos de atuação na construção civil, ao longo da sua história a companhia obteve destaque no segmento em que atua. Sendo reconhecida nacionalmente com vários prêmios, como:",
+   "itens": [
+    {
+     "veiculo": "O Empreiteiro",
+     "titulo": "10ª MAIOR EMPRESA DE ENGENHARIA DO BRASIL",
+     "ano": "2022",
+     "texto": "Em 2022, a Patrimar foi eleita em 10º lugar no Ranking Engenharia Brasileira, pela Revista O Empreiteiro."
+    },
+    {
+     "veiculo": "XXV Prêmio Minas Desempenho Empresarial - Melhores e Maiores Empresas",
+     "titulo": "Setor Construção e Engenharia | Categoria Tradição e Perpetuidade",
+     "ano": "2023",
+     "texto": "Em 2023, a Patrimar recebeu duas premiações no XXV Prêmio Minas Desempenho Empresarial, realizado pela revista Mercado Comum, como Melhores e Maiores Empresas no setor de Construção e Engenharia e na categoria Tradição e Perpetuidade."
+    },
+    {
+     "veiculo": "International Property Awards (Londres, Inglaterra)",
+     "titulo": "Best Office Architecture Brazil | Best Office Architecture Central & South America | Categoria: Mixed Use",
+     "ano": "2014 e 2020",
+     "texto": "A Patrimar foi premiada com os empreendimentos Medplex e Home Residence, desenvolvidos em parceria com o escritório de arquitetura Farkasvölgy. Em 2014, o projeto empresarial Medplex recebeu como Melhor Arquitetura de Escritórios do Brasil e da América Central e do Sul. Já em 2020, o projeto Home Residence foi premiado na categoria de Uso Misto."
+    },
+    {
+     "veiculo": "XI Grande Prêmio de Arquitetura Corporativa",
+     "titulo": "Categoria Predial Corporativa",
+     "ano": "2014",
+     "texto": "Em 2014, a Patrimar ganhou o prêmio com o projeto empresarial J.M.IRFFI Business, desenvolvido em parceria com o escritório de arquitetura Farkasvölgyi."
+    }
+   ]
+  },
+  "sustentabilidade": {
+   "pagina": "Sustentabilidade",
+   "arquivo": "ri.patrimar.com.br_e905d24d9c587dde.html",
+   "introducao": "O Grupo Patrimar acredita na importância de ações sustentáveis para a conservação de recursos naturais e preservação do planeta. Por isso, todos os seus empreendimentos são planejados de forma a minimizar o impacto ambiental e prezam pela acessibilidade de suas áreas. Conheça algumas medidas ecológicas adotadas pelo Grupo Patrimar nas áreas comuns e privativas dos seus imóveis.",
+   "melhorias": [
+    {
+     "titulo": "Dispositivos economizadores de água nos apartamentos",
+     "titulo_oficial": "DISPOSITIVOS ECONOMIZADORES DE ÁGUA NOS APARTAMENTOS",
+     "titulo_gsa": false,
+     "texto": "Uso de bacias sanitárias com caixa acoplada e sistema dual flux, torneiras com sistema para controle do consumo de água.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Dispositivos economizadores de água nas áreas comuns",
+     "titulo_oficial": "DISPOSITIVOS ECONOMIZADORES DE ÁGUA NAS ÁREAS COMUNS",
+     "titulo_gsa": false,
+     "texto": "Uso de bacias sanitárias com caixa acoplada e sistema dual flux, torneiras com sistema para controle do consumo de água.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Sistema para reutilização de água da chuva",
+     "titulo_oficial": "SISTEMA PARA REUTILIZAÇÃO DE ÁGUA DA CHUVA",
+     "titulo_gsa": false,
+     "texto": "Possibilita reserva e armazenagem de água da chuva priorizando o aproveitamento para irrigação e lavagem das áreas comuns.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Previsão de medição individualizada de água nas unidades autônomas",
+     "titulo_oficial": "PREVISÃO DE MEDIÇÃO INDIVIDUALIZADA DE ÁGUA NAS UNIDADES AUTÔNOMAS",
+     "titulo_gsa": false,
+     "texto": "O condomínio faz a gestão do consumo e o rateio de cada apartamento. O morador acompanha seu consumo mês a mês.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Previsão de medição individualizada de gás nas unidades autônomas",
+     "titulo_oficial": "PREVISÃO DE MEDIÇÃO INDIVIDUALIZADA DE GÁS NAS UNIDADES AUTÔNOMAS",
+     "titulo_gsa": false,
+     "texto": "O condomínio faz a gestão do consumo e o rateio de cada apartamento. O morador acompanha seu consumo mês a mês.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Medição individualizada de água nas unidades autônomas",
+     "titulo_oficial": "MEDIÇÃO INDIVIDUALIZADA DE ÁGUA NAS UNIDADES AUTÔNOMAS",
+     "titulo_gsa": false,
+     "texto": "Cada unidade paga somente a água que consumir, o que possibilita o uso racional e a gestão de seus gastos.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Sensor de presença para iluminação nos halls de acesso às unidades, garagens e áreas comuns",
+     "titulo_oficial": "SENSOR DE PRESENÇA PARA ILUMINAÇÃO NOS HALLS DE ACESSO ÀS UNIDADES, GARAGENS E ÁREAS COMUNS",
+     "titulo_gsa": false,
+     "texto": "Uso de luminárias específicas com sensor de presença, que geram mais de 30% de economia de energia elétrica se comparados ao acionamento manual. As luminárias das áreas comuns serão entregues com lâmpadas de LED.",
+     "grupo": "Energia"
+    },
+    {
+     "titulo": "Recarga de carro elétrico",
+     "titulo_oficial": "RECARGA DE CARRO ELÉTRICO",
+     "titulo_gsa": false,
+     "texto": "Estação para recarga de carro elétrico, promovendo a utilização de transporte limpo, sem emissão de gases de efeito estufa. Os projetos de hidráulica são desenvolvidos com controle de vazão para as áreas privativas objetivando o controle do consumo de água.",
+     "grupo": "Mobilidade"
+    },
+    {
+     "titulo": "Válvulas redutoras de pressão estática",
+     "titulo_oficial": "VÁLVULAS REDUTORAS DE PRESSÃO ESTÁTICA",
+     "titulo_gsa": false,
+     "texto": "Distribui de forma semelhante a pressão da água em todos os ambientes, o que gera economia de água e conforto ao morador.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Esquadrias dos dormitórios com persianas de embutidas",
+     "titulo_oficial": "ESQUADRIAS DOS DORMITÓRIOS COM PERSIANAS DE EMBUTIDAS",
+     "titulo_gsa": false,
+     "texto": "Maior utilização de luz natural e consequente economia de energia.",
+     "grupo": "Energia"
+    },
+    {
+     "titulo": "Painéis fotovoltaicos",
+     "titulo_oficial": null,
+     "titulo_gsa": true,
+     "texto": "Instalação de painéis fotovoltaicos que produzem energia elétrica de forma limpa, segura e com baixo custo de manutenção. A instalação do sistema possibilita que a demanda de energia das áreas comuns seja atendida parcialmente, um benefício que será distribuído igualmente a todos os condôminos. Essa tecnologia equilibra a demanda crescente por energia com o uso racional dos recursos naturais.",
+     "grupo": "Energia"
+    },
+    {
+     "titulo": "Bicicletas e patinetes elétricos",
+     "titulo_oficial": null,
+     "titulo_gsa": true,
+     "texto": "Na montagem de equipamentos das áreas comuns do empreendimento serão entregues bicicletas e patinetes elétricos (a tecnologia dos aparelhos poderá ser alterada de acordo com a disponibilidade durante a aquisição) para uso compartilhado do condomínio.",
+     "grupo": "Mobilidade"
+    },
+    {
+     "titulo": "Coleta seletiva de lixo",
+     "titulo_oficial": "COLETA SELETIVA DE LIXO",
+     "titulo_gsa": false,
+     "texto": "São entregues lixeiras para coleta seletiva e correta disposição dos resíduos do condomínio para reciclagem.",
+     "grupo": "Resíduos e materiais"
+    },
+    {
+     "titulo": "Coleta de óleo de cozinha",
+     "titulo_oficial": "COLETA DE ÓLEO DE COZINHA",
+     "titulo_gsa": false,
+     "texto": "São entregues recipientes para o descarte exclusivo de óleo para a sua correta destinação.",
+     "grupo": "Resíduos e materiais"
+    },
+    {
+     "titulo": "Coleta de pilhas e baterias",
+     "titulo_oficial": "COLETA DE PILHAS E BATERIAS",
+     "titulo_gsa": false,
+     "texto": "São entregues recipientes para o descarte exclusivo de pilhas e baterias para a sua correta destinação.",
+     "grupo": "Resíduos e materiais"
+    },
+    {
+     "titulo": "Conforto acústico nas áreas secas das unidades",
+     "titulo_oficial": "CONFORTO ACÚSTICO NAS ÁREAS SECAS DAS UNIDADES",
+     "titulo_gsa": false,
+     "texto": "Proporciona menor propagação de ruídos de impacto entre os andares e aéreo entre dormitórios de unidades distintas.",
+     "grupo": "Conforto"
+    },
+    {
+     "titulo": "Tratamento térmico nas lajes de cobertura",
+     "titulo_oficial": "TRATAMENTO TÉRMICO NAS LAJES DE COBERTURA",
+     "titulo_gsa": false,
+     "texto": "Maior conforto térmico aos moradores e economia de energia pela menor necessidade de uso de ar-condicionado.",
+     "grupo": "Energia"
+    },
+    {
+     "titulo": "Bicicletário",
+     "titulo_oficial": "BICICLETÁRIO",
+     "titulo_gsa": false,
+     "texto": "Para incentivar a utilização de transporte limpo e a qualidade de vida dos usuários.",
+     "grupo": "Mobilidade"
+    },
+    {
+     "titulo": "Otimização de matérias-primas durante a obra",
+     "titulo_oficial": "OTIMIZAÇÃO DE MATÉRIAS-PRIMAS DURANTE A OBRA",
+     "titulo_gsa": false,
+     "texto": "Redução do desperdício e de entulho a partir da utilização eficiente de materiais.",
+     "grupo": "Resíduos e materiais"
+    },
+    {
+     "titulo": "Otimização das instalações hidráulicas",
+     "titulo_oficial": "OTIMIZAÇÃO DAS INSTALAÇÕES HIDRÁULICAS",
+     "titulo_gsa": false,
+     "texto": "Kits hidráulicos Minimizam o desperdício, a geração de entulho e a probabilidade de vazamento, o que facilita a manutenção.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Pavimentos permeáveis na área externa absorvem a água da chuva",
+     "titulo_oficial": "PAVIMENTOS PERMEÁVEIS NA ÁREA EXTERNA ABSORVEM A ÁGUA DA CHUVA",
+     "titulo_gsa": false,
+     "texto": "O que reduz o acúmulo na superfície e a necessidade de tratamento para escoamento da água.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Irrigação automatizada",
+     "titulo_oficial": "IRRIGAÇÃO AUTOMATIZADA",
+     "titulo_gsa": false,
+     "texto": "Economia de água através do uso racional do recurso.",
+     "grupo": "Água e gás"
+    },
+    {
+     "titulo": "Previsão de sistema de aquecimento solar de água",
+     "titulo_oficial": "PREVISÃO DE SISTEMA DE AQUECIMENTO SOLAR DE ÁGUA",
+     "titulo_gsa": false,
+     "texto": "Economia da energia necessária para o aquecimento de água.",
+     "grupo": "Energia"
+    },
+    {
+     "titulo": "Luminárias externas comandadas por sensor",
+     "titulo_oficial": "LUMINÁRIAS EXTERNAS COMANDADAS POR SENSOR",
+     "titulo_gsa": false,
+     "texto": "Iluminação em períodos programados, o que gera economia de energia com conforto e segurança.",
+     "grupo": "Energia"
+    },
+    {
+     "titulo": "VAPT",
+     "titulo_oficial": "VAPT",
+     "titulo_gsa": false,
+     "texto": "Carros compartilhados à disposição dos moradores",
+     "grupo": "Mobilidade"
+    },
+    {
+     "titulo": "Fachada em tons claros",
+     "titulo_oficial": "FACHADA EM TONS CLAROS",
+     "titulo_gsa": false,
+     "texto": "A pouca absorção de energia térmica ao longo do dia garante um maior conforto durante a noite.",
+     "grupo": "Energia"
+    }
+   ],
+   "gestao_residuos": {
+    "titulo": "Gestão de resíduos",
+    "texto": "O Grupo Patrimar tem como objetivo uma gestão de resíduos eficiente e com foco na sustentabilidade, é adotado em cada empreendimento o PGRCC (Plano de Gerenciamento de Resíduo da Construção Civil) e os dados dos resíduos gerados são analisados e controlados mensalmente através de indicadores."
+   },
+   "social_intro": "Em relação ao pilar social, já realizamos diversos projetos, como:",
+   "social": [
+    {
+     "titulo": "Selo Sustentável",
+     "texto": "Diante da necessidade de padronização dos canteiros de obra e implementação de ações sustentáveis nos empreendimentos, o Grupo Patrimar implantou o Selo de Sustentabilidade. Sendo assim, auditorias anuais são realizadas em cada empreendimento, por órgão certificado no Inmetro, com o intuito de garantir o cumprimento de todos os requisitos e evidenciar as melhorias implantadas."
+    },
+    {
+     "titulo": "Construindo o Bem",
+     "texto": "Ações beneficentes com o intuito de engajar e tocar os colaboradores, incentivando sempre uma atuação ativa dos mesmos para ajudar o próximo."
+    },
+    {
+     "titulo": "Semeando Ideias",
+     "texto": "Concurso de ideias entre os colaboradores que busca implementar soluções que gerem melhorias nos processos internos e/ou redução de custos e/ou aumento de receita. As melhores ideias que forem implementadas ganham prêmios em dinheiro."
+    },
+    {
+     "titulo": "Elevator",
+     "texto": "Projeto focado na iniciação da empresa na cultura de inovação. O projeto contempla várias frentes, dentre elas: palestras mensais, rodadas de apresentações de startups para setores da empresa verificarem possibilidades de contratação, estudo de novos empreendimentos com foco na melhoria do produto e implantação de inovação."
+    },
+    {
+     "titulo": "Conservação e urbanismo",
+     "texto": "A Patrimar instalou lixeiras adequadas para a coleta de fezes de cães na Lagoa Seca, no Bairro Belvedere. Na própria cesta é possível pegar um plástico para recolher o material e deposita-lo."
+    },
+    {
+     "titulo": "Orquestra Filarmônica de Minas Gerais",
+     "texto": "Buscando incentivar a cultura e levar as programações artísticas para um público cada vez maior, a Patrimar é um dos apoiadores culturais da Orquestra Filarmônica de Minas Gerais."
+    }
+   ],
+   "relatorios": [
+    {
+     "ano": 2024,
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=8huU+0UmGAQvDhFUUbB0Nw=="
+    },
+    {
+     "ano": 2023,
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=hE4HlEefBHZNQY88h08XcQ=="
+    },
+    {
+     "ano": 2022,
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=CCeV/ZT58O9IXcz7x5pVvA=="
+    }
+   ]
+  },
+  "fatos": {
+   "ranking_sudeste": 1,
+   "ranking_nacional": 30,
+   "ranking_fonte": "O Grupo Patrimar está posicionado entre as maiores construtoras do país. Desde 2019, ocupa o 1º e 30º lugares nos rankings Regional Sudeste e Nacional, respectivamente, segundo a revista O Empreiteiro¹, tendo sido eleita no mês ano, a “Empresa Excelência de Minas Gerais de 2019” na categoria Construção e Engenharia pelo “XXI Prêmio Minas – Desempenho Empresarial Melhores e Maiores”, promovido pela publicação de economia, finanças e negócios Mercado Comum. É líder de mercado no segmento residencial de alta renda em número de unidades vendidas em Belo Horizonte e adjacências. Com um modelo de negócios verticalizado, trabalha na incorporação e construção de empreendimentos imobiliários, além de comercialização e venda de unidades imobiliárias autônomas.",
+   "preco_m2_min_mil": 11,
+   "preco_m2_max_mil": 18,
+   "preco_fonte": "A Patrimar tem foco em empreendimentos residenciais no segmento de alta renda com produtos de luxo e alto luxo (com preços por metro quadrado variando entre R$11 mil e R$18 mil), voltados à população de alta renda (assim consideradas as famílias com renda média mensal acima de 20 salários mínimos, de acordo com a classificação IBGE), além de empreendimentos comerciais (de maneira oportunística). Para estes segmentos, a Companhia oferece produtos imobiliários caracterizados pela máxima diferenciação e exclusividade em projetos inovadores e de vanguarda, com arquitetura diferenciada, tais como o Edifício Medplex, vencedor do International Property Awards na categoria Arquitetura de Escritórios 2014 e do XI Grande Prêmio de Arquitetura Corporativa na categoria Predial Corporativa 2014, atuando principalmente nos mercados de Belo Horizonte e Nova Lima em Minas Gerais. Neste segmento, a Patrimar utiliza as seguintes tecnologias e métodos construtivos:",
+   "ano_origem": 1963,
+   "estados": [
+    "Minas Gerais",
+    "Rio de Janeiro",
+    "São Paulo"
+   ],
+   "estados_fonte": "Atualmente, a Companhia está presente nos Estados de Minas Gerais, Rio de Janeiro e São Paulo.",
+   "marcas": [
+    "Patrimar",
+    "Novolar"
+   ],
+   "captacoes": [
+    {
+     "ano": 2020,
+     "instrumento": "1ª e 2ª Debêntures",
+     "valor_milhoes": 130,
+     "trecho": "1ª e 2ª Debêntures – no valor total de R$ 130 MM"
+    },
+    {
+     "ano": 2022,
+     "instrumento": "3ª Emissão de Debênture",
+     "valor_milhoes": 150,
+     "trecho": "3ª Emissão de Debênture – R$ 150 MM"
+    },
+    {
+     "ano": 2023,
+     "instrumento": "4ª Emissão de Debênture",
+     "valor_milhoes": 200,
+     "trecho": "4ª Emissão de Debênture – R$ 200 MM"
+    },
+    {
+     "ano": 2023,
+     "instrumento": "1ª Emissão de Nota Comercial",
+     "valor_milhoes": 80,
+     "trecho": "1ª Emissão de Nota Comercial – R$ 80 MM"
+    },
+    {
+     "ano": 2023,
+     "instrumento": "5ª Emissão de Debênture",
+     "valor_milhoes": 200,
+     "trecho": "5ª Emissão de Debênture – R$ 200 MM"
+    }
+   ],
+   "divergencias_paginas": [
+    {
+     "tema": "Medplex, International Property Awards",
+     "pagina_a": "Nossa História (2013)",
+     "pagina_b": "Prêmios e Certificações e Perfil Corporativo (2014)"
+    }
+   ]
+  }
+ },
+ "governanca": {
+  "pagina": "Administração",
+  "arquivo": "ri.patrimar.com.br_41f10480d9189379.html",
+  "composicao": {
+   "documento": "Formulário de Referência 2026 (versão 4), item 6.1/2, Posição acionária",
+   "paginas": [
+    174,
+    175,
+    176
+   ],
+   "acionista": "PRMV Participações Ltda",
+   "percentual": 100.0,
+   "acoes_ordinarias": 56025501,
+   "acoes_preferenciais": 0,
+   "tesouraria": 0,
+   "outros": 0,
+   "total_acoes": 56025501,
+   "ultima_alteracao": "05/12/2025",
+   "pessoa_fisica_titular": "Alexandre Araujo Elias Veiga",
+   "controlador_final": true,
+   "nota": "A página Composição Acionária do site oficial não traz dados; a posição acima vem do Formulário de Referência 2026. O CPF/CNPJ do formulário não é reproduzido aqui."
+  },
+  "diretoria": [
+   {
+    "nome": "Alexandre Araújo Elias Veiga",
+    "cargo": "Diretor Presidente/CEO",
+    "anos_patrimar": 42,
+    "anos_mercado": 42,
+    "curriculo": "Graduado em Engenharia Civil pela Escola de Engenharia Kennedy, em 1982, e em Administração de Empresas e Contabilidade, pela Pontifícia Universidade Católica de Minas Gerais, em 1981. Certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018) pela Fundação Dom Cabral. Iniciou sua carreira no Grupo Patrimar em 1978, como estagiário e, em 1986, se torna Sócio-Diretor da então M. Martins Empreendimentos Imobiliários. Atuou como engenheiro, supervisor e diretor de obras, exercendo ainda os cargos de diretor técnico e de incorporação. Desde 2011, ocupa o cargo de Diretor Presidente/CEO do Grupo Patrimar, sendo sócio-controlador integral desde 2015.",
+    "chave": "alexandre araujo elias veiga"
+   },
+   {
+    "nome": "Felipe Enck Gonçalves",
+    "cargo": "Diretor Financeiro e RI (CFO e RI)",
+    "anos_patrimar": 4,
+    "anos_mercado": 23,
+    "curriculo": "Formado em Economia pela Pontifícia Universidade Católica de Minas Gerais e Contabilidade pela FUMEC, ingressou na Ernst & Young em 2002 no escritório de Belo Horizonte, onde ficou até 2007. De 2007 a 2009 trabalhou no escritório da Ernst & Young em Londres e de 2009 a 2010, no escritório de São Paulo. Foi CFO da LOG Commercial Properties de 2011 a 2020.",
+    "chave": "felipe enck goncalves"
+   },
+   {
+    "nome": "Lucas Felipe Melo Couto",
+    "cargo": "Diretor Comercial e Marketing",
+    "anos_patrimar": 15,
+    "anos_mercado": 15,
+    "curriculo": "Graduado em Engenharia Civil pela FUMEC em 2009, possui pós-graduação em Administração de Empresas pela Fundação Getúlio Vargas em 2010 e certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2005, como estagiário em engenharia, percorrendo canteiros de obras e áreas de gestão, especificamente orçamento e viabilidade econômico-financeira de projetos. Em 2007 participou do Programa de Treinee da Companhia. Entre 2009 e 2013 atuou como engenheiro responsável pela execução e gestão de obras em empreendimentos do grupo. A partir de 2013 assumiu a função de Gerente Comercial de Vendas e Marketing e a partir de 2015 passou a exercer a função de Diretor Comercial Estatutário da Patrimar.",
+    "chave": "lucas felipe melo couto"
+   },
+   {
+    "nome": "Alexandre Lara Nicácio",
+    "cargo": "Diretor Técnico",
+    "anos_patrimar": 12,
+    "anos_mercado": 31,
+    "curriculo": "Graduado em Engenharia Civil pela UFMG - Universidade Federal de Minas Gerais em 1989, possui pós-graduações em Gestão de Negócios na Construção Civil pela FEAD - Faculdade de Estudos Administrativos de Minas gerais em 2008, Tecnologia e Produtividade da Construção Civil pela UFMG - Universidade Federal de Minas Gerais em 2014 e Certificado no Programa de Desenvolvimento de Dirigentes pela Fundação Dom Cabral em 2018. Com 30 anos de experiência na indústria da construção civil e desenvolvimento imobiliário, já ocupou cargos de execução, gestão e coordenação de obras. Iniciou suas atividades na Patrimar em 2008 como gestor responsável pelo departamento técnico da Companhia, tornando-se Diretor Técnico e Estatutário em 2015.",
+    "chave": "alexandre lara nicacio"
+   },
+   {
+    "nome": "Renata Martins Veiga Couto",
+    "cargo": "Diretora de Produto e Incorporação",
+    "anos_patrimar": 14,
+    "anos_mercado": 14,
+    "curriculo": "Graduada em Engenharia Civil em 2010 e Relações Internacionais em 2011, ambos pela FUMEC. Certificada nos Programas de Desenvolvimento de Acionistas em 2017 e de Desenvolvimento de Dirigentes em 2018, ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2006, como estagiária, passando por experiências em obras e áreas de gestão em engenharia, especialmente orçamento e viabilidade econômico-financeira de projetos. Entre 2010 e 2012 atuou como engenheira de orçamentos na área de arquitetura. A partir de 2013 assumiu a gestão da área de incorporações e em 2015 passou a exercer a função de Diretora de Incorporações do Grupo Patrimar, além de ser acionista-controladora integral.",
+    "chave": "renata martins veiga couto"
+   },
+   {
+    "nome": "Patrícia Martins Veiga",
+    "cargo": "Diretora de Inovação e ESG",
+    "anos_patrimar": 11,
+    "anos_mercado": 11,
+    "curriculo": "Graduada em Engenharia de Produção/Civil pela FUMECem 2014, possui pós-graduação em Finanças pela Fundação Dom Cabral em 2016 e certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2012 como estagiária em engenharia, percorrendo canteiros de obras e áreas de gestão, especificamente orçamento e viabilidade econômico-financeira de projetos. Em 2015 participou do Programa de Treinee da Companhia. Entre 2015 e 2020 atuou como assessora de novos negócios da Novolar. A partir de 2020 assumiu a função de Gerente de Desenvolvimento Humano e Organizacional e a partir de 2024 passou a exercer a função de Diretora de ESG e Inovação do Grupo Patrimar, além de ser acionista-controladora integral.",
+    "chave": "patricia martins veiga"
+   },
+   {
+    "nome": "Silvano Aragão",
+    "cargo": "Diretor de Desenvolvimento Humano",
+    "anos_patrimar": 5,
+    "anos_mercado": 26,
+    "curriculo": "Mestrado Profissional Acadêmico em Administração pela Fundação Pedro Leopoldo, MBA em Gestão estratégica de Pessoas pela Fundação Getúlio Vargas, PDD pela Fundação Dom Cabral, graduação em Administração. Mais de 20 anos de experiência como executivo das áreas de Gente e Gestão, tendo atuado em empresas de segmento de incorporação, engenharia, agronegócios, mineração e educação. Mais de 15 anos de experiência atuando como professor universitário de MBA em grandes universidades de Minas Gerais. Atualmente está como Diretor Executivo de Desenvolvimento Humano e Organizacional do Grupo Patrimar, Professor de MBA nos cursos de Gestão Avançada da PUC Minas, Conselheiro da Associação Brasileira de Recursos Humanos de Minas Gerais e Presidente do Comitê estratégico de Gestão de Pessoas da Amcham BH. Durante a carreira obteve diversos reconhecimentos, em especial o prêmio profissional do ano em 2005 e personalidade de RH do ano de 2012 pela ABRH.",
+    "chave": "silvano aragao"
+   },
+   {
+    "nome": "Paulo Sammarco Araújo",
+    "cargo": "Diretor Regional - RJ",
+    "anos_patrimar": 3,
+    "anos_mercado": 20,
+    "curriculo": "MBA Gestão de Negócios pela Pontifícia Universidade Católica de São Paulo, com 18 anos de experiência no mercado atuando em empresas incorporadoras de médio e grande porte de abrangência nacional. Iniciou carreira na área comercial e marketing, permeando posteriormente pelas áreas de novos negócios e incorporação. Ampla experiência na gestão de todo processo da incorporação imobiliária desde a aquisição de terrenos até a entrega das unidades, dentro dos mais diferentes mercados, desde dos empreendimentos econômicos até altíssimo padrão. Membro da Comissão Novo Plano Diretor - 2022 - Rio de Janeiro.",
+    "chave": "paulo sammarco araujo"
+   }
+  ],
+  "conselho": [
+   {
+    "nome": "Heloísa Magalhães Martins Veiga",
+    "cargo": "Presidente do Conselho de Administração",
+    "anos_patrimar": 41,
+    "anos_mercado": 41,
+    "curriculo": "Graduada em Ciências Econômicas pela Pontifícia Universidade Católica de Minas Gerais em 1981, certificada nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Estagiou no INDI/MG - Agência de Promoção de Investimento e Comércio Exterior de Minas Gerais. Ingressou no Grupo Patrimar em 1980 como estagiária onde, adquiriu vasta experiência no setor imobiliário. Atuou em prospecção e escolha de terrenos, definição de produtos, viabilidade econômico-financeira de projetos e estratégias de precificação e vendas, até ocupar a posição de Vice-Presidente do Grupo em 2015 e sócia controladora integral desde então. Em janeiro de 2020, foi eleita Presidente do Conselho de Administração da Companhia.",
+    "chave": "heloisa magalhaes martins veiga"
+   },
+   {
+    "nome": "Renata Martins Veiga Couto",
+    "cargo": "Conselho de Administração (Efetivo)",
+    "anos_patrimar": 14,
+    "anos_mercado": 14,
+    "curriculo": "Graduada em Engenharia Civil em 2010 e Relações Internacionais em 2011, ambos pela FUMEC. Certificada nos Programas de Desenvolvimento de Acionistas em 2017 e de Desenvolvimento de Dirigentes em 2018, ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2006, como estagiária, passando por experiências em obras e áreas de gestão em engenharia, especialmente orçamento e viabilidade econômico-financeira de projetos. Entre 2010 e 2012 atuou como engenheira de orçamentos na área de arquitetura. A partir de 2013 assumiu a gestão da área de incorporações e em 2015 passou a exercer a função de Diretora de Incorporações do Grupo Patrimar, além de ser acionista-controladora integral.",
+    "chave": "renata martins veiga couto"
+   },
+   {
+    "nome": "Fernando Antônio Moreira Calaes",
+    "cargo": "Conselheiro Independente",
+    "anos_patrimar": null,
+    "anos_mercado": null,
+    "curriculo": "Fernando Antônio Moreira Calaes é engenheiro Agrônomo pela Universidade Federal de Viçosa, pós-graduado em engenharia de saneamento e ambiental (UFMG) e MBA em Finanças (IBMEC). Possui experiência na Açominas/Gerdau, nas áreas ambiental, administrativa, recursos humanos e financeira. Foi Diretor de Administração e Finanças e acumulou a Diretoria de Relações com Investidores da TRIP Linhas Aéreas S.A. e na UNITAS S.A. Atua em diversos trabalhos de estruturação organizacional e de capital de empresas, análise de viabilidade de projetos e em M&A nos setores siderúrgicos, serviços, varejo, construção, mineral, agrícola, agroindústria entre outros. Professor associado da Fundação Dom Cabral e professor do MBA da FUMEC. Participa do IBEF, IBGC e do IMMC (Instituto Mineiro de Mercado de Capitais) onde é membro fundador e diretor. É Conselheiro Certificado do IBGC. Atua ainda como conselheiro em empresas e “Family Business Technical Coach” em finanças corporativas, gestão de pessoas, estratégia, estrutura organizacional e gestão por resultados.",
+    "chave": "fernando antonio moreira calaes"
+   },
+   {
+    "nome": "Milton Loureiro Junior",
+    "cargo": "Conselheiro Independente",
+    "anos_patrimar": null,
+    "anos_mercado": null,
+    "curriculo": "Graduado em Engenheiro Civil pela Escola de Engenharia Mauá com especialização em Engenharia Econômica pela Fundação Dom Cabral. Foi acionista, Diretor Executivo e Vice-Presidente do Grupo Financeiro Mercantil do Brasil. É Sócio da DLM Invista Gestão de Recursos.",
+    "chave": "milton loureiro junior"
+   },
+   {
+    "nome": "Renata Maria Paes de Vilhena",
+    "cargo": "Conselheiro Independente",
+    "anos_patrimar": null,
+    "anos_mercado": 37,
+    "curriculo": "Graduada em Estatística pela UFMG. Participou do Programa de Gestão Avançada da Fundação Dom Cabral - PGA. Possui especialidade, Lato Sensu, em Gestão Pública e Legislação Urbana pela Universidade Cândido Mendes - Minas Gerais. É Professora Associada da Fundação Dom Cabral desde janeiro de 2015; Conselheira da Vetor Brasil e do Instituto República e integra o Grupo de Especialistas formado por quatro organizações do terceiro setor (Fundação Brava, Fundação Lemann, Instituto Humanize e República.org). Foi servidora pública estadual na Secretaria de Planejamento e Gestão de 1985 até 2016, período em que ocupou diversos cargos gerenciais nessa competência e no Governo Federal. Neste último, no período entre 1999 e 2002, atuou como Secretária Adjunta de Logística e Tecnologia da Informação do Ministério do Planejamento, Orçamento e Gestão.",
+    "chave": "renata maria paes de vilhena"
+   }
+  ],
+  "comites": [
+   {
+    "nome": "Comitê de Auditoria, Compliance e Risco",
+    "membros": [
+     {
+      "nome": "Fernando Antônio Moreira Calaes",
+      "cargo": "Coordenador do Comitê",
+      "anos_patrimar": null,
+      "anos_mercado": null,
+      "curriculo": "Fernando Antônio Moreira Calaes é engenheiro Agrônomo pela Universidade Federal de Viçosa, pós-graduado em engenharia de saneamento e ambiental (UFMG) e MBA em Finanças (IBMEC). Possui experiência na Açominas/Gerdau, nas áreas ambiental, administrativa, recursos humanos e financeira. Foi Diretor de Administração e Finanças e acumulou a Diretoria de Relações com Investidores da TRIP Linhas Aéreas S.A. e na UNITAS S.A. Atua em diversos trabalhos de estruturação organizacional e de capital de empresas, análise de viabilidade de projetos e em M&A nos setores siderúrgicos, serviços, varejo, construção, mineral, agrícola, agroindústria entre outros. Professor associado da Fundação Dom Cabral e professor do MBA da FUMEC. Participa do IBEF, IBGC e do IMMC (Instituto Mineiro de Mercado de Capitais) onde é membro fundador e diretor. É Conselheiro Certificado do IBGC. Atua ainda como conselheiro em empresas e “Family Business Technical Coach” em finanças corporativas, gestão de pessoas, estratégia, estrutura organizacional e gestão por resultados.",
+      "chave": "fernando antonio moreira calaes"
+     },
+     {
+      "nome": "Arthur Guimarães de Carvalho Pereira Vorcaro",
+      "cargo": "Membro do Comitê (Efetivo)",
+      "anos_patrimar": null,
+      "anos_mercado": 15,
+      "curriculo": "Graduado em Direito pela Pontifícia Universidade Católica de Minas Gerais - PUC-MG (2011) e Pós-graduado em Gestão Jurídica e de Contencioso pelo Ibmec - Instituto Brasileiro de Mercado de Capitais (2016). Possui GBA de Inovação e Transformação Digital pela Escola Conquer (2019), é Profissional certificado pelo CPC-A , Compliance Anticorrupção da LEC - Legal Ethics, and Compliance desde 2019; Executivo Jurídico com mais de 15 anos de atuação no jurídico de empresas de grande porte, inclusive multinacional e de capital aberto, nos setores de Mineração, Construção Civil e Multipropriedade. Atua como professor no Curso de Pós-Graduação do IEC – PUC Minas, MBA em Advocacia de Alta Performance; Ingressou na Patrimar em 2025 no cargo de Gerente Jurídico e de Compliance.",
+      "chave": "arthur guimaraes de carvalho pereira vorcaro"
+     },
+     {
+      "nome": "Lorena dos Reis Teixeira",
+      "cargo": "Membro do Comitê (Efetivo)",
+      "anos_patrimar": null,
+      "anos_mercado": 9,
+      "curriculo": "Graduada em Ciências Contábeis pela Universidade Federal de Viçosa (UFV), com MBA em Gestão Financeira e Controladoria. Possui mais de 9 anos de experiência em auditoria e controladoria, onde atuou na Ernst & Young na auditoria de empresas de grande porte e listadas na Comissão de Valores Mobiliários (CVM) e na Securities and Exchange Commission (SEC), nos setores de siderurgia, mineração, automobilístico e incorporação imobiliária.",
+      "chave": "lorena dos reis teixeira"
+     }
+    ]
+   },
+   {
+    "nome": "Comitê de ESG",
+    "membros": [
+     {
+      "nome": "Renata Martins Veiga Couto",
+      "cargo": "Coordenadora do Comitê",
+      "anos_patrimar": 14,
+      "anos_mercado": 14,
+      "curriculo": "Graduada em Engenharia Civil em 2010 e Relações Internacionais em 2011, ambos pela FUMEC. Certificada nos Programas de Desenvolvimento de Acionistas em 2017 e de Desenvolvimento de Dirigentes em 2018, ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2006, como estagiária, passando por experiências em obras e áreas de gestão em engenharia, especialmente orçamento e viabilidade econômico-financeira de projetos. Entre 2010 e 2012 atuou como engenheira de orçamentos na área de arquitetura. A partir de 2013 assumiu a gestão da área de incorporações e em 2015 passou a exercer a função de Diretora de Incorporações do Grupo Patrimar, além de ser acionista-controladora integral.",
+      "chave": "renata martins veiga couto"
+     },
+     {
+      "nome": "Onara Oliveira de Lima",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": null,
+      "anos_mercado": 20,
+      "curriculo": "Executiva de Sustentabilidade ESG: Formada em Engenharia Ambiental/Sanitária e Engenharia de Segurança do Trabalho, MBA em Gestão Empresarial pela FGV, Especialização em Gestão de Pessoas pela FIA, Sustainable Business Strategy - pela Harvard Business School, ESG Risk Management – pela University of Cambridge, Conselheira de Administração formada pelo IBGC. Empreendedora/Fundadora da marca ESG Advisory OnaraLima. Atua há 23 anos em Gestão Ambiental e Sustentabilidade, durante esse período, trabalhou em empresas como Gerdau, Suzano, Grupo Ambipar e CCR. Conselheira no Capitalismo Consciente Brasil. Coordenadora do GT Educacional do CBPS – Comitê Brasileiro de Pronunciamentos de Sustentabilidade, Membro da Comissão ESG da ABRASCA e do Comitê de Sustentabilidade da Verda.Global e Grupo Patrimar, Membro do Conselho Consultivo de Sustentabilidade da ZURICH Seguros. Membro da Comissão Técnica de Sustentabilidade e Clima do IBGC. Outras atuações: Educação Executiva In Company, Professora convidada FDC, FIA, ESPM e PUC, Instrutora no IBGC.",
+      "chave": "onara oliveira de lima"
+     },
+     {
+      "nome": "Patrícia Martins Veiga",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 11,
+      "anos_mercado": 11,
+      "curriculo": "Graduada em Engenharia de Produção/Civil pela FUMECem 2014, possui pós-graduação em Finanças pela Fundação Dom Cabral em 2016 e certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2012 como estagiária em engenharia, percorrendo canteiros de obras e áreas de gestão, especificamente orçamento e viabilidade econômico-financeira de projetos. Em 2015 participou do Programa de Treinee da Companhia. Entre 2015 e 2020 atuou como assessora de novos negócios da Novolar. A partir de 2020 assumiu a função de Gerente de Desenvolvimento Humano e Organizacional e a partir de 2024 passou a exercer a função de Diretora de ESG e Inovação do Grupo Patrimar, além de ser acionista-controladora integral.",
+      "chave": "patricia martins veiga"
+     },
+     {
+      "nome": "Rodrigo Valente Tavares",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": null,
+      "anos_mercado": 23,
+      "curriculo": "Graduado em Engenharia Civil pela Universidade Mackenzie e MBA com pós-graduado em Administração Financeira e Estratégia Empresarial pela Fundação Getúlio Vargas (FGV-SP). Palestrou em eventos como Qualicon ES, Construsummit Florianópolis, Cafe Prevision CWB e Festival de Inovação de Curitiba. Com mais de 20 anos de experiência, possui conhecimento em Sistema de Gestão de Qualidade, conceitos de Lean Construction e certificações de sustentabilidade (como Leed, Aqua e Procel). Atua na reestruturação de processos e organização do plano estratégico para expansão regional da engenharia.",
+      "chave": "rodrigo valente tavares"
+     }
+    ]
+   },
+   {
+    "nome": "Comitê de Estratégia",
+    "membros": [
+     {
+      "nome": "Heloísa Magalhães Martins Veiga",
+      "cargo": "Coordenadora do Comitê",
+      "anos_patrimar": 41,
+      "anos_mercado": 41,
+      "curriculo": "Graduada em Ciências Econômicas pela Pontifícia Universidade Católica de Minas Gerais em 1981, certificada nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Estagiou no INDI/MG - Agência de Promoção de Investimento e Comércio Exterior de Minas Gerais. Ingressou no Grupo Patrimar em 1980 como estagiária onde, adquiriu vasta experiência no setor imobiliário. Atuou em prospecção e escolha de terrenos, definição de produtos, viabilidade econômico-financeira de projetos e estratégias de precificação e vendas, até ocupar a posição de Vice-Presidente do Grupo em 2015 e sócia controladora integral desde então. Em janeiro de 2020, foi eleita Presidente do Conselho de Administração da Companhia.",
+      "chave": "heloisa magalhaes martins veiga"
+     },
+     {
+      "nome": "Alexandre Araújo Elias Veiga",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 42,
+      "anos_mercado": 42,
+      "curriculo": "Graduado em Engenharia Civil pela Escola de Engenharia Kennedy, em 1982, e em Administração de Empresas e Contabilidade, pela Pontifícia Universidade Católica de Minas Gerais, em 1981. Certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018) pela Fundação Dom Cabral. Iniciou sua carreira no Grupo Patrimar em 1978, como estagiário e, em 1986, se torna Sócio-Diretor da então M. Martins Empreendimentos Imobiliários. Atuou como engenheiro, supervisor e diretor de obras, exercendo ainda os cargos de diretor técnico e de incorporação. Desde 2011, ocupa o cargo de Diretor Presidente/CEO do Grupo Patrimar, sendo sócio-controlador integral desde 2015.",
+      "chave": "alexandre araujo elias veiga"
+     },
+     {
+      "nome": "Alexandre Lara Nicácio",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 12,
+      "anos_mercado": 12,
+      "curriculo": "Graduado em Engenharia Civil pela UFMG - Universidade Federal de Minas Gerais em 1989, possui pós-graduações em Gestão de Negócios na Construção Civil pela FEAD - Faculdade de Estudos Administrativos de Minas gerais em 2008, Tecnologia e Produtividade da Construção Civil pela UFMG - Universidade Federal de Minas Gerais em 2014 e Certificado no Programa de Desenvolvimento de Dirigentes pela Fundação Dom Cabral em 2018. Com 30 anos de experiência na indústria da construção civil e desenvolvimento imobiliário, já ocupou cargos de execução, gestão e coordenação de obras. Iniciou suas atividades na Patrimar em 2008 como gestor responsável pelo departamento técnico da Companhia, tornando-se Diretor Técnico e Estatutário em 2015.",
+      "chave": "alexandre lara nicacio"
+     },
+     {
+      "nome": "Felipe Enck Gonçalves",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 4,
+      "anos_mercado": 23,
+      "curriculo": "Formado em Economia pela Pontifícia Universidade Católica de Minas Gerais e Contabilidade pela FUMEC, ingressou na Ernst & Young em 2002 no escritório de Belo Horizonte, onde ficou até 2007. De 2007 a 2009 trabalhou no escritório da Ernst & Young em Londres e de 2009 a 2010, no escritório de São Paulo. Foi CFO da LOG Commercial Properties de 2011 a 2020.",
+      "chave": "felipe enck goncalves"
+     },
+     {
+      "nome": "Lucas Felipe Melo Couto",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 15,
+      "anos_mercado": 15,
+      "curriculo": "Graduado em Engenharia Civil pela FUMEC em 2009, possui pós-graduação em Administração de Empresas pela Fundação Getúlio Vargas em 2010 e certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2005, como estagiário em engenharia, percorrendo canteiros de obras e áreas de gestão, especificamente orçamento e viabilidade econômico-financeira de projetos. Em 2007 participou do Programa de Treinee da Companhia. Entre 2009 e 2013 atuou como engenheiro responsável pela execução e gestão de obras em empreendimentos do grupo. A partir de 2013 assumiu a função de Gerente Comercial de Vendas e Marketing e a partir de 2015 passou a exercer a função de Diretor Comercial Estatutário da Patrimar.",
+      "chave": "lucas felipe melo couto"
+     }
+    ]
+   },
+   {
+    "nome": "Comitê de Finanças",
+    "membros": [
+     {
+      "nome": "Milton Loureiro Júnior",
+      "cargo": "Coordenador do Comitê",
+      "anos_patrimar": null,
+      "anos_mercado": null,
+      "curriculo": "Graduado em Engenheiro Civil pela Escola de Engenharia Mauá com especialização em Engenharia Econômica pela Fundação Dom Cabral. Foi acionista, Diretor Executivo e Vice-Presidente do Grupo Financeiro Mercantil do Brasil. É Sócio da DLM Invista Gestão de Recursos.",
+      "chave": "milton loureiro junior"
+     },
+     {
+      "nome": "Alexandre Araújo Elias Veiga",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 42,
+      "anos_mercado": 42,
+      "curriculo": "Graduado em Engenharia Civil pela Escola de Engenharia Kennedy, em 1982, e em Administração de Empresas e Contabilidade, pela Pontifícia Universidade Católica de Minas Gerais, em 1981. Certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018) pela Fundação Dom Cabral. Iniciou sua carreira no Grupo Patrimar em 1978, como estagiário e, em 1986, se torna Sócio-Diretor da então M. Martins Empreendimentos Imobiliários. Atuou como engenheiro, supervisor e diretor de obras, exercendo ainda os cargos de diretor técnico e de incorporação. Desde 2011, ocupa o cargo de Diretor Presidente/CEO do Grupo Patrimar, sendo sócio-controlador integral desde 2015.",
+      "chave": "alexandre araujo elias veiga"
+     },
+     {
+      "nome": "Felipe Enck Gonçalves",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 4,
+      "anos_mercado": 23,
+      "curriculo": "Formado em Economia pela Pontifícia Universidade Católica de Minas Gerais e Contabilidade pela FUMEC, ingressou na Ernst & Young em 2002 no escritório de Belo Horizonte, onde ficou até 2007. De 2007 a 2009 trabalhou no escritório da Ernst & Young em Londres e de 2009 a 2010, no escritório de São Paulo. Foi CFO da LOG Commercial Properties de 2011 a 2020.",
+      "chave": "felipe enck goncalves"
+     },
+     {
+      "nome": "Lucas Felipe Melo Couto",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 15,
+      "anos_mercado": 15,
+      "curriculo": "Graduado em Engenharia Civil pela FUMEC em 2009, possui pós-graduação em Administração de Empresas pela Fundação Getúlio Vargas em 2010 e certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2005, como estagiário em engenharia, percorrendo canteiros de obras e áreas de gestão, especificamente orçamento e viabilidade econômico-financeira de projetos. Em 2007 participou do Programa de Treinee da Companhia. Entre 2009 e 2013 atuou como engenheiro responsável pela execução e gestão de obras em empreendimentos do grupo. A partir de 2013 assumiu a função de Gerente Comercial de Vendas e Marketing e a partir de 2015 passou a exercer a função de Diretor Comercial Estatutário da Patrimar.",
+      "chave": "lucas felipe melo couto"
+     }
+    ]
+   },
+   {
+    "nome": "Comitê de Gente e Cultura",
+    "membros": [
+     {
+      "nome": "Renata Maria Paes de Vilhena",
+      "cargo": "Coordenadora do Comitê",
+      "anos_patrimar": null,
+      "anos_mercado": 37,
+      "curriculo": "Graduada em Estatística pela UFMG. Participou do Programa de Gestão Avançada da Fundação Dom Cabral - PGA. Possui especialidade, Lato Sensu, em Gestão Pública e Legislação Urbana pela Universidade Cândido Mendes - Minas Gerais. É Professora Associada da Fundação Dom Cabral desde janeiro de 2015; Conselheira da Vetor Brasil e do Instituto República e integra o Grupo de Especialistas formado por quatro organizações do terceiro setor (Fundação Brava, Fundação Lemann, Instituto Humanize e República.org). Foi servidora pública estadual na Secretaria de Planejamento e Gestão de 1985 até 2016, período em que ocupou diversos cargos gerenciais nessa competência e no Governo Federal. Neste último, no período entre 1999 e 2002, atuou como Secretária Adjunta de Logística e Tecnologia da Informação do Ministério do Planejamento, Orçamento e Gestão.",
+      "chave": "renata maria paes de vilhena"
+     },
+     {
+      "nome": "Alexandre Araújo Elias Veiga",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 42,
+      "anos_mercado": 42,
+      "curriculo": "Graduado em Engenharia Civil pela Escola de Engenharia Kennedy, em 1982, e em Administração de Empresas e Contabilidade, pela Pontifícia Universidade Católica de Minas Gerais, em 1981. Certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018) pela Fundação Dom Cabral. Iniciou sua carreira no Grupo Patrimar em 1978, como estagiário e, em 1986, se torna Sócio-Diretor da então M. Martins Empreendimentos Imobiliários. Atuou como engenheiro, supervisor e diretor de obras, exercendo ainda os cargos de diretor técnico e de incorporação. Desde 2011, ocupa o cargo de Diretor Presidente/CEO do Grupo Patrimar, sendo sócio-controlador integral desde 2015.",
+      "chave": "alexandre araujo elias veiga"
+     },
+     {
+      "nome": "Patrícia Martins Veiga",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 14,
+      "anos_mercado": 14,
+      "curriculo": "Graduada em Engenharia de Produção/Civil pela FUMECem 2014, possui pós-graduação em Finanças pela Fundação Dom Cabral em 2016 e certificado nos Programas de Desenvolvimento de Acionistas (2017) e de Desenvolvimento de Dirigentes (2018), ambos pela Fundação Dom Cabral. Ingressou na Patrimar em 2012 como estagiária em engenharia, percorrendo canteiros de obras e áreas de gestão, especificamente orçamento e viabilidade econômico-financeira de projetos. Em 2015 participou do Programa de Treinee da Companhia. Entre 2015 e 2020 atuou como assessora de novos negócios da Novolar. A partir de 2020 assumiu a função de Gerente de Desenvolvimento Humano e Organizacional e a partir de 2024 passou a exercer a função de Diretora de ESG e Inovação do Grupo Patrimar, além de ser acionista-controladora integral.",
+      "chave": "patricia martins veiga"
+     },
+     {
+      "nome": "Paulo Sammarco Araújo",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 3,
+      "anos_mercado": 20,
+      "curriculo": "MBA Gestão de Negócios pela Pontifícia Universidade Católica de São Paulo, com 18 anos de experiência no mercado atuando em empresas incorporadoras de médio e grande porte de abrangência nacional. Iniciou carreira na área comercial e marketing, permeando posteriormente pelas áreas de novos negócios e incorporação. Ampla experiência na gestão de todo processo da incorporação imobiliária desde a aquisição de terrenos até a entrega das unidades, dentro dos mais diferentes mercados, desde dos empreendimentos econômicos até altíssimo padrão. Membro da Comissão Novo Plano Diretor - 2022 - Rio de Janeiro.",
+      "chave": "paulo sammarco araujo"
+     },
+     {
+      "nome": "Silvano Aragão",
+      "cargo": "Membro do Comitê",
+      "anos_patrimar": 5,
+      "anos_mercado": 26,
+      "curriculo": "Mestrado Profissional Acadêmico em Administração pela Fundação Pedro Leopoldo, MBA em Gestão estratégica de Pessoas pela Fundação Getúlio Vargas, PDD pela Fundação Dom Cabral, graduação em Administração. Mais de 20 anos de experiência como executivo das áreas de Gente e Gestão, tendo atuado em empresas de segmento de incorporação, engenharia, agronegócios, mineração e educação. Mais de 15 anos de experiência atuando como professor universitário de MBA em grandes universidades de Minas Gerais. Atualmente está como Diretor Executivo de Desenvolvimento Humano e Organizacional do Grupo Patrimar, Professor de MBA nos cursos de Gestão Avançada da PUC Minas, Conselheiro da Associação Brasileira de Recursos Humanos de Minas Gerais e Presidente do Comitê estratégico de Gestão de Pessoas da Amcham BH. Durante a carreira obteve diversos reconhecimentos, em especial o prêmio profissional do ano em 2005 e personalidade de RH do ano de 2012 pela ABRH.",
+      "chave": "silvano aragao"
+     }
+    ]
+   }
+  ],
+  "divergencias": [
+   {
+    "pessoa": "Alexandre Lara Nicácio",
+    "campo": "anos de mercado",
+    "valores": [
+     {
+      "orgao": "Diretoria",
+      "valor": 31
+     },
+     {
+      "orgao": "Comitê de Estratégia",
+      "valor": 12
+     }
+    ]
+   },
+   {
+    "pessoa": "Patrícia Martins Veiga",
+    "campo": "anos de Patrimar",
+    "valores": [
+     {
+      "orgao": "Diretoria",
+      "valor": 11
+     },
+     {
+      "orgao": "Comitê de ESG",
+      "valor": 11
+     },
+     {
+      "orgao": "Comitê de Gente e Cultura",
+      "valor": 14
+     }
+    ]
+   },
+   {
+    "pessoa": "Patrícia Martins Veiga",
+    "campo": "anos de mercado",
+    "valores": [
+     {
+      "orgao": "Diretoria",
+      "valor": 11
+     },
+     {
+      "orgao": "Comitê de ESG",
+      "valor": 11
+     },
+     {
+      "orgao": "Comitê de Gente e Cultura",
+      "valor": 14
+     }
+    ]
+   }
+  ],
+  "documentos": {
+   "estatuto": [
+    {
+     "categoria": null,
+     "data": "31/01/2024",
+     "titulo": "Estatuto Social",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=wNCzDpM8E2t/N0UYkU7mbA=="
+    }
+   ],
+   "politicas": [
+    {
+     "categoria": null,
+     "data": "18/09/2025",
+     "titulo": "Regimento Interno do Comitê de Gente e Cultura",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=2mhbXE3azz0F0HF0eeD0SQ=="
+    },
+    {
+     "categoria": null,
+     "data": "18/09/2025",
+     "titulo": "Regimento Interno do Comitê de ESG",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=pQJ+nWXN0FaHerRFfxepJQ=="
+    },
+    {
+     "categoria": null,
+     "data": "18/09/2025",
+     "titulo": "Regimento Interno do Comitê de Finanças",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=hutShN1i264S0dcqTH/rfA=="
+    },
+    {
+     "categoria": null,
+     "data": "18/09/2025",
+     "titulo": "Regimento Interno do Comitê de Estratégia",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=VBOF/jCNxQSxaJNsEoq6mg=="
+    },
+    {
+     "categoria": null,
+     "data": "18/09/2025",
+     "titulo": "Regimento Interno do Comitê de Auditoria, Compliance e Risco",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=Ew9EK3EHYbaZYfWv3m6tcw=="
+    },
+    {
+     "categoria": null,
+     "data": "21/03/2025",
+     "titulo": "Código de Conduta",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=dAxwJaG27vfuCN6ywnm4Zg=="
+    },
+    {
+     "categoria": null,
+     "data": "08/11/2024",
+     "titulo": "Política de Combate à Lavagem de Dinheiro",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=Cq5/KIgBwhMcRSeui9brxg=="
+    },
+    {
+     "categoria": null,
+     "data": "22/10/2024",
+     "titulo": "Política de Indicação de Membros",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=dYquyKF6yki8uNHUAEIF8g=="
+    },
+    {
+     "categoria": null,
+     "data": "22/10/2024",
+     "titulo": "Política de Negociação com Valores Mobiliários de Emissão",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=Pma83k2R9B8L94ir3X4Tgw=="
+    },
+    {
+     "categoria": null,
+     "data": "22/10/2024",
+     "titulo": "Política para Transação com Partes Relacionadas",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=kB+7uwg//HiXP4oPooo0vA=="
+    }
+   ],
+   "codigo_governanca": [
+    {
+     "categoria": null,
+     "data": "30/07/2026",
+     "titulo": "Informe do Código de Governança",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=PiUzUTlmE1bolUYwjYw+Bw=="
+    }
+   ],
+   "formulario": [
+    {
+     "categoria": "Formulário de Referência",
+     "data": "19/10/2026",
+     "titulo": "Formulário de Referência 2026",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=CF0dNo0IOeGZMja5122dow==&IdCanal=XOldav7+fb8k3u2NGUOKZQ=="
+    },
+    {
+     "categoria": "Formulário Cadastral",
+     "data": "29/05/2026",
+     "titulo": "Formulário Cadastral 2026",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=wepYLx85p+I9/qpOzNDj1A==&IdCanal=XOldav7+fb8k3u2NGUOKZQ=="
+    }
+   ],
+   "cvm": [
+    {
+     "categoria": "Assembleia",
+     "data": "29/04/2026",
+     "titulo": "AGO - Ata | Proposta da Administração",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=xxROeALpdfRFT5VQuc1NhA==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Assembleia",
+     "data": "27/04/2026",
+     "titulo": "AGO - Proposta da Administração",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=kos/qhMjU4QJD7fZp9tExA==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "15/10/2026",
+     "titulo": "Comunicado ao Mercado - Prévia Operacional 3T26 e 9M26",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=m0th3NgNNNCM4p0TfiQ2Zg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "16/07/2026",
+     "titulo": "Comunicado ao Mercado - Prévia Operacional 2T26 e 6M26",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=9q3izMYNIY9DuA2dnB97jg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "26/05/2026",
+     "titulo": "Comunicado ao Mercado - Conclusão Operação Alicerce",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=yV0g6K85AH5HaeKJpGg01w==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "15/04/2026",
+     "titulo": "Comunicado ao Mercado - Prévia Operacional 1T26",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=k2iw8EVTD7sJXLYN51XpkQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "03/03/2026",
+     "titulo": "Comunicado ao Mercado - Nova data de divulgação das DFs",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=oKOLtnxDvD4HVgdXQRaHhQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "25/02/2026",
+     "titulo": "Comunicado ao Mercado - Nova data de divulgação das DFs",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=XTXq8ugYu+khArYXZgKxRw==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Comunicado ao Mercado",
+     "data": "15/01/2026",
+     "titulo": "Comunicado ao Mercado - Prévia Operacional 4T25 e 2025",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=dd2WgJ+PLYIhgQj9PlU6Xg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Dados Econômico-Financeiros",
+     "data": "30/04/2026",
+     "titulo": "Dados Econômico-Financeiros - Relatório Anual Fiduciário, 7ª Emissão de Debênture, 2025",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=RuHaub/H6m1nQ/K5kJOXlQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Dados Econômico-Financeiros",
+     "data": "05/03/2026",
+     "titulo": "Demonstrações Financeiras Anuais Completas, 2025",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=AaqcJelaK5hwiAtW7h2XhA==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Dados Econômico-Financeiros",
+     "data": "05/03/2026",
+     "titulo": "Dados Econômico-Financeiros - Release de Resultados 4T25 e 2025",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=3sQXCDA9N7/T9zRamaVYTw==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Fato Relevante",
+     "data": "25/09/2026",
+     "titulo": "Fato Relevante - Conclusão Operação de Estoque",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=jTvbyd9K3JTUIIMAtJofag==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Fato Relevante",
+     "data": "31/07/2026",
+     "titulo": "Fato Relevante - Renúncia de Diretor Executivo",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=JJ9x1hcJFIX4wJMQqyxiMA==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Fato Relevante",
+     "data": "15/05/2026",
+     "titulo": "Fato Relevante - Operação de Estoque",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=67V/R2/X9tCqlcWXd1fbqg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Formulário de Referência e Cadastral",
+     "data": "19/10/2026",
+     "titulo": "Formulário de Referência 2026",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=CF0dNo0IOeGZMja5122dow==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Formulário de Referência e Cadastral",
+     "data": "29/05/2026",
+     "titulo": "Formulário Cadastral 2026",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=wepYLx85p+I9/qpOzNDj1A==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "16/10/2026",
+     "titulo": "Conselho de Administração - Ata | Eleição DPO e CoAudit",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=eJZeoN/hv6rJxeUFA05GVg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "31/07/2026",
+     "titulo": "Conselho de Administração - Ata | Renúncia Diretor Executivo Técnico Novolar",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=ILohIPCifhXL1M/W+FzFJg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "27/04/2026",
+     "titulo": "Conselho de Administração - Ata | Aprovação Proposta Administração",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=EuCRH/q7zU/DiRWJid07+g==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "23/04/2026",
+     "titulo": "Conselho de Administração - Ata | Contrato de Permuta",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=/MpgozHK7IqJgzf9IFYI9w==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "01/04/2026",
+     "titulo": "Conselho de Administração - Ata | Renúncia Diretor Executivo",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=uEbacjdTeG9t5X8rMv6JeQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "05/03/2026",
+     "titulo": "Conselho de Administração - Ata | Aprovação das DFs de 2025",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=lulkj2jpZ090f0qTUF2URw==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Reunião de Administração",
+     "data": "30/01/2026",
+     "titulo": "Conselho de Administração - Ata | Distribuição de dividendo à acionista",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=ROLGmmbUvQCm1/5amYbMoQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "01/10/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=+msXgsC6lhpXhPFr+Z6F3Q==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "03/09/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=curMBe+70lKc+R+t7uphag==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "03/08/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=xDnpjppmshfldK18+lePdg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "02/07/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=cExTEgswT6eb+0u7+YmngQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "01/06/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=hunxnGfS3RfHfnwt99KQhg==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "04/05/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=lKlAlvOr7ywjzk86kPcvuA==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "01/04/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=dia+auidwqezdmAdgDE8YQ==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "05/03/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=uqdcrhohi6rYHGnn/aN8mA==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "03/02/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=wDVTllzlrC+HW4x3WeZ97A==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    },
+    {
+     "categoria": "Valores Mobiliários Negociados e Detidos (art. 11 da Instr. CVM nº 358)",
+     "data": "06/01/2026",
+     "titulo": "Valores Mobiliários Negociados e Detidos - Posição Consolidada",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=TM3+IMQddADG2eeJUozY6A==&IdCanal=4PGQYDVxrU544HYs+8WYHQ=="
+    }
+   ],
+   "apresentacoes": [
+    {
+     "categoria": null,
+     "data": "19/10/2026",
+     "titulo": "Apresentação Institucional",
+     "url": "https://ri.patrimar.com.br/Download.aspx?Arquivo=FiMPCoIziQ4gcVYNpjmfRQ=="
+    }
+   ]
+  }
+ },
+ "servicos": {
+  "calendario": {
+   "pagina": "Calendário de Eventos",
+   "arquivo": "ri.patrimar.com.br_8774b0e33d836b6e.html",
+   "proximo": {
+    "data": "2026-11-12",
+    "titulo": "Divulgação de Resultados 3T26",
+    "horario": "Após Fechamento do Mercado",
+    "ano_inferido": true
+   },
+   "eventos": [
+    {
+     "data": "2026-11-12",
+     "titulo": "Divulgação de Resultados 3T26",
+     "origem": "proximo",
+     "tipo": "resultado",
+     "ref": "3T26",
+     "fim_periodo": "2026-09-30",
+     "dias_apos_fim": 43
+    },
+    {
+     "data": "2026-10-15",
+     "titulo": "Prévia Operacional 3T26",
+     "origem": "realizado",
+     "tipo": "previa",
+     "ref": "3T26",
+     "fim_periodo": "2026-09-30",
+     "dias_apos_fim": 15
+    },
+    {
+     "data": "2026-08-14",
+     "titulo": "Divulgação de Resultados 2T26",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "2T26",
+     "fim_periodo": "2026-06-30",
+     "dias_apos_fim": 45
+    },
+    {
+     "data": "2026-07-30",
+     "titulo": "Informe sobre o Código Brasileiro de Governança Corporativa",
+     "origem": "realizado",
+     "tipo": "governanca",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2026-07-16",
+     "titulo": "Prévia Operacional 2T26",
+     "origem": "realizado",
+     "tipo": "previa",
+     "ref": "2T26",
+     "fim_periodo": "2026-06-30",
+     "dias_apos_fim": 16
+    },
+    {
+     "data": "2026-05-29",
+     "titulo": "Formulários de Referência e Cadastral",
+     "origem": "realizado",
+     "tipo": "formularios",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2026-05-15",
+     "titulo": "Divulgação de Resultados 1T26",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "1T26",
+     "fim_periodo": "2026-03-31",
+     "dias_apos_fim": 45
+    },
+    {
+     "data": "2026-04-29",
+     "titulo": "Realização da Assembleia Geral Ordinária",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2026-04-15",
+     "titulo": "Prévia Operacional 1T26",
+     "origem": "realizado",
+     "tipo": "previa",
+     "ref": "1T26",
+     "fim_periodo": "2026-03-31",
+     "dias_apos_fim": 15
+    },
+    {
+     "data": "2026-03-30",
+     "titulo": "AGO - Envio da Proposta da Administração",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2026-03-30",
+     "titulo": "AGO - Envio do Edital de Convocação",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2026-03-05",
+     "titulo": "Divulgação de Resultados e Demonstrações Financeiras 2025",
+     "origem": "realizado",
+     "tipo": "resultado_anual",
+     "ref": "2025",
+     "fim_periodo": "2025-12-31",
+     "dias_apos_fim": 64
+    },
+    {
+     "data": "2026-01-15",
+     "titulo": "Prévia Operacional 2025",
+     "origem": "realizado",
+     "tipo": "previa_anual",
+     "ref": "2025",
+     "fim_periodo": "2025-12-31",
+     "dias_apos_fim": 15
+    },
+    {
+     "data": "2025-11-10",
+     "titulo": "Divulgação de Resultados 3T25",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "3T25",
+     "fim_periodo": "2025-09-30",
+     "dias_apos_fim": 41
+    },
+    {
+     "data": "2025-10-16",
+     "titulo": "Prévia Operacional 3T25",
+     "origem": "realizado",
+     "tipo": "previa",
+     "ref": "3T25",
+     "fim_periodo": "2025-09-30",
+     "dias_apos_fim": 16
+    },
+    {
+     "data": "2025-08-07",
+     "titulo": "Divulgação de Resultados 2T25",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "2T25",
+     "fim_periodo": "2025-06-30",
+     "dias_apos_fim": 38
+    },
+    {
+     "data": "2025-07-31",
+     "titulo": "Informe sobre o Código Brasileiro de Governança Corporativa",
+     "origem": "realizado",
+     "tipo": "governanca",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2025-07-17",
+     "titulo": "Prévia Operacional 2T25",
+     "origem": "realizado",
+     "tipo": "previa",
+     "ref": "2T25",
+     "fim_periodo": "2025-06-30",
+     "dias_apos_fim": 17
+    },
+    {
+     "data": "2025-05-30",
+     "titulo": "Formulários de Referência e Cadastral",
+     "origem": "realizado",
+     "tipo": "formularios",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2025-05-14",
+     "titulo": "Divulgação de Resultados 1T25",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "1T25",
+     "fim_periodo": "2025-03-31",
+     "dias_apos_fim": 44
+    },
+    {
+     "data": "2025-04-29",
+     "titulo": "Realização da Assembleia Geral Ordinária",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2025-04-15",
+     "titulo": "Prévia Operacional 1T25",
+     "origem": "realizado",
+     "tipo": "previa",
+     "ref": "1T25",
+     "fim_periodo": "2025-03-31",
+     "dias_apos_fim": 15
+    },
+    {
+     "data": "2025-03-29",
+     "titulo": "Envio da Proposta da Administração",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2025-03-29",
+     "titulo": "Envio do Edital de Convocação",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2025-03-13",
+     "titulo": "Demonstrações Financeiras 2024",
+     "origem": "realizado",
+     "tipo": "resultado_anual",
+     "ref": "2024",
+     "fim_periodo": "2024-12-31",
+     "dias_apos_fim": 72
+    },
+    {
+     "data": "2024-11-11",
+     "titulo": "Divulgação de Resultados 3T24",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "3T24",
+     "fim_periodo": "2024-09-30",
+     "dias_apos_fim": 42
+    },
+    {
+     "data": "2024-08-12",
+     "titulo": "Divulgação de Resultados 2T24",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "2T24",
+     "fim_periodo": "2024-06-30",
+     "dias_apos_fim": 43
+    },
+    {
+     "data": "2024-05-15",
+     "titulo": "Divulgação de Resultados 1T24",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "1T24",
+     "fim_periodo": "2024-03-31",
+     "dias_apos_fim": 45
+    },
+    {
+     "data": "2024-04-26",
+     "titulo": "Envio da Proposta da Administração",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2024-03-05",
+     "titulo": "Demonstrações Financeiras 2023",
+     "origem": "realizado",
+     "tipo": "resultado_anual",
+     "ref": "2023",
+     "fim_periodo": "2023-12-31",
+     "dias_apos_fim": 65
+    },
+    {
+     "data": "2023-11-13",
+     "titulo": "Divulgação de Resultados 3T23",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "3T23",
+     "fim_periodo": "2023-09-30",
+     "dias_apos_fim": 44
+    },
+    {
+     "data": "2023-08-09",
+     "titulo": "Divulgação de Resultados 2T23",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "2T23",
+     "fim_periodo": "2023-06-30",
+     "dias_apos_fim": 40
+    },
+    {
+     "data": "2023-07-31",
+     "titulo": "Informe sobre o Código Brasileiro de Governança Corporativa",
+     "origem": "realizado",
+     "tipo": "governanca",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2023-05-31",
+     "titulo": "Formulário de Referência",
+     "origem": "realizado",
+     "tipo": "formularios",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2023-05-11",
+     "titulo": "Divulgação de Resultados 1T23",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "1T23",
+     "fim_periodo": "2023-03-31",
+     "dias_apos_fim": 41
+    },
+    {
+     "data": "2023-04-28",
+     "titulo": "Assembleia Geral Ordinária",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2023-03-08",
+     "titulo": "Demonstrações Financeiras 2022",
+     "origem": "realizado",
+     "tipo": "resultado_anual",
+     "ref": "2022",
+     "fim_periodo": "2022-12-31",
+     "dias_apos_fim": 67
+    },
+    {
+     "data": "2022-11-08",
+     "titulo": "Divulgação de Resultados 3T22",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "3T22",
+     "fim_periodo": "2022-09-30",
+     "dias_apos_fim": 39
+    },
+    {
+     "data": "2022-08-09",
+     "titulo": "Divulgação de Resultados 2T22",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "2T22",
+     "fim_periodo": "2022-06-30",
+     "dias_apos_fim": 40
+    },
+    {
+     "data": "2022-07-29",
+     "titulo": "Informe sobre o Código Brasileiro de Governança Corporativa",
+     "origem": "realizado",
+     "tipo": "governanca",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2022-05-31",
+     "titulo": "Formulário de Referência de 2021",
+     "origem": "realizado",
+     "tipo": "formularios",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2022-05-10",
+     "titulo": "Divulgação de Resultados 1T22",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "1T22",
+     "fim_periodo": "2022-03-31",
+     "dias_apos_fim": 40
+    },
+    {
+     "data": "2022-04-29",
+     "titulo": "Assembleia Geral Ordinária",
+     "origem": "realizado",
+     "tipo": "assembleia",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2022-03-09",
+     "titulo": "Demonstrações Financeiras 2021",
+     "origem": "realizado",
+     "tipo": "resultado_anual",
+     "ref": "2021",
+     "fim_periodo": "2021-12-31",
+     "dias_apos_fim": 68
+    },
+    {
+     "data": "2021-11-09",
+     "titulo": "Divulgação de Resultados 3T21",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "3T21",
+     "fim_periodo": "2021-09-30",
+     "dias_apos_fim": 40
+    },
+    {
+     "data": "2021-08-09",
+     "titulo": "Divulgação de Resultados 2T21",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "2T21",
+     "fim_periodo": "2021-06-30",
+     "dias_apos_fim": 40
+    },
+    {
+     "data": "2021-06-10",
+     "titulo": "Divulgação de Resultados 1T21",
+     "origem": "realizado",
+     "tipo": "resultado",
+     "ref": "1T21",
+     "fim_periodo": "2021-03-31",
+     "dias_apos_fim": 71
+    },
+    {
+     "data": "2021-05-31",
+     "titulo": "Formulário de Referência 2020",
+     "origem": "realizado",
+     "tipo": "formularios",
+     "ref": null,
+     "fim_periodo": null,
+     "dias_apos_fim": null
+    },
+    {
+     "data": "2021-03-23",
+     "titulo": "Demonstrações Financeiras 2020",
+     "origem": "realizado",
+     "tipo": "resultado_anual",
+     "ref": "2020",
+     "fim_periodo": "2020-12-31",
+     "dias_apos_fim": 82
+    }
+   ],
+   "nota_proximo": "A página oficial mostra o próximo evento só com dia e mês; o ano foi inferido (o primeiro dia depois do último evento realizado)."
+  },
+  "informe": {
+   "pagina": "Informe de Rendimentos",
+   "arquivo": "ri.patrimar.com.br_84dc9ba90d4c2518.html",
+   "linhas": [
+    "Prezado Acionista, para obter seu informe de rendimentos basta se dirigir a qualquer agência do Banco Itaú, banco custodiante das ações da Patrimar, e solicitar o Informe.",
+    "O Itaú envia, anualmente, os Informes de Rendimentos ao endereço cadastrado de cada acionista, portanto lembre-se de verificar se o endereço cadastrado está correto e, em caso negativo, atualizá-lo na própria agência.",
+    "Correntistas do Itaú Unibanco: através do site do Itaú Unibanco (www.itau.com.br) inclua os dados de agência, conta corrente e senha eletrônica. Acesse o menu Conta Corrente > Declaração do Imposto de Renda > Informe de Rendimentos.",
+    "Lembrando que os cadastros da conta corrente e escritural devem estar atualizados.",
+    "Não-correntistas do Itaú Unibanco: Após se cadastrar no Portal de Correspondências Digitais é possível acessar o informe de rendimentos:?correspondenciasdigitais.com.br/login"
+   ]
+  },
+  "contatos": {
+   "pagina": "Fale com RI",
+   "arquivo": "ri.patrimar.com.br_a92f931cfb49d489.html",
+   "responsavel": "Felipe Enck Gonçalves",
+   "cargo": "Diretor Relações com Investidores",
+   "telefone": "(31) 3254-0311",
+   "email": "ri@patrimar.com.br",
+   "endereco": "Rod. Stael Mary Bicalho Motta Magalhães (estrada para Nova Lima), 521, 17º andar",
+   "cidade": "Belo Horizonte / MG",
+   "rodape_endereco": [
+    "Rod. Stael Mary Bicalho Motta Magalhães (estrada para Nova Lima), 521 17º andar",
+    "Belo Horizonte / MG"
+   ],
+   "rodape_equipe": "(31) 3264-4301 /(31) 3264-4302"
+  }
+ }
+}
