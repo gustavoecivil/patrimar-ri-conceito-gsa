@@ -39,7 +39,7 @@
         <li><a href="#indicadores">Indicadores</a></li>
         <li><a href="#explorador">Explorador</a></li>
         <li><a href="#assistente">Assistente</a></li>
-        <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#documentos">Central</a></li>
         <li><a href="#metodologia">Metodologia</a></li>
       </ul>
     </nav>
@@ -260,17 +260,62 @@
   <section id="documentos" aria-labelledby="titulo-documentos">
     <div class="wrap">
       <div class="cabeca">
-        <p class="eyebrow">Central de documentos</p>
-        <h2 id="titulo-documentos">Releases, ITR, prévias e demonstrações</h2>
-        <p>Os documentos oficiais da Central de Resultados, do mais recente ao mais antigo, com link para o original no site de RI.</p>
+        <p class="eyebrow">Central de Resultados</p>
+        <h2 id="titulo-documentos">O resultado de cada período, já organizado para análise</h2>
+        <p>Escolha o período com as setas e a forma de agrupar. O painel traz os números dos releases, dos ITRs e das prévias, a conta e a fonte de cada um, e deixa baixar os dados para trabalhar na planilha. Os documentos originais seguem à mão.</p>
       </div>
-      <div class="controles">
-        <div class="campo"><label for="doc-busca">Buscar documento</label><input id="doc-busca" type="search" autocomplete="off" placeholder="Ex.: 2T26, release"></div>
-        <div class="campo"><label for="doc-tipo">Tipo</label><select id="doc-tipo"></select></div>
-        <div class="campo"><label for="doc-ano">Ano</label><select id="doc-ano"></select></div>
-        <p class="contagem" id="documentos-contagem" aria-live="polite"></p>
+      <div class="painel" id="painel">
+        <div class="painel-topo">
+          <div class="painel-nav" role="group" aria-label="Período">
+            <button type="button" id="painel-ant" class="painel-seta" aria-label="Período anterior"><span aria-hidden="true">&#8249;</span></button>
+            <div class="painel-titulo"><p class="painel-visao-rotulo" id="painel-visao-rotulo"></p><p class="painel-periodo" id="painel-periodo" aria-live="polite"></p></div>
+            <button type="button" id="painel-prox" class="painel-seta" aria-label="Próximo período"><span aria-hidden="true">&#8250;</span></button>
+          </div>
+          <div class="painel-visoes" role="group" aria-label="Agrupar por" id="painel-visoes"></div>
+        </div>
+        <p class="nota" id="painel-aviso"></p>
+        <h3 class="subtitulo">Os números do período</h3>
+        <div class="grade-kpi" id="painel-kpis"></div>
+        <div class="painel-duas">
+          <div class="painel-bloco">
+            <h3 class="subtitulo">Evolução</h3>
+            <div class="campo"><label for="painel-indicador">Indicador</label><select id="painel-indicador"></select></div>
+            <div id="painel-grafico" class="painel-grafico"></div>
+            <p class="nota" id="painel-grafico-nota"></p>
+          </div>
+          <div class="painel-bloco" id="painel-recortes">
+            <h3 class="subtitulo">Por região e por marca</h3>
+            <div id="painel-recortes-corpo"></div>
+          </div>
+        </div>
+        <h3 class="subtitulo">A conta do período</h3>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Tabela do período, role para os lados em telas pequenas">
+          <table id="painel-tabela">
+            <caption class="so-leitor">Indicadores do período escolhido, com o período de comparação e a variação</caption>
+            <thead><tr><th scope="col">Indicador</th><th scope="col" class="num">Valor</th><th scope="col" class="num" id="painel-col-base">Comparação</th><th scope="col" class="num">Variação</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="painel-baixar" id="painel-baixar">
+          <h3 class="subtitulo">Levar os dados</h3>
+          <div class="painel-botoes" id="painel-botoes"></div>
+          <p class="nota">O CSV do período traz os 147 indicadores com a comparação e a fonte de cada valor. A planilha completa tem uma aba por assunto, o dicionário de dados e a cobertura de cada série.</p>
+        </div>
+        <div id="painel-originais">
+          <h3 class="subtitulo">Documentos originais do período</h3>
+          <ul class="painel-docs" id="painel-docs"></ul>
+        </div>
       </div>
-      <ul class="docs" id="lista-documentos"></ul>
+      <details class="todos-docs">
+        <summary>Lista completa dos documentos oficiais (releases, ITR, prévias e demonstrações)</summary>
+        <div class="controles">
+          <div class="campo"><label for="doc-busca">Buscar documento</label><input id="doc-busca" type="search" autocomplete="off" placeholder="Ex.: 2T26, release"></div>
+          <div class="campo"><label for="doc-tipo">Tipo</label><select id="doc-tipo"></select></div>
+          <div class="campo"><label for="doc-ano">Ano</label><select id="doc-ano"></select></div>
+          <p class="contagem" id="documentos-contagem" aria-live="polite"></p>
+        </div>
+        <ul class="docs" id="lista-documentos"></ul>
+      </details>
     </div>
   </section>
 

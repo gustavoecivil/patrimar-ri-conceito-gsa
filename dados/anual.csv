@@ -1,0 +1,148 @@
+﻿id;seção;subgrupo;indicador;unidade;natureza;2020;2021;2022;2023;2024;2025
+1;Operacional;Lançamentos VGV 100%;Lançamentos (VGV 100%);R$ milhões;Fluxo (soma dos trimestres);734,138034;1263,5942102;1363,298443;1905,3890639999997;1973,610747325;2470,9164377399998
+2;Operacional;Lançamentos VGV 100%;Lançamentos VGV 100%: Econômico;R$ milhões;Fluxo (soma dos trimestres);129,662;304,089;174,0068;295,34736;231,75920000000002;350,59267682
+3;Operacional;Lançamentos VGV 100%;Lançamentos VGV 100%: Média Renda;R$ milhões;Fluxo (soma dos trimestres);0,0;0,0;74,498;1016,2341945200002;519,49487926;742,29892484
+4;Operacional;Lançamentos VGV 100%;Lançamentos VGV 100%: Alta Renda;R$ milhões;Fluxo (soma dos trimestres);604,477;959,506;1114,794086;593,80751;1222,3566680650001;1378,0248360800001
+5;Operacional;Lançamentos unidades;Lançamentos (unidades);unidades;Fluxo (soma dos trimestres);959,0;1546,0;1343,0;2781,0;2264,0;3194,0
+6;Operacional;Lançamentos unidades;Lançamentos unidades: Econômico;unidades;Fluxo (soma dos trimestres);648,0;1300,0;876,0;1196,0;904,0;1323,0
+7;Operacional;Lançamentos unidades;Lançamentos unidades: Média Renda;unidades;Fluxo (soma dos trimestres);0,0;0,0;96,0;1425,0;768,0;1222,0
+8;Operacional;Lançamentos unidades;Lançamentos unidades: Alta Renda;unidades;Fluxo (soma dos trimestres);311,0;246,0;371,0;160,0;592,0;649,0
+9;Operacional;Vendas líquidas VGV 100%;Vendas líquidas (VGV 100%);R$ milhões;Fluxo (soma dos trimestres);545,96637049;988,32524063;729,56420787;1509,0278848700002;1460,2091355900002;1106,21394215
+10;Operacional;Vendas líquidas VGV 100%;Vendas líquidas VGV 100%: Econômico;R$ milhões;Fluxo (soma dos trimestres);86,47;294,696;202,28674625000002;226,45856827999998;212,05268927999998;233,549133
+11;Operacional;Vendas líquidas VGV 100%;Vendas líquidas VGV 100%: Média Renda;R$ milhões;Fluxo (soma dos trimestres);49,92;20,728;22,403837600000003;443,86315966999996;376,13122384;350,73206400000004
+12;Operacional;Vendas líquidas VGV 100%;Vendas líquidas VGV 100%: Alta Renda;R$ milhões;Fluxo (soma dos trimestres);409,575;672,903;504,87401355000003;838,70615527;872,0246825999999;521,932745
+13;Operacional;Vendas líquidas unidades;Vendas líquidas (unidades);unidades;Fluxo (soma dos trimestres);908,0;1609,0;1125,0;1892,0;1791,0;1733,0
+14;Operacional;Vendas líquidas unidades;Vendas líquidas unidades: Econômico;unidades;Fluxo (soma dos trimestres);460,0;1364,0;915,0;987,0;801,0;894,0
+15;Operacional;Vendas líquidas unidades;Vendas líquidas unidades: Média Renda;unidades;Fluxo (soma dos trimestres);120,0;47,0;45,0;696,0;593,0;580,0
+16;Operacional;Vendas líquidas unidades;Vendas líquidas unidades: Alta Renda;unidades;Fluxo (soma dos trimestres);328,0;198,0;165,0;209,0;397,5;259,0
+17;Operacional;Preço médio;Preço médio de venda;R$ mil por unidade;Razão (%, x);601,2845489977974;614,2481296643879;648,5015181066667;797,5834486627908;815,3038166331659;638,3231056837853
+18;Operacional;Preço médio;Preço médio: Econômico;R$ mil por unidade;Razão (%, x);187,97826086956522;216,05278592375367;221,07841120218583;229,44130524822694;264,7349429213483;261,2406409395973
+19;Operacional;Preço médio;Preço médio: Média Renda;R$ mil por unidade;Razão (%, x);416,0;441,02127659574467;497,86305777777784;637,7344248132183;634,2853690387858;604,7104551724138
+20;Operacional;Preço médio;Preço médio: Alta Renda;R$ mil por unidade;Razão (%, x);1248,7042682926829;3398,5;3059,8425063636364;4012,948111339713;2193,7727864150943;2015,1843436293436
+21;Operacional;Landbank;Landbank (VGV 100%);R$ milhões;Saldo de fim de período;7218,0;9346,2;11284,0;12869,0;15700,0;15100,0
+22;Operacional;Landbank;Landbank (unidades);unidades;Saldo de fim de período;12666,0;11801,0;13145,0;16344,0;20218,0;15659,0
+23;Operacional;Landbank;Landbank: preço médio por unidade;R$ mil por unidade;Razão (%, x);569,8720985315017;791,9837301923567;858,4252567516165;787,3837493881546;776,535760213671;964,3016795453094
+24;Operacional;Landbank;Landbank: participação da companhia no VGV;%;Razão (%, x);69,44444444444444;69,0;69,0;75,0;75,33999999999999;73,0
+25;DRE;DRE consolidada;Receita operacional líquida;R$ milhões;Fluxo (soma dos trimestres);435,227;882,168;829,418;1355,49885735;1464,532;1463,176
+26;DRE;DRE consolidada;Custo dos imóveis vendidos;R$ milhões;Fluxo (soma dos trimestres);-266,525;-585,907;-619,844;-1063,0989919;-1166,844;-1139,08
+27;DRE;DRE consolidada;Lucro bruto;R$ milhões;Fluxo (soma dos trimestres);168,702;296,261;209,574;292,39986545000005;297,688;324,096
+28;DRE;DRE consolidada;Margem bruta operacional (contábil);%;Razão (%, x);38,76184152178059;33,58328572335429;25,267597279055913;21,571384133929968;20,32649337808938;22,15017195470675
+29;DRE;DRE consolidada;Receitas (despesas) operacionais;R$ milhões;Fluxo (soma dos trimestres);-72,81;-115,794;-122,165;-173,09799745872638;-194,167;-200,459
+30;DRE;DRE consolidada;Gerais e administrativas;R$ milhões;Fluxo (soma dos trimestres);-31,305;-40,551;-51,795;-66,73081441;-86,763;-101,038
+31;DRE;DRE consolidada;Comerciais;R$ milhões;Fluxo (soma dos trimestres);-29,331;-55,392;-68,519;-97,44128042;-114,395;-119,11
+32;DRE;DRE consolidada;Outras receitas (despesas) operacionais;R$ milhões;Fluxo (soma dos trimestres);-12,174;-19,851;-1,851;-8,927027399999998;3,528;14,664
+33;DRE;DRE consolidada;Equivalência patrimonial;R$ milhões;Fluxo (soma dos trimestres);3,401;-9,137;-3,965;-2,88528163;3,463;5,025
+34;DRE;DRE consolidada;Lucro (prejuízo) operacional;R$ milhões;Fluxo (soma dos trimestres);95,892;171,33;83,444;116,41658636127364;103,521;123,637
+35;DRE;DRE consolidada;Receitas financeiras;R$ milhões;Fluxo (soma dos trimestres);17,282;14,505;44,652;49,81564905;52,964;51,925
+36;DRE;DRE consolidada;Despesas financeiras;R$ milhões;Fluxo (soma dos trimestres);-13,784;-13,478;-36,113;-55,30916645;-92,157;-115,88
+37;DRE;DRE consolidada;Resultado financeiro;R$ milhões;Fluxo (soma dos trimestres);3,498;1,027;8,539;-5,493517399999999;-39,193;-63,955
+38;DRE;DRE consolidada;Lucro (prejuízo) antes do IR e CS;R$ milhões;Fluxo (soma dos trimestres);102,791;172,357;91,983;110,92306530562756;64,32825117958538;59,682
+39;DRE;DRE consolidada;DRE consolidada: Imposto de renda e contribuição social;R$ milhões;Fluxo (soma dos trimestres);-8,424;-17,593;-19,437;-31,41077407;-29,176;-27,093
+40;DRE;DRE consolidada;Lucro (prejuízo) líquido;R$ milhões;Fluxo (soma dos trimestres);94,367;154,764;72,546;79,51229489127365;35,15225117958538;32,589
+41;DRE;DRE consolidada;Margem líquida;%;Razão (%, x);21,68224857373279;17,543597137960116;8,746615096368778;5,865906179447033;2,400237835676201;2,2272781948309706
+42;DRE;DRE consolidada;Participação do controlador;R$ milhões;Fluxo (soma dos trimestres);56,389;79,658;32,249;51,643430800000004;31,882;27,689
+43;DRE;DRE consolidada;Participação dos sócios não controladores;R$ milhões;Fluxo (soma dos trimestres);37,978;75,106;40,297;27,86873932;3,27;4,9
+44;Fluxo de caixa;Atividades operacionais;Lucro líquido do exercício;R$ milhões;Fluxo (soma dos trimestres);94,367;154,764;72,546;79,512;35,152;32,589
+45;Fluxo de caixa;Atividades operacionais;Depreciações e amortizações;R$ milhões;Fluxo (soma dos trimestres);8,951;9,95;15,456;24,481;28,681;32,54
+46;Fluxo de caixa;Atividades operacionais;Ajuste a valor presente sobre contas a receber;R$ milhões;Fluxo (soma dos trimestres);-2,1239999999999997;4,182;8,619;27,346;16,699;2,865
+47;Fluxo de caixa;Atividades operacionais;Resultado de equivalência patrimonial;R$ milhões;Fluxo (soma dos trimestres);-3,401;9,137;3,965;2,885;-3,463;-5,025
+48;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Provisão para manutenção de imóveis;R$ milhões;Fluxo (soma dos trimestres);2,743;4,021;4,97;13,343;15,316;13,391
+49;Fluxo de caixa;Atividades operacionais;Provisão para riscos trabalhistas, civeis e tributários;R$ milhões;Fluxo (soma dos trimestres);2,628;2,227;6,41;10,05;-2,837;5,634
+50;Fluxo de caixa;Atividades operacionais;Provisão para distratos;R$ milhões;Fluxo (soma dos trimestres);;;0,262;0,335;6,565;-1,176
+51;Fluxo de caixa;Atividades operacionais;Provisão para devedores duvidosos;R$ milhões;Fluxo (soma dos trimestres);;-0,122;3,109;0,826;3,581;6,675
+52;Fluxo de caixa;Atividades operacionais;Provisão de juros sobre empréstimos e financiamentos;R$ milhões;Fluxo (soma dos trimestres);6,425;18,343;45,192;74,699;110,331;186,964
+53;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Imposto de renda e contribuição social;R$ milhões;Fluxo (soma dos trimestres);8,424;17,593;7,992;-5,862;12,82;4,09
+54;Fluxo de caixa;Atividades operacionais;Baixa de ativos imobilizados;R$ milhões;Fluxo (soma dos trimestres);1,318;0,698;1,781;6,319;4,255;1,028
+55;Fluxo de caixa;Atividades operacionais;Ganhos e perdas na baixa de investimentos;R$ milhões;Fluxo (soma dos trimestres);;;;;;
+56;Fluxo de caixa;Atividades operacionais;Rendimento de títulos e valores mobiliários;R$ milhões;Fluxo (soma dos trimestres);;;-8,816;-11,188;-14,211;-10,761
+57;Fluxo de caixa;Atividades operacionais;Valor justo de instrumento financeiro;R$ milhões;Fluxo (soma dos trimestres);;;;;;0,413
+58;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Contas a receber de clientes;R$ milhões;Fluxo (soma dos trimestres);-104,223;-211,086;-156,875;-208,973;-435,259;-45,485
+59;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Imóveis a comercializar;R$ milhões;Fluxo (soma dos trimestres);-65,7914;-84,058;-83,431;-21,804;-122,024;-361,656
+60;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Tributos a recuperar;R$ milhões;Fluxo (soma dos trimestres);-0,057;-3,783;-7,048;-6,776;-6,758;-6,697
+61;Fluxo de caixa;Atividades operacionais;Outros ativos;R$ milhões;Fluxo (soma dos trimestres);-16,097;-5,981;-3,63;-20,318;0,396;-11,694
+62;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Fornecedores;R$ milhões;Fluxo (soma dos trimestres);-2,25;17,029;16,517;69,831;-21,243;15,455
+63;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Salários e encargos sociais;R$ milhões;Fluxo (soma dos trimestres);2,655;5,248;2,501;7,848;0,752;3,05
+64;Fluxo de caixa;Atividades operacionais;Obrigações tributárias;R$ milhões;Fluxo (soma dos trimestres);5,477;3,966;9,038;52,012;19,99;21,747
+65;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Obrigações por compra de imóveis;R$ milhões;Fluxo (soma dos trimestres);31,824;-17,26;-21,252;8,268;66,14;14,988
+66;Fluxo de caixa;Atividades operacionais;Atividades operacionais: Adiantamentos de clientes;R$ milhões;Fluxo (soma dos trimestres);65,722;222,048;113,933;-63,127;-43,321;84,17
+67;Fluxo de caixa;Atividades operacionais;Outros passivos;R$ milhões;Fluxo (soma dos trimestres);-1,376;-6,118;-1,123;4,105;1,378;3,326
+68;Fluxo de caixa;Atividades operacionais;Valores pagos por manutenção de imóveis em garantia;R$ milhões;Fluxo (soma dos trimestres);;;-1,827;-6,967;-6,712;-6,011
+69;Fluxo de caixa;Atividades operacionais;Valores pagos por riscos cíveis, trabalhistas e tributários;R$ milhões;Fluxo (soma dos trimestres);-3,96;2,227;-8,32;-5,816;-8,645;-4,984
+70;Fluxo de caixa;Atividades operacionais;Aumento / (redução) dos ativos e passivos;R$ milhões;Fluxo (soma dos trimestres);-88,07639999999999;-77,768;-141,517;-191,717;-555,306;-293,791
+71;Fluxo de caixa;Atividades operacionais;Juros pagos;R$ milhões;Fluxo (soma dos trimestres);-5,633;-6,008;-20,761;-67,702;-126,711;-164,193
+72;Fluxo de caixa;Atividades operacionais;Imposto de renda e contribuição social pagos;R$ milhões;Fluxo (soma dos trimestres);-6,325;-11,104;-11,445;-37,273;-16,356;-23,003
+73;Fluxo de caixa;Atividades operacionais;Caixa das atividades operacionais;R$ milhões;Fluxo (soma dos trimestres);19,296600000000005;125,913;-12,237;-73,946;-485,697;-211,76
+74;Fluxo de caixa;Atividades de investimentos;Aplicação/Aumento de titulos e valor mobilarios;R$ milhões;Fluxo (soma dos trimestres);0,0;-56,415;-40,815;-54,722;50,366;-149,896
+75;Fluxo de caixa;Atividades de investimentos;Resgate de títulos de valores mobiliários;R$ milhões;Fluxo (soma dos trimestres);;;;;;243,588
+76;Fluxo de caixa;Atividades de investimentos;Movimentação de aplicações financeiras restritas;R$ milhões;Fluxo (soma dos trimestres);-0,059;-0,089;-0,325;-0,241;-0,298;-0,43
+77;Fluxo de caixa;Atividades de investimentos;Adiantamentos a empresas ligadas;R$ milhões;Fluxo (soma dos trimestres);13,801;-3,548;14,423;-17,82;-57,614;15,961
+78;Fluxo de caixa;Atividades de investimentos;Aportes (retorno) de investimentos;R$ milhões;Fluxo (soma dos trimestres);3,209;12,711;-3,136;0,334;-0,687;-2,172
+79;Fluxo de caixa;Atividades de investimentos;Aquisições de ativos imobilizados e intangíveis;R$ milhões;Fluxo (soma dos trimestres);-7,174;-28,656;-17,714;-42,297;-31,519;-48,554
+80;Fluxo de caixa;Atividades de investimentos;Recebimento por venda de participações societárias;R$ milhões;Fluxo (soma dos trimestres);;;;;;0,0
+81;Fluxo de caixa;Atividades de investimentos;Caixa líquido (aplicados nas) gerados pelas atividades de investimentos;R$ milhões;Fluxo (soma dos trimestres);9,777;-76,205;-47,567;-114,746;-39,752;58,497
+82;Fluxo de caixa;Atividades de financiamentos e saldo final;Valores recebidos de empréstimos e financiamentos;R$ milhões;Fluxo (soma dos trimestres);164,819;260,709;317,213;619,401;791,811;586,314
+83;Fluxo de caixa;Atividades de financiamentos e saldo final;Amortização de principal de empréstimos e financiamentos;R$ milhões;Fluxo (soma dos trimestres);-98,58;-137,917;-155,725;-283,317;-355,273;-332,929
+84;Fluxo de caixa;Atividades de financiamentos e saldo final;Dividendos pagos;R$ milhões;Fluxo (soma dos trimestres);-5,268;-38,532;-2,214;-13,6;-16,551;-8,272
+85;Fluxo de caixa;Atividades de financiamentos e saldo final;Redução de capital;R$ milhões;Fluxo (soma dos trimestres);-12,43;0,0;0,0;0,0;0,0;0,0
+86;Fluxo de caixa;Atividades de financiamentos e saldo final;Distribuições a sócios não controladores, líquido;R$ milhões;Fluxo (soma dos trimestres);-8,593;-9,42;-13,259;-38,779;-17,408;-37,78
+87;Fluxo de caixa;Atividades de financiamentos e saldo final;Recebimentos de parceiros em empreendimentos imobiliários;R$ milhões;Fluxo (soma dos trimestres);;;;;;43,504
+88;Fluxo de caixa;Atividades de financiamentos e saldo final;Caixa líquido gerado pelas (aplicado nas) atividades de financiamentos;R$ milhões;Fluxo (soma dos trimestres);39,948;74,84;146,015;283,705;402,579;250,837
+89;Fluxo de caixa;Atividades de financiamentos e saldo final;Aumento de caixa e equivalentes de caixa, líquidos;R$ milhões;Fluxo (soma dos trimestres);69,022;124,67;86,211;95,013;-122,87;97,574
+90;Fluxo de caixa;Atividades de financiamentos e saldo final;Caixa e equivalentes de caixa no início do exercício;R$ milhões;Saldo de fim de período;50,234;119,256;243,926;330,137;425,15;302,281
+91;Fluxo de caixa;Atividades de financiamentos e saldo final;Caixa e equivalentes, fim do período (fluxo de caixa);R$ milhões;Saldo de fim de período;119,256;243,926;330,137;425,15;302,281;399,855
+92;Fluxo de caixa;Atividades de financiamentos e saldo final;Aumento líquido de caixa e equivalentes de caixa;R$ milhões;Fluxo (soma dos trimestres);69,022;124,67;86,211;95,013;-122,87;97,574
+93;Balanço;Ativo circulante;Caixa e equivalentes de caixa;R$ milhões;Saldo de fim de período;119,256;243,926;330,137;425,15;302,281;399,855
+94;Balanço;Ativo circulante;Títulos e valores mobiliários;R$ milhões;Saldo de fim de período;;56,415;106,046;171,956;135,801;52,87
+95;Balanço;Ativo circulante;Contas a receber de clientes, curto prazo;R$ milhões;Saldo de fim de período;142,038;201,174;315,643;274,411;523,613;684,956
+96;Balanço;Ativo circulante;Ativo circulante: Imóveis a comercializar;R$ milhões;Saldo de fim de período;328,108;402,608;419,866;471,124;553,337;935,681
+97;Balanço;Ativo circulante;Ativo circulante: Tributos a recuperar;R$ milhões;Saldo de fim de período;5,487;9,27;16,318;20,847;28,027;34,98
+98;Balanço;Ativo circulante;Despesas antecipadas;R$ milhões;Saldo de fim de período;16,186;22,011;25,105;34,239;45,548;46,572
+99;Balanço;Ativo circulante;Outras contas a receber;R$ milhões;Saldo de fim de período;13,642;14,138;14,229;26,29;14,569;22,408
+100;Balanço;Ativo circulante;Total do ativo circulante;R$ milhões;Saldo de fim de período;624,717;949,542;1227,344;1424,017;1603,176;2177,322
+101;Balanço;Ativo não circulante / Ativo total;Aplicações Financeiras;R$ milhões;Saldo de fim de período;2,25;2,339;2,664;2,905;3,203;3,633
+102;Balanço;Ativo não circulante / Ativo total;Contas a receber de clientes, longo prazo;R$ milhões;Saldo de fim de período;97,985;245,753;276,169;497,867;664,073;539,851
+103;Balanço;Ativo não circulante / Ativo total;Ativo não circulante / Ativo total: Imóveis a comercializar;R$ milhões;Saldo de fim de período;14,845;24,403;90,676;61,222;101,033;80,345
+104;Balanço;Ativo não circulante / Ativo total;Depósitos judiciais;R$ milhões;Saldo de fim de período;1,529;1,189;1,634;0,757;0,773;3,604
+105;Balanço;Ativo não circulante / Ativo total;Partes relacionadas;R$ milhões;Saldo de fim de período;6,686;12,013;8,04;32,332;85,839;78,381
+106;Balanço;Ativo não circulante / Ativo total;Impostos diferidos ativos;R$ milhões;Saldo de fim de período;0,0;0,0;0,0;2,247;1,825;1,569
+107;Balanço;Ativo não circulante / Ativo total;Instrumento financeiros;R$ milhões;Saldo de fim de período;0,0;0,0;0,0;0,0;0,213;0,0
+108;Balanço;Ativo não circulante / Ativo total;Total do ativo realizável a longo prazo;R$ milhões;Saldo de fim de período;123,295;285,697;379,183;597,33;856,959;707,383
+109;Balanço;Ativo não circulante / Ativo total;Investimentos;R$ milhões;Saldo de fim de período;47,117;27,697;28,074;26,506;32,569;41,004
+110;Balanço;Ativo não circulante / Ativo total;Imobilizado;R$ milhões;Saldo de fim de período;16,341;36,087;36,094;50,116;50,7;64,595
+111;Balanço;Ativo não circulante / Ativo total;Intangível;R$ milhões;Saldo de fim de período;3,43;5,102;6,53;8,319;11,319;16,756
+112;Balanço;Ativo não circulante / Ativo total;Direito de uso de arrendamento;R$ milhões;Saldo de fim de período;10,417;7,796;9,32;5,006;14,982;12,608
+113;Balanço;Ativo não circulante / Ativo total;Total do ativo não circulante;R$ milhões;Saldo de fim de período;200,6;362,379;459,201;687,277;966,529;842,346
+114;Balanço;Ativo não circulante / Ativo total;Ativo total;R$ milhões;Saldo de fim de período;825,317;1311,921;1686,545;2111,294;2569,705;3019,668
+115;Balanço;Passivo circulante;Empréstimos e financiamentos, curto prazo;R$ milhões;Saldo de fim de período;49,686;60,797;93,475;164,443;265,431;470,001
+116;Balanço;Passivo circulante;Passivo circulante: Arrendamento;R$ milhões;Saldo de fim de período;1,486;2,362;4,894;3,54;3,714;4,632
+117;Balanço;Passivo circulante;Passivo circulante: Fornecedores;R$ milhões;Saldo de fim de período;27,373;44,402;60,919;130,75;109,507;124,962
+118;Balanço;Passivo circulante;Passivo circulante: Salários e encargos sociais;R$ milhões;Saldo de fim de período;4,283;9,531;12,032;19,88;20,632;23,682
+119;Balanço;Passivo circulante;Tributos a pagar;R$ milhões;Saldo de fim de período;15,742;26,197;5,559;6,435;6,726;6,383
+120;Balanço;Passivo circulante;Passivo circulante: Obrigações por compra de imóveis;R$ milhões;Saldo de fim de período;54,965;35,942;35,774;27,65;33,21;41,158
+121;Balanço;Passivo circulante;Dividendos a pagar;R$ milhões;Saldo de fim de período;8,235;0,08;6,814;0,152;7,572;6,576
+122;Balanço;Passivo circulante;Passivo circulante: Adiantamentos de clientes;R$ milhões;Saldo de fim de período;151,075;373,167;202,973;247,098;256,005;258,496
+123;Balanço;Passivo circulante;Provisão distratos;R$ milhões;Saldo de fim de período;0,0;0,0;0,0;0,0;0,0;0,0
+124;Balanço;Passivo circulante;Passivo circulante: Provisão para manutenção de imóveis;R$ milhões;Saldo de fim de período;2,759;6,425;1,561;2,696;2,754;7,856
+125;Balanço;Passivo circulante;Tributos diferidos;R$ milhões;Saldo de fim de período;0,0;0,0;21,134;13,752;2,005;24,387
+126;Balanço;Passivo circulante;Outras contas a pagar;R$ milhões;Saldo de fim de período;4,088;1,963;1,831;1,224;22,531;6,08
+127;Balanço;Passivo circulante;Total do passivo circulante;R$ milhões;Saldo de fim de período;319,692;560,866;446,966;617,62;730,087;974,213
+128;Balanço;Passivo não circulante;Empréstimos e financiamentos, longo prazo;R$ milhões;Saldo de fim de período;84,2;206,853;360,194;638,433;962,969;1039,358
+129;Balanço;Passivo não circulante;Passivo não circulante: Arrendamento;R$ milhões;Saldo de fim de período;2,383;2,874;1,758;1,699;11,136;7,387
+130;Balanço;Passivo não circulante;Passivo não circulante: Obrigações por compra de imóveis;R$ milhões;Saldo de fim de período;30,238;32,001;10,917;27,309;87,889;94,929
+131;Balanço;Passivo não circulante;Adiantamentos recebidos de clientes;R$ milhões;Saldo de fim de período;0,044;0,0;284,127;176,875;124,647;206,326
+132;Balanço;Passivo não circulante;Provisão para riscos;R$ milhões;Saldo de fim de período;5,588;6,626;4,716;8,95;4,462;5,112
+133;Balanço;Passivo não circulante;Passivo não circulante: Provisão para manutenção de imóveis;R$ milhões;Saldo de fim de período;6,003;6,358;14,365;19,606;28,901;30,43
+134;Balanço;Passivo não circulante;Tributos correntes com recolhimento diferido;R$ milhões;Saldo de fim de período;;0,0;5,089;20,472;27,856;29,177
+135;Balanço;Passivo não circulante;Débitos com partes relacionadas;R$ milhões;Saldo de fim de período;2,489;4,268;14,718;21,19;17,083;25,586
+136;Balanço;Passivo não circulante;Provisão para passivo a descoberto;R$ milhões;Saldo de fim de período;2,365;4,793;5,999;7,65;9,563;10,832
+137;Balanço;Passivo não circulante;Instrumentos financeiros;R$ milhões;Saldo de fim de período;;;;;;0,2
+138;Balanço;Passivo não circulante;Parceiros em Empreendimentos Imobiliários;R$ milhões;Saldo de fim de período;;;;;;43,504
+139;Balanço;Passivo não circulante;Total do passivo não circulante;R$ milhões;Saldo de fim de período;133,31;263,773;701,883;922,184;1274,506;1492,841
+140;Balanço;Patrimônio líquido e total;Capital social;R$ milhões;Saldo de fim de período;269,172;269,172;269,172;269,172;269,172;269,172
+141;Balanço;Patrimônio líquido e total;Reservas de capital;R$ milhões;Saldo de fim de período;0,259;0,259;0,259;0,259;0,259;0,259
+142;Balanço;Patrimônio líquido e total;Reservas de lucro;R$ milhões;Saldo de fim de período;25,697;74,978;98,354;143,058;150,818;171,231
+143;Balanço;Patrimônio líquido e total;Lucro ou Prejuízo acumulado;R$ milhões;Saldo de fim de período;0,0;0,0;0,0;;;0,0
+144;Balanço;Patrimônio líquido e total;Patrimônio líquido atribuível aos controladores;R$ milhões;Saldo de fim de período;295,128;344,409;367,785;412,489;420,249;440,662
+145;Balanço;Patrimônio líquido e total;Participação dos não controladores;R$ milhões;Saldo de fim de período;77,187;142,873;169,911;159,001;144,863;111,952
+146;Balanço;Patrimônio líquido e total;Patrimônio líquido;R$ milhões;Saldo de fim de período;372,315;487,282;537,696;571,49;565,112;552,614
+147;Balanço;Patrimônio líquido e total;Total do passivo e patrimônio líquido;R$ milhões;Saldo de fim de período;825,317;1311,921;1686,545;2111,294;2569,705;3019,668

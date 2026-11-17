@@ -310,3 +310,54 @@ export function desenharExplorador(alvo, cfg) {
   alvo.replaceChildren(raiz);
   return { largura: W, altura: H, geo };
 }
+
+// ---------------------------------------------------------------- barras do painel (evolução por período)
+
+/**
+ * Geometria de barras a partir do ZERO (negativas descem). Valor null vira barra ausente (altura 0, "n/d"): nunca zero.
+ * Devolve { barras: [{chave, rotulo, valor, x, largura, y, altura, ausente, negativa, selecionada}], y0, min, max }.
+ */
+export function geometriaBarras(serie, largura, altura, { pad = 8, rotulo = 24, topo = 22 } = {}) {
+  const valores = serie.map((s) => s.valor).filter((v) => v !== null);
+  const min = Math.min(0, ...valores);
+  const max = Math.max(0, ...valores);
+  const faixa = max - min || 1;
+  const area = altura - rotulo - topo;
+  const Y = (v) => topo + ((max - v) / faixa) * area;
+  const y0 = Y(0);
+  const passo = (largura - 2 * pad) / Math.max(1, serie.length);
+  const w = Math.min(48, passo * 0.66);
+  const barras = serie.map((s, i) => {
+    const x = pad + passo * i + (passo - w) / 2;
+    if (s.valor === null) return { ...s, x, largura: w, y: y0, altura: 0, ausente: true, negativa: false };
+    const y = Y(s.valor);
+    return { ...s, x, largura: w, y: Math.min(y, y0), altura: Math.abs(y0 - y), ausente: false, negativa: s.valor < 0 };
+  });
+  return { barras, y0, min, max };
+}
+
+export function desenharBarras(alvo, serie, { descricao, largura, altura = 210, formatar }) {
+  const L = Math.max(260, Math.round(largura));
+  const geo = geometriaBarras(serie, L, altura);
+  const raiz = svg("svg", { viewBox: `0 0 ${L} ${altura}`, width: L, height: altura, role: "img", class: "barras-svg", "aria-label": descricao }, svg("title", {}, descricao));
+  raiz.append(svg("line", { x1: 0, x2: L, y1: geo.y0, y2: geo.y0, class: "barras-zero" }));
+  const todas = serie.length <= 8;
+  const passo = (L - 16) / Math.max(1, serie.length);
+  const salto = passo < 26 ? 3 : passo < 36 ? 2 : 1;      // em tela estreita, rótulo de período em dias alternados, sempre com o último
+  for (const b of geo.barras) {
+    const classe = `barra${b.selecionada ? " barra-sel" : ""}${b.negativa ? " barra-neg" : ""}`;
+    const g = svg("g", { class: classe, "data-periodo": b.chave, "data-valor": b.valor === null ? "" : String(Math.round(b.valor * 1e6) / 1e6) });
+    g.append(svg("title", {}, `${b.rotulo}: ${b.ausente ? "n/d" : formatar(b.valor)}`));
+    if (!b.ausente) g.append(svg("rect", { x: b.x.toFixed(1), y: b.y.toFixed(1), width: b.largura.toFixed(1), height: Math.max(1, b.altura).toFixed(1), rx: 1 }));
+    const yTexto = b.ausente ? geo.y0 - 6 : b.negativa ? b.y + b.altura + 13 : b.y - 5;
+    if (b.ausente || b.selecionada || todas) {
+      const cx = b.x + b.largura / 2;
+      const nas_bordas = cx > L - 44 ? "end" : cx < 44 ? "start" : "middle";     // o rótulo da primeira e da última barra não pode sair do desenho
+      g.append(svg("text", { x: (nas_bordas === "end" ? L - 2 : nas_bordas === "start" ? 2 : cx).toFixed(1), y: yTexto.toFixed(1), class: "barra-valor", "text-anchor": nas_bordas }, b.ausente ? "n/d" : formatar(b.valor)));
+    }
+    if (salto === 1 || (serie.length - 1 - geo.barras.indexOf(b)) % salto === 0) g.append(svg("text", { x: (b.x + b.largura / 2).toFixed(1), y: altura - 6, class: "barra-rotulo", "text-anchor": "middle" }, b.rotulo));
+    raiz.append(g);
+  }
+  alvo.replaceChildren(raiz);
+  return geo;
+}

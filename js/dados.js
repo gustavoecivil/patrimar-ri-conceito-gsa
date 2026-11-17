@@ -7,8 +7,8 @@ async function ler(nome) {
   return r.json();
 }
 
-/** data_site.json (números, gerado da base) e anotacoes.json (contexto escrito pelo Gu). */
+/** data_site.json (números, gerado da base), anotacoes.json (contexto escrito pelo Gu) e data_painel.json (região e marca, gerado do banco). */
 export async function carregar() {
-  const [ds, an] = await Promise.all([ler("data_site.json"), ler("anotacoes.json")]);
-  return { ds, an, ix: indexar(ds) };
+  const [ds, an, dp] = await Promise.all([ler("data_site.json"), ler("anotacoes.json"), ler("data_painel.json")]);
+  return { ds, an, dp, ix: indexar(ds) };
 }

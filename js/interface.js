@@ -3,7 +3,8 @@
 import { carregar } from "./dados.js";
 import * as C from "./calculos.js";
 import { fmtValor, fmtPct, nf, ND, rotuloPeriodo, ROTULO_TIPO_INDICADOR, ROTULO_SECAO } from "./formatar.js";
-import { desenharSkyline, desenharSparkline, desenharExplorador } from "./graficos.js";
+import { desenharSkyline, desenharSparkline, desenharExplorador, desenharBarras } from "./graficos.js";
+import * as P from "./painel.js";
 import { criarAssistente, PERGUNTAS_SUGERIDAS } from "./assistente.js";
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -218,6 +219,197 @@ function iniciarDocumentos(ctx) {
   ano.addEventListener("change", () => { estadoDoc.ano = ano.value; desenharDocumentos(ctx); });
   $("#doc-busca").addEventListener("input", (e) => { estadoDoc.busca = e.target.value.trim().toLowerCase(); desenharDocumentos(ctx); });
   desenharDocumentos(ctx);
+}
+
+// ------------------------------------------------------------------ painel da Central de Resultados
+
+const estadoPainel = { visao: "tri", chave: null, indicador: 25 };
+const ROTULO_VISAO_PAINEL = { tri: "Trimestre", sem: "Semestre", ano: "Ano", todos: "Todos os períodos" };
+const AVISO_VISAO = {
+  tri: "Valores publicados de cada trimestre. No financeiro do 3T26, a fonte é o ITR 3T26, com a página.",
+  sem: "Semestre: fluxos (receita, lucro, lançamentos) somam os dois trimestres; saldos (caixa, landbank) são os do fim do semestre. Cálculo GSA.",
+  ano: "Ano: valores anuais publicados na planilha oficial. O ano corrente aparece como acumulado até o último trimestre divulgado (soma dos trimestres, cálculo GSA).",
+  todos: "Série completa, de 1T20 ao último trimestre. Para os cartões e a conta de um período, escolha trimestre, semestre ou ano.",
+};
+
+function lerEstadoPainel(ix) {
+  const q = new URLSearchParams(location.search);
+  const v = q.get("cv");
+  if (v && P.VISOES[v]) estadoPainel.visao = v;
+  const lista = P.janelas(ix, estadoPainel.visao);
+  estadoPainel.chave = (lista.find((j) => j.chave === q.get("c")) ?? lista[lista.length - 1]).chave;
+  const i = Number(q.get("ci"));
+  if (P.KPIS_PAINEL.includes(i)) estadoPainel.indicador = i;
+}
+
+function gravarEstadoPainel() {
+  const q = new URLSearchParams(location.search);
+  q.set("cv", estadoPainel.visao);
+  q.set("c", estadoPainel.chave);
+  q.set("ci", String(estadoPainel.indicador));
+  try { history.replaceState(null, "", `${location.pathname}?${q.toString()}${location.hash}`); } catch (e) { /* sem histórico: segue sem salvar o estado */ }
+}
+
+function fmtComp(comp, unidade) {
+  if (!comp) return ND;
+  if (comp.tipo === "pct") return fmtPct(comp.valor, 1);
+  if (comp.tipo === "pp") return `${comp.valor >= 0 ? "+" : "-"}${nf(Math.abs(comp.valor), 1)} p.p.`;
+  return `diferença de ${fmtValor(comp.valor, unidade)}`;
+}
+
+function chipPainel(k) {
+  if (!k.comp) return el("span", { class: "chip chip-neutro" }, k.periodoBase ? `Sem base em ${k.periodoBase}: ${ND}` : "Sem período de comparação");
+  if (k.comp.tipo === "abs") return el("span", { class: "chip chip-neutro" }, `${k.periodoBase}: ${fmtValor(k.base, k.unidade, { bi: 1 })}`);
+  const sobe = k.comp.valor >= 0;
+  return el("span", { class: `chip ${sobe ? "chip-bom" : "chip-atencao"}` }, el("span", { "aria-hidden": "true" }, sobe ? "▲ " : "▼ "), `${fmtComp(k.comp, k.unidade)} contra ${k.periodoBase}`);
+}
+
+function cartaoPainel(k, j, { ds, ix }) {
+  const fonte = k.valor === null ? `Sem dado neste período (${ND})` : k.origem ? fonteLink(ds, "planilha oficial", k.origem) : P.fonteJanela(ix, k.id, j);
+  return el("article", { class: `kpi kpi-painel${k.valor !== null && k.valor < 0 ? " kpi-negativo" : ""}`, "data-id": String(k.id) },
+    el("h4", { class: "kpi-rotulo" }, k.rotulo),
+    el("p", { class: "kpi-valor" }, fmtValor(k.valor, k.unidade, { bi: 1 })),
+    el("p", { class: "kpi-meta" }, el("span", { class: "periodo" }, j.rotulo), chipPainel(k)),
+    el("p", { class: "kpi-fonte" }, el("span", {}, "Fonte: "), fonte));
+}
+
+function pilhaRecorte(rotulo, itens) {
+  const total = itens.reduce((a, x) => a + x.valor, 0);
+  return el("div", { class: "pilha-bloco" },
+    el("p", { class: "pilha-rotulo" }, rotulo),
+    el("div", { class: "pilha", role: "img", "aria-label": `${rotulo}: ${itens.map((x) => `${x.recorte} ${fmtValor(x.valor, "BRL_MILHOES")}`).join(", ")}` },
+      itens.map((x, i) => el("span", { class: `seg seg-${i}`, style: `width:${((x.valor / total) * 100).toFixed(2)}%`, title: `${x.recorte}: ${fmtValor(x.valor, "BRL_MILHOES")}` }))),
+    el("ul", { class: "pilha-legenda" }, itens.map((x, i) => el("li", { "data-recorte": x.recorte, "data-valor": String(x.valor), "data-status": x.status },
+      el("span", { class: `chave seg-${i}`, "aria-hidden": "true" }), `${x.recorte}: ${fmtValor(x.valor, "BRL_MILHOES")} (${nf((x.valor / total) * 100, 0)}%)`,
+      x.status === "PENDENTE_REVISAO" ? el("span", { class: "chip chip-atencao" }, "pendente de revisão") : x.status === "VALIDADO_COM_RESSALVA" ? el("span", { class: "chip chip-neutro" }, "com ressalva") : null))));
+}
+
+function desenharRecortesPainel({ dp, ix }, j) {
+  const alvo = limpar($("#painel-recortes-corpo"));
+  const r = P.recortesJanela(dp, j);
+  if (!r) {
+    alvo.append(el("p", { class: "nota" }, "Os dados por região e por marca são lidos dos gráficos das prévias operacionais e existem para os trimestres de 2023 em diante, para o primeiro semestre, os nove meses e o ano. Para este período não há leitura."));
+    return;
+  }
+  const ant = P.janelaAnterior(ix, j);
+  const ra = ant ? P.recortesJanela(dp, ant) : null;
+  for (const [m, nome] of [["lancamentos", "Lançamentos (VGV 100%)"], ["vendas", "Vendas líquidas (VGV 100%)"]]) {
+    for (const [t, tn] of [["REGIAO", "por região"], ["MARCA", "por marca"]]) {
+      if (!r[m][t].length) continue;
+      const fonte = r[m][t][0];
+      alvo.append(el("figure", { class: "recorte", "data-metrica": m, "data-tipo": t },
+        el("figcaption", {}, `${nome}, ${tn}`),
+        pilhaRecorte(j.rotulo, r[m][t]),
+        ra && ra[m][t].length ? pilhaRecorte(ant.rotulo, ra[m][t]) : null,
+        el("p", { class: "nota" }, `Fonte: ${fonte.documento}, p. ${fonte.pagina}${ra && ra[m][t].length ? `; comparação: ${ra[m][t][0].documento}, p. ${ra[m][t][0].pagina}` : ""}.`)));
+    }
+  }
+  alvo.append(el("p", { class: "nota" }, "Região ou marca sem barra não teve lançamento ou venda no período (as demais somam o total). Cada valor foi conferido: os pedaços somam o total do gráfico e o total bate com a planilha oficial."));
+}
+
+function desenharGraficoPainel({ ix }, j) {
+  const id = estadoPainel.indicador;
+  const i = ix.ind.get(id);
+  const todos = estadoPainel.visao === "todos";
+  const serie = todos ? P.serieJanelas(ix, id, "tri", null, 27) : P.serieJanelas(ix, id, estadoPainel.visao, j.chave, 12);
+  const alvo = $("#painel-grafico");
+  const descricao = `${i.rotulo}: ${serie.length} períodos, de ${serie[0].rotulo} a ${serie[serie.length - 1].rotulo}`;
+  desenharBarras(alvo, serie, { descricao, largura: alvo.clientWidth || 560, formatar: (v) => fmtValor(v, i.unidade, { bi: 1 }) });
+  $("#painel-grafico-nota").textContent = `${i.rotulo}, ${todos ? "todos os trimestres" : `últimos ${serie.length} períodos até ${j.rotulo}`}. Barras a partir do zero; n/d é falta de dado, nunca zero.`;
+}
+
+function desenharPainel(ctx) {
+  const { ix, ds } = ctx;
+  const lista = P.janelas(ix, estadoPainel.visao);
+  const k = lista.findIndex((x) => x.chave === estadoPainel.chave);
+  const j = lista[k];
+  const ant = P.janelaAnterior(ix, j);
+  const todos = estadoPainel.visao === "todos";
+  $("#painel-visao-rotulo").textContent = ROTULO_VISAO_PAINEL[estadoPainel.visao];
+  $("#painel-periodo").textContent = j.rotulo;
+  $("#painel-aviso").textContent = AVISO_VISAO[estadoPainel.visao];
+  const ant_ = $("#painel-ant"), prox = $("#painel-prox");
+  ant_.disabled = todos || k <= 0;
+  prox.disabled = todos || k >= lista.length - 1;
+  for (const b of document.querySelectorAll("#painel-visoes button")) b.setAttribute("aria-pressed", String(b.dataset.visao === estadoPainel.visao));
+
+  const kpis = limpar($("#painel-kpis"));
+  const tabela = $("#painel-tabela tbody");
+  limpar(tabela);
+  for (const sel of ["#painel-kpis", ".painel-duas .painel-bloco:nth-child(2)"]) $(sel).hidden = todos;
+  $("#painel-tabela").closest(".tabela-rolagem").hidden = todos;
+  const subs = [...document.querySelectorAll("#painel > h3.subtitulo")];
+  for (const h of subs) if (["Os números do período", "A conta do período"].includes(h.textContent)) h.hidden = todos;
+  if (!todos) {
+    for (const x of P.kpisJanela(ix, j)) kpis.append(cartaoPainel(x, j, ctx));
+    $("#painel-col-base").textContent = ant ? ant.rotulo : "Comparação";
+    for (const l of P.linhasTabela(ix, j)) {
+      tabela.append(el("tr", { "data-id": String(l.id) },
+        el("th", { scope: "row" }, l.rotulo, el("span", { class: "sub" }, ROTULO_SECAO[l.secao])),
+        el("td", { class: "num" }, fmtValor(l.valor, l.unidade)),
+        el("td", { class: "num" }, l.base === null ? ND : fmtValor(l.base, l.unidade)),
+        el("td", { class: "num" }, l.valor === null || l.base === null ? ND : fmtComp(l.comp, l.unidade))));
+    }
+    desenharRecortesPainel(ctx, j);
+  }
+  desenharGraficoPainel(ctx, j);
+
+  const botoes = limpar($("#painel-botoes"));
+  if (!todos) {
+    botoes.append(el("button", { type: "button", class: "botao botao-primario", id: "painel-csv", onclick: () => baixarCsvPainel(ctx, j) }, `Baixar os dados de ${j.rotulo} (CSV)`));
+  }
+  botoes.append(el("a", { class: "botao", href: "dados/patrimar_dados_ri.xlsx", download: "patrimar_dados_ri.xlsx" }, "Baixar a planilha completa (Excel)"),
+    el("a", { class: "botao", href: "dados/dados_longos.csv", download: "patrimar_dados_longos.csv" }, "Baixar a série completa (CSV)"));
+
+  const docs = limpar($("#painel-docs"));
+  const lst = todos ? [] : P.documentosJanela(ds, j);
+  if (!lst.length) docs.append(el("li", { class: "nota" }, todos ? "Escolha um período para ver os documentos originais dele." : "Nenhum documento deste período na Central de Resultados."));
+  for (const d of lst) {
+    docs.append(el("li", { "data-tipo": d.tipo },
+      el("span", { class: "pilula pilula-fluxo" }, ds.tipos_documento[d.tipo] ?? d.tipo), el("span", { class: "doc-titulo" }, d.titulo),
+      externo(d.url, d.complemento ? "Abrir na Central de Resultados" : "Abrir original", "doc-abrir")));
+  }
+  gravarEstadoPainel();
+}
+
+function baixarCsvPainel({ ix }, j) {
+  const blob = new Blob([P.csvJanela(ix, j)], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = el("a", { href: url, download: `patrimar_${j.chave}.csv` });
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 3000);
+}
+
+function iniciarPainel(ctx) {
+  const { ix } = ctx;
+  lerEstadoPainel(ix);
+  const caixa = $("#painel-visoes");
+  for (const [v, nome] of Object.entries(P.VISOES)) {
+    caixa.append(el("button", { type: "button", "data-visao": v, "aria-pressed": "false", onclick: () => {
+      const atual = P.janelas(ix, estadoPainel.visao).find((x) => x.chave === estadoPainel.chave);
+      const ultimo = atual.trimestres[atual.trimestres.length - 1];
+      const novas = P.janelas(ix, v);
+      estadoPainel.visao = v;
+      estadoPainel.chave = (novas.find((x) => x.trimestres.includes(ultimo)) ?? novas[novas.length - 1]).chave;
+      desenharPainel(ctx);
+    } }, nome));
+  }
+  const sel = $("#painel-indicador");
+  for (const id of P.KPIS_PAINEL) sel.append(el("option", { value: String(id) }, ix.ind.get(id).rotulo));
+  sel.value = String(estadoPainel.indicador);
+  sel.addEventListener("change", () => { estadoPainel.indicador = Number(sel.value); desenharPainel(ctx); });
+  const mover = (d) => {
+    const lista = P.janelas(ix, estadoPainel.visao);
+    const k = lista.findIndex((x) => x.chave === estadoPainel.chave) + d;
+    if (k >= 0 && k < lista.length) { estadoPainel.chave = lista[k].chave; desenharPainel(ctx); }
+  };
+  $("#painel-ant").addEventListener("click", () => mover(-1));
+  $("#painel-prox").addEventListener("click", () => mover(1));
+  let espera = null;
+  window.addEventListener("resize", () => { clearTimeout(espera); espera = setTimeout(() => desenharGraficoPainel(ctx, P.janelas(ix, estadoPainel.visao).find((x) => x.chave === estadoPainel.chave)), 150); });
+  desenharPainel(ctx);
 }
 
 // ------------------------------------------------------------------ metodologia
@@ -786,6 +978,7 @@ carregar().then((ctx) => {
   iniciarIndicadores(ctx);
   iniciarExplorador(ctx);
   iniciarAssistente(ctx);
+  iniciarPainel(ctx);
   iniciarDocumentos(ctx);
   iniciarMetodologia(ctx);
   document.body.classList.add("pronto");
