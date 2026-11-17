@@ -71,6 +71,33 @@ export function selicJanela(diaria, meses) {
   return { fim: ate[ate.length - 1][1], media: dentro.reduce((s, [, v]) => s + v, 0) / dentro.length };
 }
 
+/** Último valor de uma série diária até o fim do mês "aaaa-mm" (ponto com no máximo 10 dias de atraso). */
+export function ultimoAte(diaria, mes) {
+  const [a, m] = mes.split("-").map(Number);
+  const dia = new Date(Date.UTC(a, m, 0)).getUTCDate();
+  const fim = `${mes}-${String(dia).padStart(2, "0")}`;
+  const piso = `${mes}-${String(Math.max(1, dia - 10)).padStart(2, "0")}`;
+  let r = null;
+  for (const [d, v] of diaria.pontos) {
+    if (d <= fim) r = [d, v];
+    else break;
+  }
+  return r && r[0] >= piso ? r[1] : null;
+}
+
+export function mesAnterior(mes) {
+  let [a, m] = mes.split("-").map(Number);
+  m -= 1;
+  if (m === 0) { m = 12; a -= 1; }
+  return `${a}-${String(m).padStart(2, "0")}`;
+}
+
+/** Variação (%) de uma série diária no período: do fim do mês anterior ao primeiro mês até o fim do último mês. */
+export function variacaoDiaria(diaria, meses) {
+  const a = ultimoAte(diaria, mesAnterior(meses[0])), b = ultimoAte(diaria, meses[meses.length - 1]);
+  return a === null || b === null || a === 0 ? null : (b / a - 1) * 100;
+}
+
 /** PIB da construção (índice de volume): média dos trimestres da janela; null se faltar algum. */
 export function pibJanela(ext, tris) {
   const mapa = new Map(ext.series.pib_construcao_indice.pontos.map(([k, v]) => [k, v]));
@@ -90,6 +117,10 @@ export function externosDaJanela(ext, tris) {
     concessoes: somaMeses(mapaMensal(S.credito_imob_concessoes), ms),
     juros: mediaMeses(mapaMensal(S.credito_imob_juros), ms),
     selic: selicJanela(S.meta_selic, ms),
+    poupanca: acumulado(mapaMensal(S.poupanca_mensal), ms),
+    igpm: acumulado(mapaMensal(S.igpm_mensal), ms),
+    dolar: variacaoDiaria(S.dolar_ptax, ms),
+    fii: acumulado(mapaMensal(S.fii_rentabilidade_efetiva), ms),
   });
   const atual = f(meses);
   const triAnt = tris.map(tAnterior);
@@ -211,6 +242,10 @@ export function seriesDoGrafico(ix, ext) {
       { chave: "incc", rotulo: "INCC-M (custo da obra)", grupo: "indice", dono: "Referência", valores: reb(nivel("incc_mensal")), padrao: true },
       { chave: "ipca", rotulo: "IPCA (inflação)", grupo: "indice", dono: "Referência", valores: reb(nivel("ipca_mensal")), padrao: false },
       { chave: "cdi", rotulo: "CDI acumulado (renda fixa)", grupo: "indice", dono: "Referência", valores: reb(nivel("cdi_mensal")), padrao: true },
+      { chave: "poupanca", rotulo: "Poupança acumulada", grupo: "indice", dono: "Referência", valores: reb(nivel("poupanca_mensal")), padrao: false },
+      { chave: "igpm", rotulo: "IGP-M (reajuste de aluguel)", grupo: "indice", dono: "Referência", valores: reb(nivel("igpm_mensal")), padrao: false },
+      { chave: "fii", rotulo: "Fundos imobiliários, média do setor (CVM)", grupo: "indice", dono: "Referência", valores: reb(nivel("fii_rentabilidade_efetiva")), padrao: false },
+      { chave: "dolar", rotulo: "Dólar comercial (PTAX)", grupo: "indice", dono: "Referência", valores: reb(tris.map((q) => ultimoAte(S.dolar_ptax, mesesDosTrimestres([q])[2]))), padrao: false },
       { chave: "credito", rotulo: "Concessões de crédito imobiliário, 12 meses", grupo: "indice", dono: "Referência", valores: reb(conc12), padrao: false },
       { chave: "pib", rotulo: "PIB da construção (índice de volume)", grupo: "indice", dono: "Referência", valores: reb(pib), padrao: false },
       { chave: "selic", rotulo: "Meta Selic (% ao ano, eixo da direita)", grupo: "taxa", dono: "Referência", valores: selic, padrao: true },

@@ -379,12 +379,23 @@
           </div>
         </div>
 
+        <h3 class="subtitulo">Quanto R$ 100 viram em outros investimentos</h3>
+        <p class="nota">O mesmo dinheiro, aplicado em alternativas que o investidor tem à mão. Valores brutos, antes de imposto, das séries públicas do Banco Central. O imóvel entra com as premissas da conta acima. IPCA, IGP-M e INCC-M são réguas, não investimentos.</p>
+        <div class="tabela-rolagem" tabindex="0" role="region" aria-label="Quanto R$ 100 viram em cada alternativa, role para os lados em telas pequenas">
+          <table id="inv-alt">
+            <caption class="so-leitor">Valor final de R$ 100 aplicados em cada alternativa</caption>
+            <thead><tr><th scope="col">Alternativa</th><th scope="col" class="num" id="inv-alt-periodo"></th><th scope="col" class="num">5 anos, desde o 3T21</th><th scope="col">Natureza</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="nota">Os fundos imobiliários entram pela média do setor calculada com os informes mensais da CVM (mais de 300 fundos por mês, ponderados pelo patrimônio), que usa o valor patrimonial da cota. O investidor de fundos compara com o IFIX, o índice da B3 a preço de mercado, que não tem acesso aberto: a média aqui é uma boa referência do setor, mas não é o IFIX. Ficam de fora o Ibovespa e o ouro: o Banco Central deixou de publicar as duas séries em 2019.</p>
+
         <h3 class="subtitulo">O risco de a obra chegar ao fim</h3>
         <p class="nota">Quem compra na planta depende de a incorporadora terminar o prédio. Estes sinais usam os mesmos números do resto do site.</p>
         <div class="prova-grade" id="inv-obra"></div>
         <h4 class="subtitulo-menor">Cinco medidas de solidez, lidas contra a história da própria Patrimar</h4>
         <ul class="lista-selos" id="inv-selos"></ul>
-        <p class="nota">Ficam de fora, por falta de dado público aberto: aluguel e valorização por bairro (FipeZap, IGMI-R da FGV), o índice de fundos imobiliários e o preço por metro quadrado dos concorrentes. A leitura dos concorrentes pelos dados abertos da CVM é a próxima etapa.</p>
+        <p class="nota">Ficam de fora, por falta de dado público aberto: aluguel e valorização por bairro (FipeZap, IGMI-R da FGV). Comparar incorporadoras é tarefa do próprio investidor: este site mostra a Patrimar contra outros investimentos, não contra outras empresas.</p>
       </div>
 
       <div id="inv-credor" hidden>
@@ -562,7 +573,7 @@
         <p>Solidez se prova mostrando os números completos, inclusive os trimestres fracos, com contexto e contrapeso. Estas são as regras que o site segue.</p>
       </div>
       <div class="grade-cartoes">
-        <article class="cartao"><h3>Fonte</h3><p>Os números vêm da planilha pública Base de Dados Operacionais e Financeiros, publicada no site de RI. Cada valor mostra a célula de origem. O financeiro do 3T26 vem do ITR 3T26, divulgado em 12 de novembro de 2026, porque a planilha capturada antes dessa data ainda não o trazia: cada um desses valores mostra o documento e a página e foi conferido contra as colunas de comparação do próprio ITR.</p><p id="met-fonte" class="bloco-fonte"></p><p class="nota" id="met-contagens"></p></article>
+        <article class="cartao"><h3>Fonte e banco de dados</h3><p>Cada número passa por um banco de dados (SQLite) antes de chegar a esta página: o banco guarda o valor, o período, a fonte, o documento, a página, o método e o status de conferência. O site é gerado desse banco. Por isso a fonte exibida ao lado de cada número é a origem do dado, e não o caminho que ele fez: "planilha oficial" é a planilha pública Base de Dados Operacionais e Financeiros, publicada no site de RI, com a célula de origem. O financeiro do 3T26 vem do ITR 3T26, divulgado em 12 de novembro de 2026, porque a planilha capturada antes dessa data ainda não o trazia: cada um desses valores mostra o documento e a página e foi conferido contra as colunas de comparação do próprio ITR.</p><p id="met-fonte" class="bloco-fonte"></p><p class="nota" id="met-contagens"></p></article>
         <article class="cartao"><h3>Conciliação com os releases</h3><p>Os valores da planilha são conferidos contra os releases de resultados. A tabela abaixo mostra cada conferência e a diferença, que fica dentro do arredondamento do release.</p></article>
         <article class="cartao"><h3>Margem ajustada e margem contábil</h3><p>A planilha traz a margem bruta operacional contábil. Os releases destacam a margem bruta ajustada por encargos financeiros. São medidas diferentes: nunca aparecem no mesmo gráfico. A tabela abaixo traz a ajustada, com documento e página.</p></article>
         <article class="cartao"><h3>Saldo e fluxo</h3><p>Landbank, caixa e balanço são saldos de fim de período e não se somam. Lançamentos, vendas e receita são fluxos do trimestre e podem ser somados em janelas de 12 meses.</p></article>

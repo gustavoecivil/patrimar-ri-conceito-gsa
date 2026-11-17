@@ -90,6 +90,10 @@ function quadro(ix, ext) {
     ["Referências públicas", null],
     ["IPCA acumulado no período", (q) => pct(q.externos.ipca)],
     ["INCC-M acumulado no período (custo da obra)", (q) => pct(q.externos.incc)],
+    ["IGP-M acumulado no período (reajuste de aluguel)", (q) => pct(q.externos.igpm)],
+    ["Poupança acumulada no período", (q) => pct(q.externos.poupanca)],
+    ["Dólar comercial (PTAX), variação no período", (q) => pct(q.externos.dolar)],
+    ["Fundos imobiliários, média do setor (CVM), rentabilidade no período", (q) => pct(q.externos.fii)],
     ["Concessões de crédito imobiliário (R$)", (q) => pct(q.externos.concessoesAA)],
     ["PIB da construção, índice de volume", (q) => pct(q.externos.pibAA)],
     ["Selic meta no fim do período", (q) => (q.externos.selic.fim === null ? ND : `${nf(q.externos.selic.fim, 2)}%`)],
@@ -103,7 +107,7 @@ function quadro(ix, ext) {
   }
 }
 
-const COR = { vendas: "s-1", lancamentos: "s-2", receita: "s-3", landbank: "s-4", incc: "s-5", ipca: "s-6", cdi: "s-7", credito: "s-8", pib: "s-9", selic: "s-10", juros: "s-11" };
+const COR = { vendas: "s-1", lancamentos: "s-2", receita: "s-3", landbank: "s-4", incc: "s-5", ipca: "s-6", cdi: "s-7", credito: "s-8", pib: "s-9", selic: "s-10", juros: "s-11", poupanca: "s-12", igpm: "s-13", dolar: "s-14", fii: "s-15" };
 
 /** Gráfico único: índices base 100 no eixo da esquerda e taxas (% ao ano) no eixo da direita, no mesmo tempo. */
 export function desenharGraficoUnico(alvo, dados, ativas, sel, largura) {
@@ -197,7 +201,7 @@ export function iniciarComparadores({ ix, ext }) {
 
   const fontes = limpar($("#cmp-fontes"));
   for (const s of Object.values(ext.series)) {
-    fontes.append(el("li", {}, el("strong", {}, s.nome), ` (${s.unidade}). ${s.fonte}, ${s.codigo}. `, externo(s.url, "Série consultada")));
+    fontes.append(el("li", {}, el("strong", {}, s.nome), ` (${s.unidade}). ${s.fonte}, ${s.codigo}. `, externo(s.url, "Série consultada"), s.nota ? el("span", { class: "nota-serie" }, ` ${s.nota}`) : null));
   }
   $("#cmp-baixado").textContent = `Séries baixadas em ${ext.baixado_em.slice(8, 10)}/${ext.baixado_em.slice(5, 7)}/${ext.baixado_em.slice(0, 4)}.`;
 }

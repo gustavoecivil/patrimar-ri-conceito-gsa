@@ -76,6 +76,7 @@ function iniciarComprador({ ix, ext, an }) {
     cartaoMercado("CDI acima da inflação", pc(c.cdiReal, 2), "Ganho real da renda fixa: (1 + CDI) ÷ (1 + IPCA) - 1."),
     cartaoMercado("Meta Selic", `${nf(c.selic, 2)}% ao ano`, "Taxa básica no fim do trimestre. SGS 432."),
     cartaoMercado("Juros do financiamento imobiliário", `${nf(c.jurosFinanciamento, 2)}% ao ano`, "Média do trimestre, recursos direcionados, pessoas físicas. SGS 20774."),
+    cartaoMercado("Rendimento distribuído pelos fundos imobiliários em 12 meses", pc(c.fiiRendimento12m, 2), "Média do setor, soma dos 12 meses de dividend yield informados à CVM. Não é o IFIX."),
     cartaoMercado("INCC-M em 12 meses", pc(c.incc12m, 2), "Custo da obra. FGV, SGS 192."),
     cartaoMercado("Concessões de crédito imobiliário, 12 meses", fmtValor(c.concessoes12m, "BRL_MILHOES", { bi: 1 }), `${fmtPct(c.concessoesAA, 1)} contra os 12 meses anteriores. SGS 20704.`));
 
@@ -113,6 +114,30 @@ function iniciarComprador({ ix, ext, an }) {
     void nome;
   }
   desenhar();
+
+  // quanto R$ 100 viram nas alternativas
+  const alt = I.alternativas(ix, ext);
+  const corpoAlt = limpar($("#inv-alt tbody"));
+  const reais = (p) => (p === null ? ND : `R$ ${nf(100 * (1 + p / 100), 2)}`);
+  for (const a of alt.linhas) {
+    corpoAlt.append(el("tr", { "data-alt": a.chave, class: a.tipo === "regua" ? "linha-regua" : "" },
+      el("th", { scope: "row" }, a.rotulo, a.tipo === "regua" ? el("span", { class: "so-leitor" }, " (régua, não é investimento)") : null),
+      el("td", { class: "num", "data-col": "12m" }, reais(a.m12)), el("td", { class: "num", "data-col": "5a" }, reais(a.cinco)), el("td", {}, a.tipo === "regua" ? "régua de inflação ou custo" : "investimento")));
+  }
+  const r0 = saida();
+  const cinco = 100 * (1 + r0.retornoTotal / 100) ** 5;
+  corpoAlt.append(el("tr", { "data-alt": "imovel", class: "linha-imovel" },
+    el("th", { scope: "row" }, "Imóvel, com as premissas da conta acima"),
+    el("td", { class: "num", "data-col": "12m", id: "inv-alt-imovel-12m" }, reais(r0.retornoTotal)),
+    el("td", { class: "num", "data-col": "5a", id: "inv-alt-imovel-5a" }, `R$ ${nf(cinco, 2)}`),
+    el("td", {}, "premissas suas, repetidas por 5 anos; antes de imposto")));
+  const refresca = () => {
+    const r = saida();
+    $("#inv-alt-imovel-12m").textContent = reais(r.retornoTotal);
+    $("#inv-alt-imovel-5a").textContent = `R$ ${nf(100 * (1 + r.retornoTotal / 100) ** 5, 2)}`;
+  };
+  for (const f of Object.values(campos)) $(`#${f.id}`).addEventListener("input", refresca);
+  $("#inv-alt-periodo").textContent = `12 meses até ${alt.periodo}`;
 
   // risco de entrega
   const s = I.sinaisDaObra(ix, an);

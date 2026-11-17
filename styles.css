@@ -766,3 +766,13 @@ nav.subnav a:hover { border-color: var(--destaque); color: var(--destaque); }
 .lista-selos { grid-template-columns: minmax(0, 1fr); }
 .lista-selos li { flex-wrap: wrap; min-width: 0; }
 .lista-selos .chip { white-space: normal; }
+
+.chave.s-12, .linha-traco.s-12 { background: #6b8e23; stroke: #6b8e23; }
+.chave.s-13, .linha-traco.s-13 { background: #a0522d; stroke: #a0522d; }
+.chave.s-14, .linha-traco.s-14 { background: #2e8b8b; stroke: #2e8b8b; }
+#inv-alt { min-width: 0; }
+#inv-alt tr.linha-regua th, #inv-alt tr.linha-regua td { color: var(--suave); }
+#inv-alt tr.linha-imovel th, #inv-alt tr.linha-imovel td { background: var(--destaque-fundo); font-weight: 600; }
+
+.chave.s-15, .linha-traco.s-15 { background: #8a6d3b; stroke: #8a6d3b; }
+.nota-serie { display: block; font-size: 0.78rem; color: var(--suave); margin-top: 2px; }

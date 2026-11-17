@@ -99,7 +99,10 @@ export function custoDeOportunidade(ix, ext) {
   const juros = X.mediaMeses(X.mapaMensal(S.credito_imob_juros), meses);
   const conc = X.somaMeses(X.mapaMensal(S.credito_imob_concessoes), m12), concAnt = X.somaMeses(X.mapaMensal(S.credito_imob_concessoes), ant12);
   const selic = X.selicJanela(S.meta_selic, meses).fim;
+  const fii12m = X.acumulado(X.mapaMensal(S.fii_rentabilidade_efetiva), m12);
+  const fiiDy = X.somaMeses(X.mapaMensal(S.fii_rendimento_distribuido), m12);
   return {
+    fii12m, fiiRendimento12m: fiiDy,
     periodo: q, cdi12m: cdi, cdi12mAnterior: cdiAnt, ipca12m: ipca, incc12m: incc, jurosFinanciamento: juros, selic,
     concessoes12m: conc, concessoesAA: conc === null || concAnt === null || concAnt === 0 ? null : (conc / concAnt - 1) * 100,
     cdiReal: cdi === null || ipca === null ? null : ((1 + cdi / 100) / (1 + ipca / 100) - 1) * 100,
@@ -150,4 +153,38 @@ export function sinaisDaObra(ix, an) {
     adiantamentos, adiantamentosSobreDivida: div(adiantamentos, bruta),
     selos: solidez.map((s) => ({ chave: s.chave, nome: s.nome, selo: s.selo, valor: s.atual ? s.atual.valor : null, unidade: s.unidade })),
   };
+}
+
+// ------------------------------------------------------------------ outros investimentos
+
+/**
+ * Quanto R$ 100 viram em cada alternativa, nos 12 meses até o último trimestre com balanço e desde o fim do 3T21 (cinco anos).
+ * Tudo das séries públicas, bruto de imposto. "ipca" e "igpm" entram como régua da inflação, não como investimento.
+ */
+export function alternativas(ix, ext) {
+  const S = ext.series;
+  const q = C.ultimoComDado(C.serieTri(ix, 114)).periodo;
+  const fim = X.mesesDosTrimestres([q])[2];
+  const m12 = X.ultimos12(fim);
+  const baseCinco = X.mesesDosTrimestres([X.BASE_INDICE])[2];     // fim do 3T21
+  const desde = [];
+  for (let m = baseCinco; m !== fim;) {
+    let [a, mm] = m.split("-").map(Number);
+    mm += 1;
+    if (mm === 13) { mm = 1; a += 1; }
+    m = `${a}-${String(mm).padStart(2, "0")}`;
+    desde.push(m);
+  }
+  const cadeia = (chave) => ({ m12: X.acumulado(X.mapaMensal(S[chave]), m12), cinco: X.acumulado(X.mapaMensal(S[chave]), desde) });
+  const dolar = (a, b) => { const x = X.ultimoAte(S.dolar_ptax, a), y = X.ultimoAte(S.dolar_ptax, b); return x === null || y === null ? null : (y / x - 1) * 100; };
+  const linhas = [
+    { chave: "cdi", rotulo: "CDI (renda fixa)", tipo: "investimento", ...cadeia("cdi_mensal") },
+    { chave: "poupanca", rotulo: "Poupança", tipo: "investimento", ...cadeia("poupanca_mensal") },
+    { chave: "fii", rotulo: "Fundos imobiliários, média do setor (CVM)", tipo: "investimento", ...cadeia("fii_rentabilidade_efetiva") },
+    { chave: "dolar", rotulo: "Dólar comercial", tipo: "investimento", m12: dolar(X.mesAnterior(m12[0]), fim), cinco: dolar(baseCinco, fim) },
+    { chave: "ipca", rotulo: "IPCA (inflação)", tipo: "regua", ...cadeia("ipca_mensal") },
+    { chave: "igpm", rotulo: "IGP-M (reajuste de aluguel)", tipo: "regua", ...cadeia("igpm_mensal") },
+    { chave: "incc", rotulo: "INCC-M (custo da obra)", tipo: "regua", ...cadeia("incc_mensal") },
+  ];
+  return { periodo: q, fim, linhas };
 }
