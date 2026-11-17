@@ -11,6 +11,7 @@ function el(tag, props = {}, ...filhos) {
   for (const [k, v] of Object.entries(props)) {
     if (v === null || v === undefined || v === false) continue;
     if (k === "class") n.className = v;
+    else if (k.startsWith("on")) n.addEventListener(k.slice(2), v);
     else n.setAttribute(k, v === true ? "" : v);
   }
   for (const f of filhos.flat()) {
@@ -102,26 +103,88 @@ function quadro(ix, ext) {
   }
 }
 
-function par(ix, serie, cfg) {
-  const L = (a) => Math.max(240, Math.floor(a.clientWidth || 520));
-  const a = $(cfg.topo), b = $(cfg.base);
-  desenharLinha(a, serie.map((s) => ({ periodo: s.periodo, valor: s[cfg.campoA] })), { descricao: cfg.descA, largura: L(a), formatar: cfg.fmtA, classe: "linha-a" });
-  desenharLinha(b, serie.map((s) => ({ periodo: s.periodo, valor: s[cfg.campoB] })), { descricao: cfg.descB, largura: L(b), formatar: cfg.fmtB, classe: "linha-b" });
+const COR = { vendas: "s-1", lancamentos: "s-2", receita: "s-3", landbank: "s-4", incc: "s-5", ipca: "s-6", cdi: "s-7", credito: "s-8", pib: "s-9", selic: "s-10", juros: "s-11" };
+
+/** Gráfico único: índices base 100 no eixo da esquerda e taxas (% ao ano) no eixo da direita, no mesmo tempo. */
+export function desenharGraficoUnico(alvo, dados, ativas, sel, largura) {
+  const L = Math.max(300, Math.round(largura)), H = 380, pad = { e: 52, d: 52, t: 16, b: 28 };
+  const lista = dados.series.filter((s) => ativas.has(s.chave));
+  const idx = lista.filter((s) => s.grupo === "indice"), tax = lista.filter((s) => s.grupo === "taxa");
+  const raiz = sv("svg", { viewBox: `0 0 ${L} ${H}`, width: L, height: H, role: "img", class: "linha-svg", "aria-label": "Gráfico único: índices base 100 no eixo da esquerda e taxas de juros no eixo da direita, por trimestre, de 3T21 a 3T26. Os valores de cada trimestre estão na lista abaixo do gráfico." }, sv("title", {}, "Patrimar e referências públicas no mesmo gráfico"));
+  const n = dados.periodos.length;
+  const X_ = (i) => pad.e + ((L - pad.e - pad.d) * i) / Math.max(1, n - 1);
+  const vI = idx.flatMap((s) => s.valores).filter((v) => v !== null);
+  const iMin = Math.min(100, ...vI), iMax = Math.max(100, ...vI);
+  const vT = tax.flatMap((s) => s.valores).filter((v) => v !== null);
+  const tMax = Math.max(1, ...vT, 0);
+  const YI = (v) => pad.t + ((iMax - v) / (iMax - iMin || 1)) * (H - pad.t - pad.b);
+  const YT = (v) => pad.t + ((tMax - v) / tMax) * (H - pad.t - pad.b);
+  if (idx.length) {
+    for (const v of [iMin, 100, iMax].filter((x, i, a) => a.indexOf(x) === i)) {
+      raiz.append(sv("line", { x1: pad.e, x2: L - pad.d, y1: YI(v).toFixed(1), y2: YI(v).toFixed(1), class: v === 100 ? "linha-zero" : "linha-grade" }),
+        sv("text", { x: pad.e - 6, y: (YI(v) + 4).toFixed(1), class: "linha-eixo", "text-anchor": "end" }, nf(v, 0)));
+    }
+  }
+  if (tax.length) {
+    for (const v of [0, tMax]) raiz.append(sv("text", { x: L - pad.d + 6, y: (YT(v) + 4).toFixed(1), class: "linha-eixo", "text-anchor": "start" }, `${nf(v, 0)}%`));
+  }
+  for (const s of lista) {
+    const Y_ = s.grupo === "indice" ? YI : YT;
+    let d = "", aberto = false;
+    s.valores.forEach((v, i) => {
+      if (v === null) { aberto = false; return; }
+      d += `${aberto ? "L" : "M"}${X_(i).toFixed(1)} ${Y_(v).toFixed(1)} `;
+      aberto = true;
+    });
+    raiz.append(sv("path", { d: d.trim(), class: `linha-traco ${COR[s.chave]} ${s.dono === "Patrimar" ? "grossa" : "fina"} ${s.grupo === "taxa" ? "pontilhada" : ""}`, "data-serie": s.chave }));
+  }
+  const xs = X_(sel);
+  raiz.append(sv("line", { x1: xs.toFixed(1), x2: xs.toFixed(1), y1: pad.t, y2: H - pad.b, class: "linha-guia" }));
+  dados.periodos.forEach((q, i) => {
+    if ((i % 4 === 0 && i < n - 3) || i === n - 1) raiz.append(sv("text", { x: X_(i).toFixed(1), y: H - 8, class: "linha-eixo", "text-anchor": i === n - 1 ? "end" : "middle" }, q));
+  });
+  alvo.replaceChildren(raiz);
+}
+
+function iniciarGrafico({ ix, ext }) {
+  const dados = X.seriesDoGrafico(ix, ext);
+  const ativas = new Set(dados.series.filter((s) => s.padrao).map((s) => s.chave));
+  let sel = dados.periodos.length - 1;
+  const chips = limpar($("#cmp-g-chips"));
+  const alvo = $("#cmp-g");
+  const faixa = $("#cmp-g-tri");
+  faixa.min = "0"; faixa.max = String(dados.periodos.length - 1); faixa.value = String(sel);
+  const fmt = (s, v) => (v === null ? ND : s.grupo === "taxa" ? `${nf(v, 2)}% ao ano` : nf(v, 1));
+  const leitura = () => {
+    const q = dados.periodos[sel];
+    $("#cmp-g-trimestre").textContent = q;
+    const ul = limpar($("#cmp-g-leitura"));
+    for (const s of dados.series.filter((x) => ativas.has(x.chave))) {
+      ul.append(el("li", { "data-serie": s.chave, "data-periodo": q }, el("span", { class: `chave ${COR[s.chave]}`, "aria-hidden": "true" }), el("span", { class: "leitura-rotulo" }, s.rotulo), el("strong", {}, fmt(s, s.valores[sel]))));
+    }
+  };
+  const redesenhar = () => {
+    desenharGraficoUnico(alvo, dados, ativas, sel, Math.floor(alvo.clientWidth || 800));
+    leitura();
+    for (const b of chips.children) b.setAttribute("aria-pressed", String(ativas.has(b.dataset.serie)));
+  };
+  for (const s of dados.series) {
+    chips.append(el("button", { type: "button", class: "chip-botao chip-serie", "data-serie": s.chave, "aria-pressed": String(s.padrao), onclick: () => {
+      if (ativas.has(s.chave)) { if (ativas.size > 1) ativas.delete(s.chave); } else ativas.add(s.chave);
+      redesenhar();
+    } }, el("span", { class: `chave ${COR[s.chave]}`, "aria-hidden": "true" }), s.rotulo));
+  }
+  faixa.addEventListener("input", () => { sel = Number(faixa.value); redesenhar(); });
+  $("#cmp-g-base").textContent = `Índices em base 100 no ${X.BASE_INDICE}, o primeiro trimestre com 12 meses fechados de vendas e lançamentos. Linhas contínuas grossas são da Patrimar; as finas, referências públicas; as pontilhadas são taxas, lidas no eixo da direita.`;
+  redesenhar();
+  let t = null;
+  window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(redesenhar, 150); });
 }
 
 export function iniciarComparadores({ ix, ext }) {
   quadro(ix, ext);
+  iniciarGrafico({ ix, ext });
   const serie = X.serieTrimestral(ix, ext);
-  const p1 = (v) => `${nf(v, 0)}%`;
-  const cfgs = [
-    { topo: "#cmp-a1", base: "#cmp-a2", campoA: "selicFim", campoB: "vendasLtmAA", fmtA: p1, fmtB: p1, descA: "Meta Selic no fim de cada trimestre, em % ao ano", descB: "Variação em 12 meses das vendas líquidas de 12 meses (VGV), contra o ano anterior, por trimestre" },
-    { topo: "#cmp-b1", base: "#cmp-b2", campoA: "incc12m", campoB: "margem", fmtA: p1, fmtB: p1, descA: "INCC-M acumulado em 12 meses no fim de cada trimestre", descB: "Margem bruta operacional contábil de cada trimestre" },
-    { topo: "#cmp-c1", base: "#cmp-c2", campoA: "concessoesAA", campoB: "vendasAA", fmtA: p1, fmtB: p1, descA: "Variação anual das concessões de crédito imobiliário a pessoas físicas no trimestre", descB: "Variação anual das vendas líquidas (VGV) da Patrimar no trimestre" },
-  ];
-  const desenhar = () => cfgs.forEach((c) => par(ix, serie, c));
-  desenhar();
-  let t = null;
-  window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(desenhar, 150); });
 
   const lagsA = [0, 1, 2, 3, 4].map((a) => X.correlacaoComAtraso(serie, "selicFim", "vendasLtmAA", a));
   const corpo = limpar($("#cmp-lags tbody"));

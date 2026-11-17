@@ -159,3 +159,62 @@ export function forcaCorrelacao(r) {
   const f = a < 0.3 ? "fraca" : a < 0.6 ? "moderada" : "forte";
   return `${f} e ${r >= 0 ? "positiva" : "negativa"}`;
 }
+
+// ---------------------------------------------------------------- gráfico único: tudo no mesmo eixo de tempo
+
+export const BASE_INDICE = "3T21";   // primeiro trimestre com 12 meses fechados de vendas e lançamentos (a série operacional começa no 4T20)
+
+/** Índice encadeado (nível 1 em 2019-01) de uma variação mensal, no fim de cada mês: { "2026-03": nível }. */
+export function nivelEncadeado(mapaMensalVar) {
+  const meses = [...mapaMensalVar.keys()].sort();
+  const nivel = new Map();
+  let f = 1;
+  for (const m of meses) {
+    f *= 1 + mapaMensalVar.get(m) / 100;
+    nivel.set(m, f);
+  }
+  return nivel;
+}
+
+/**
+ * Séries para o gráfico único, de BASE_INDICE em diante. Grupos:
+ *  - "indice": base 100 no BASE_INDICE (Patrimar e referências de preço, custo e crédito);
+ *  - "taxa": % ao ano, no eixo da direita (Selic e juros do financiamento imobiliário).
+ * Série sem dado no trimestre é null (a linha quebra). Nada é preenchido.
+ */
+export function seriesDoGrafico(ix, ext) {
+  const S = ext.series;
+  const k0 = ix.posTri.get(BASE_INDICE);
+  const tris = ix.tri.slice(k0);
+  const reb = (vals) => {
+    const b = vals[0];
+    return vals.map((v) => (v === null || v === undefined || b === null || b === undefined || b <= 0 ? null : (v / b) * 100));
+  };
+  const ltm = (id) => C.serieLTM(ix, id).slice(k0).map((x) => x.valor);
+  const nivel = (chave) => {
+    const n = nivelEncadeado(mapaMensal(S[chave]));
+    return tris.map((q) => n.get(mesesDosTrimestres([q])[2]) ?? null);
+  };
+  const conc = mapaMensal(S.credito_imob_concessoes);
+  const conc12 = tris.map((q) => somaMeses(conc, ultimos12(mesesDosTrimestres([q])[2])));
+  const pibMapa = new Map(S.pib_construcao_indice.pontos);
+  const pib = tris.map((q) => pibMapa.get(`${aaaa(q)}-T${q[0]}`) ?? null);
+  const selic = tris.map((q) => selicJanela(S.meta_selic, mesesDosTrimestres([q])).fim);
+  const juros = tris.map((q) => mediaMeses(mapaMensal(S.credito_imob_juros), mesesDosTrimestres([q])));
+  return {
+    periodos: tris,
+    series: [
+      { chave: "vendas", rotulo: "Vendas líquidas da Patrimar, 12 meses (VGV)", grupo: "indice", dono: "Patrimar", valores: reb(ltm(9)), padrao: true },
+      { chave: "lancamentos", rotulo: "Lançamentos da Patrimar, 12 meses (VGV)", grupo: "indice", dono: "Patrimar", valores: reb(ltm(1)), padrao: false },
+      { chave: "receita", rotulo: "Receita líquida da Patrimar, 12 meses", grupo: "indice", dono: "Patrimar", valores: reb(ltm(25)), padrao: false },
+      { chave: "landbank", rotulo: "Landbank da Patrimar (VGV, saldo)", grupo: "indice", dono: "Patrimar", valores: reb(tris.map((q) => C.valor(ix, 21, q))), padrao: false },
+      { chave: "incc", rotulo: "INCC-M (custo da obra)", grupo: "indice", dono: "Referência", valores: reb(nivel("incc_mensal")), padrao: true },
+      { chave: "ipca", rotulo: "IPCA (inflação)", grupo: "indice", dono: "Referência", valores: reb(nivel("ipca_mensal")), padrao: false },
+      { chave: "cdi", rotulo: "CDI acumulado (renda fixa)", grupo: "indice", dono: "Referência", valores: reb(nivel("cdi_mensal")), padrao: true },
+      { chave: "credito", rotulo: "Concessões de crédito imobiliário, 12 meses", grupo: "indice", dono: "Referência", valores: reb(conc12), padrao: false },
+      { chave: "pib", rotulo: "PIB da construção (índice de volume)", grupo: "indice", dono: "Referência", valores: reb(pib), padrao: false },
+      { chave: "selic", rotulo: "Meta Selic (% ao ano, eixo da direita)", grupo: "taxa", dono: "Referência", valores: selic, padrao: true },
+      { chave: "juros", rotulo: "Juros do financiamento imobiliário (% ao ano, eixo da direita)", grupo: "taxa", dono: "Referência", valores: juros, padrao: false },
+    ],
+  };
+}

@@ -8,6 +8,7 @@ import * as P from "./painel.js";
 import { criarAssistente, PERGUNTAS_SUGERIDAS } from "./assistente.js";
 import { iniciarInstitucional } from "./institucional_ui.js";
 import { iniciarComparadores } from "./comparadores_ui.js";
+import { iniciarInvestidor } from "./investidor_ui.js";
 
 const $ = (s, r = document) => r.querySelector(s);
 
@@ -985,6 +986,7 @@ carregar().then((ctx) => {
   iniciarDocumentos(ctx);
   iniciarInstitucional(ctx);
   iniciarComparadores(ctx);
+  iniciarInvestidor(ctx);
   iniciarMetodologia(ctx);
   document.body.classList.add("pronto");
 }).catch((erro) => {
