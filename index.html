@@ -40,6 +40,10 @@
         <li><a href="#metodologia" data-secoes="metodologia">Metodologia</a></li>
       </ul>
     </nav>
+    <div class="idioma" role="group" aria-label="Idioma">
+      <button type="button" data-idioma="pt" aria-pressed="true">PT</button>
+      <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+    </div>
     <button id="tema" class="botao-tema" type="button" aria-pressed="false">
       <span class="tema-icone" aria-hidden="true"></span><span class="tema-rotulo">Tema escuro</span>
     </button>
@@ -414,13 +418,14 @@
         <p class="eyebrow">Converse com os dados</p>
         <h2 id="titulo-assistente">Pergunte aos números, com a fonte em cada resposta</h2>
         <p>Este assistente não usa inteligência artificial generativa: ele segue regras escritas e consulta só os dados desta página. Toda resposta traz o período, o valor e o link da fonte. O que não está na base, ele diz que não está.</p>
+        <p class="nota">O assistente entende perguntas e responde em português.</p>
       </div>
       <div class="chat">
-        <ul class="chat-mensagens" id="chat-mensagens" aria-live="polite" aria-label="Conversa com o assistente"></ul>
-        <div class="chat-sugestoes" id="chat-sugestoes" role="group" aria-label="Perguntas sugeridas"></div>
+        <ul class="chat-mensagens" id="chat-mensagens" data-sem-traducao aria-live="polite" aria-label="Conversa com o assistente"></ul>
+        <div class="chat-sugestoes" id="chat-sugestoes" data-sem-traducao role="group" aria-label="Perguntas sugeridas"></div>
         <form class="chat-form" id="chat-form" autocomplete="off">
           <label for="chat-pergunta" class="so-leitor">Sua pergunta sobre os indicadores ou documentos</label>
-          <input id="chat-pergunta" type="text" maxlength="300" placeholder="Ex.: qual o recorde de vendas em unidades?">
+          <input id="chat-pergunta" type="text" maxlength="300" data-sem-traducao placeholder="Ex.: qual o recorde de vendas em unidades?">
           <button class="botao botao-primario" type="submit">Perguntar</button>
         </form>
       </div>

@@ -776,3 +776,11 @@ nav.subnav a:hover { border-color: var(--destaque); color: var(--destaque); }
 
 .chave.s-15, .linha-traco.s-15 { background: #8a6d3b; stroke: #8a6d3b; }
 .nota-serie { display: block; font-size: 0.78rem; color: var(--suave); margin-top: 2px; }
+
+.idioma { display: inline-flex; border: 1.5px solid var(--tinta); border-radius: var(--raio); overflow: hidden; flex-shrink: 0; }
+.idioma button { font: 600 0.8rem var(--corpo); padding: 7px 11px; border: 0; background: transparent; color: var(--tinta); cursor: pointer; }
+.idioma button[aria-pressed="true"] { background: var(--tinta); color: var(--superficie); }
+@media (max-width: 1100px) { .idioma { margin-left: auto; } .idioma + .botao-tema { margin-left: 0; } }
+
+.marca-cartao, .marca-cartao * { overflow-wrap: anywhere; }
+.marca-cartao .chip { white-space: normal; }

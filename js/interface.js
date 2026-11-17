@@ -9,6 +9,7 @@ import { criarAssistente, PERGUNTAS_SUGERIDAS } from "./assistente.js";
 import { iniciarInstitucional } from "./institucional_ui.js";
 import { iniciarComparadores } from "./comparadores_ui.js";
 import { iniciarInvestidor } from "./investidor_ui.js";
+import { iniciarIdioma } from "./i18n.js";
 
 const $ = (s, r = document) => r.querySelector(s);
 
@@ -989,6 +990,7 @@ carregar().then((ctx) => {
   iniciarInvestidor(ctx);
   iniciarMetodologia(ctx);
   document.body.classList.add("pronto");
+  iniciarIdioma();
 }).catch((erro) => {
   console.error(erro);
   const aviso = el("div", { class: "erro", role: "alert" },
